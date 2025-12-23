@@ -5,47 +5,54 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const Countdown = () => {
-  const weddingDate = new Date("2026-05-02T16:00:00");
-  const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  });
-  const [isClient, setIsClient] = useState(false);
+  const [timeLeft, setTimeLeft] = useState<{
+    days: number;
+    hours: number;
+    minutes: number;
+    seconds: number;
+  } | null>(null);
 
   useEffect(() => {
-    setIsClient(true);
-    const timer = setInterval(() => {
+    const weddingDate = new Date("2026-05-02T16:00:00");
+
+    const calculateTimeLeft = () => {
       const now = new Date();
       const difference = weddingDate.getTime() - now.getTime();
 
       if (difference > 0) {
-        setTimeLeft({
+        return {
           days: Math.floor(difference / (1000 * 60 * 60 * 24)),
           hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
           minutes: Math.floor((difference / 1000 / 60) % 60),
           seconds: Math.floor((difference / 1000) % 60),
-        });
-      } else {
-        clearInterval(timer);
+        };
       }
+      return null;
+    };
+
+    // Set initial value
+    setTimeLeft(calculateTimeLeft());
+
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
 
     return () => clearInterval(timer);
   }, []);
 
-  if (!isClient) {
-    return (
-      <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
-        {[...Array(4)].map((_, i) => (
-          <div key={i} className="rounded-lg bg-white/20 p-4 backdrop-blur-sm">
-            <div className="h-12 w-16 animate-pulse rounded-md bg-white/30" />
-            <div className="h-6 w-12 mt-2 mx-auto animate-pulse rounded-md bg-white/30" />
-          </div>
-        ))}
-      </div>
-    );
+  const renderSkeletons = () => (
+    <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
+      {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
+        <div key={unit} className="rounded-lg bg-white/20 p-2 md:p-4 backdrop-blur-sm">
+          <div className="text-4xl md:text-6xl font-bold">--</div>
+          <div className="text-sm md:text-base uppercase tracking-wider">{unit}</div>
+        </div>
+      ))}
+    </div>
+  );
+
+  if (!timeLeft) {
+    return renderSkeletons();
   }
 
   return (
