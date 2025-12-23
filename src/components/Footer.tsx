@@ -12,7 +12,7 @@ export default function Footer() {
         <p className="font-headline text-lg font-semibold text-foreground">
           Júlia & Pedro
         </p>
-        <p>© {new Date().getFullYear() > 2026 ? new Date().getFullYear() : 2026}</p>
+        <p>© 2026</p>
       </div>
     </footer>
   );
