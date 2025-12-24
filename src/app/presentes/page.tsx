@@ -2,13 +2,15 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import GiftCard, { type Gift } from "@/components/GiftCard";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
 
-const initialGifts: Gift[] = [
-  {
+// This data is duplicated for simplicity in this example. 
+// In a real application, it would be fetched from a single source.
+const allGifts: Gift[] = [
+    {
     id: 1,
     name: "Cotas para Lua de Mel",
     goal: 15000,
@@ -92,10 +94,8 @@ const initialGifts: Gift[] = [
   { id: 50, name: "Cortinas Novas", goal: 1200, current: 400, description: "Para dar mais privacidade e aconchego.", image: "https://picsum.photos/seed/curtains/600/400", imageHint: "window curtains" },
 ];
 
-const GIFTS_PER_PAGE = 8;
-
-export default function GiftListSection() {
-  const [gifts, setGifts] = useState<Gift[]>(initialGifts);
+export default function GiftsPage() {
+  const [gifts, setGifts] = useState<Gift[]>(allGifts);
 
   const handleContribute = (giftId: number, amount: number) => {
     setGifts((prevGifts) =>
@@ -104,33 +104,32 @@ export default function GiftListSection() {
       )
     );
   };
-  
+
   return (
-    <section id="presentes" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Lista de Presentes</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Seu carinho é nosso maior presente, mas se desejar nos presentear, aqui estão algumas sugestões.
-            </p>
+    <div className="flex flex-col min-h-[100dvh] bg-background">
+      <Header />
+      <main className="flex-1">
+        <section id="presentes" className="w-full py-12 md:py-24 lg:py-32">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Lista de Presentes</h2>
+                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+                  Seu carinho é nosso maior presente, mas se desejar nos presentear, aqui estão algumas sugestões.
+                </p>
+              </div>
+            </div>
+            <Separator className="my-8" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {gifts.map((gift) => (
+                <GiftCard key={gift.id} gift={gift} onContribute={handleContribute} />
+              ))}
+            </div>
           </div>
-        </div>
-        <Separator className="my-8" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {gifts.slice(0, GIFTS_PER_PAGE).map((gift) => (
-            <GiftCard key={gift.id} gift={gift} onContribute={handleContribute} />
-          ))}
-        </div>
-        {gifts.length > GIFTS_PER_PAGE && (
-          <div className="mt-12 text-center">
-            <Button asChild size="lg">
-              <Link href="/presentes">Ver mais presentes</Link>
-            </Button>
-          </div>
-        )}
-      </div>
-    </section>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 }
 

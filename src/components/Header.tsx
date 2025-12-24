@@ -7,16 +7,19 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, Heart } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { usePathname } from 'next/navigation'
 
-const navLinks = [
-  { href: "#historia", label: "Nossa História" },
-  { href: "#local", label: "Local" },
-  { href: "#presentes", label: "Lista de Presentes" },
-  { href: "#rsvp", label: "RSVP" },
-];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: pathname === "/" ? "#historia" : "/#historia", label: "Nossa História" },
+    { href: pathname === "/" ? "#local" : "/#local", label: "Local" },
+    { href: "/presentes", label: "Lista de Presentes" },
+    { href: pathname === "/" ? "#rsvp" : "/#rsvp", label: "RSVP" },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,3 +93,5 @@ export default function Header() {
     </header>
   );
 }
+
+    
