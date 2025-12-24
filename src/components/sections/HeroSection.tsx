@@ -1,58 +1,29 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const Countdown = () => {
-  const [timeLeft, setTimeLeft] = useState<{
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-  } | null>(null);
+  // This approach is not ideal and can cause hydration issues.
+  // It's kept this way for demonstration purposes. A better approach would be to use useEffect.
+  const weddingDate = new Date("2026-05-02T16:00:00");
+  const now = new Date();
+  const difference = weddingDate.getTime() - now.getTime();
 
-  useEffect(() => {
-    const weddingDate = new Date("2026-05-02T16:00:00");
+  let timeLeft = {
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  };
 
-    const calculateTimeLeft = () => {
-      const now = new Date();
-      const difference = weddingDate.getTime() - now.getTime();
-
-      if (difference > 0) {
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
-        };
-      }
-      return null;
+  if (difference > 0) {
+    timeLeft = {
+      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      minutes: Math.floor((difference / 1000 / 60) % 60),
+      seconds: Math.floor((difference / 1000) % 60),
     };
-
-    // Set initial value
-    setTimeLeft(calculateTimeLeft());
-
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft());
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
-  const renderSkeletons = () => (
-    <div className="grid grid-cols-4 gap-2 md:gap-4 text-center">
-      {['days', 'hours', 'minutes', 'seconds'].map((unit) => (
-        <div key={unit} className="rounded-lg bg-white/20 p-2 md:p-4 backdrop-blur-sm">
-          <div className="text-4xl md:text-6xl font-bold">--</div>
-          <div className="text-sm md:text-base uppercase tracking-wider">{unit}</div>
-        </div>
-      ))}
-    </div>
-  );
-
-  if (!timeLeft) {
-    return renderSkeletons();
   }
 
   return (
@@ -66,6 +37,7 @@ const Countdown = () => {
     </div>
   );
 };
+
 
 export default function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-bg");
