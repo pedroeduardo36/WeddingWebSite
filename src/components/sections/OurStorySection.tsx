@@ -33,7 +33,7 @@ export default function OurStorySection() {
                 {storyImage && (
                   <Image
                     src={storyImage.imageUrl}
-                    alt={storyImage.description}
+                    alt=""
                     fill
                     className="object-cover"
                     data-ai-hint={storyImage.imageHint}
