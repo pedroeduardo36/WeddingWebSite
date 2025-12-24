@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 export default function OurStorySection() {
-  const storyImage = PlaceHolderImages.find((img) => img.id === "our-story");
+  const storyImage = PlaceHolderImages.find((img) => img.id === "hero-bg");
 
   return (
     <section id="historia" className="w-full py-12 md:py-24 lg:py-32 bg-background">
