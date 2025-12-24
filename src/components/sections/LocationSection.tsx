@@ -38,14 +38,14 @@ export default function LocationSection() {
                     </div>
                     <div className="flex items-center gap-2">
                         <GlassWater className="h-5 w-5 text-muted-foreground" />
-                        <span>Traje: Esporte Fino</span>
+                        <span>Traje: Passeio completo</span>
                     </div>
                   </div>
                 </CardContent>
               </div>
               <div className="w-full h-64 md:h-full min-h-[300px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.827777174358!2d-48.01257452583857!3d-15.601050519391083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a51a80c680001%3A0x46423878b2a3a25!2sMaison%20Daniela!5e0!3m2!1spt-BR!2sbr!4v1718049969440!5m2!1spt-BR!2sbr"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.2491387359687!2d-47.929892599999995!3d-15.6317161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a49b170a23083%3A0xa96f6f7420205887!2sMaison%20Daniela!5e0!3m2!1spt-BR!2sbr!4v1766584054073!5m2!1spt-BR!2sbr"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
