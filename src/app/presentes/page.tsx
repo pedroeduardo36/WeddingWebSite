@@ -1,16 +1,25 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GiftCard, { type Gift } from "@/components/GiftCard";
 import { Separator } from "@/components/ui/separator";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { allGifts } from "@/lib/gifts";
 
+type SortOption = "default" | "price-desc" | "price-asc";
 
 export default function GiftsPage() {
   const [gifts, setGifts] = useState<Gift[]>(allGifts);
+  const [sortOption, setSortOption] = useState<SortOption>("default");
 
   const handleContribute = (giftId: number, amount: number) => {
     setGifts((prevGifts) =>
@@ -19,6 +28,19 @@ export default function GiftsPage() {
       )
     );
   };
+
+  const sortedGifts = useMemo(() => {
+    const sorted = [...gifts];
+    switch (sortOption) {
+      case "price-desc":
+        return sorted.sort((a, b) => b.goal - a.goal);
+      case "price-asc":
+        return sorted.sort((a, b) => a.goal - b.goal);
+      default:
+        // Return original order based on ID for "default"
+        return sorted.sort((a, b) => a.id - b.id);
+    }
+  }, [gifts, sortOption]);
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background">
@@ -34,9 +56,21 @@ export default function GiftsPage() {
                 </p>
               </div>
             </div>
-            <Separator className="my-8" />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {gifts.map((gift) => (
+            <div className="flex justify-end my-8">
+              <Select onValueChange={(value: SortOption) => setSortOption(value)} defaultValue="default">
+                <SelectTrigger className="w-[240px]">
+                  <SelectValue placeholder="Ordenar por" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="default">Padrão</SelectItem>
+                  <SelectItem value="price-desc">Mais caro para mais barato</SelectItem>
+                  <SelectItem value="price-asc">Mais barato para mais caro</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+            <Separator />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-8">
+              {sortedGifts.map((gift) => (
                 <GiftCard key={gift.id} gift={gift} onContribute={handleContribute} />
               ))}
             </div>
