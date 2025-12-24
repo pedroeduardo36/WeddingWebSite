@@ -6,93 +6,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GiftCard, { type Gift } from "@/components/GiftCard";
 import { Separator } from "@/components/ui/separator";
+import { allGifts } from "@/lib/gifts";
 
-// This data is duplicated for simplicity in this example. 
-// In a real application, it would be fetched from a single source.
-const allGifts: Gift[] = [
-    {
-    id: 1,
-    name: "Cotas para Lua de Mel",
-    goal: 15000,
-    current: 4500,
-    description: "Ajude-nos a ter uma lua de mel inesquecível na Grécia!",
-    image: "https://picsum.photos/seed/honeymoon/600/400",
-    imageHint: "honeymoon travel"
-  },
-  {
-    id: 2,
-    name: "Reforma do Apartamento",
-    goal: 20000,
-    current: 3200,
-    description: "Para deixar nosso cantinho com a nossa cara e mais aconchegante.",
-    image: "https://picsum.photos/seed/apartment/600/400",
-    imageHint: "modern apartment"
-  },
-  {
-    id: 3,
-    name: "Jantar Romântico",
-    goal: 1000,
-    current: 750,
-    description: "Um momento especial e uma experiência gastronômica para nós dois.",
-    image: "https://picsum.photos/seed/dinner/600/400",
-    imageHint: "romantic dinner"
-  },
-  {
-    id: 4,
-    name: "Passeio de Balão",
-    goal: 2500,
-    current: 500,
-    description: "Uma aventura inesquecível para começar nossa vida de casados.",
-    image: "https://picsum.photos/seed/balloon/600/400",
-    imageHint: "hot air balloon"
-  },
-  { id: 5, name: "Sofá Novo", goal: 3500, current: 1200, description: "Um sofá confortável para nossas noites de cinema.", image: "https://picsum.photos/seed/sofa/600/400", imageHint: "living room" },
-  { id: 6, name: "TV 4K", goal: 4000, current: 800, description: "Para maratonar nossas séries favoritas em alta definição.", image: "https://picsum.photos/seed/tv/600/400", imageHint: "television screen" },
-  { id: 7, name: "Geladeira Inox", goal: 4500, current: 2000, description: "Uma geladeira moderna para nossa cozinha nova.", image: "https://picsum.photos/seed/fridge/600/400", imageHint: "kitchen appliance" },
-  { id: 8, name: "Máquina de Lavar", goal: 3000, current: 1500, description: "Para facilitar o dia a dia e manter tudo limpinho.", image: "https://picsum.photos/seed/washingmachine/600/400", imageHint: "laundry room" },
-  { id: 9, name: "Jogo de Panelas", goal: 800, current: 300, description: "Panelas de qualidade para nossas aventuras culinárias.", image: "https://picsum.photos/seed/pans/600/400", imageHint: "cooking pots" },
-  { id: 10, name: "Cama Queen Size", goal: 2800, current: 1000, description: "Para noites de sono mais confortáveis e espaçosas.", image: "https://picsum.photos/seed/bed/600/400", imageHint: "bedroom interior" },
-  { id: 11, name: "Mesa de Jantar", goal: 2200, current: 500, description: "Para reunir amigos e família em jantares especiais.", image: "https://picsum.photos/seed/diningtable/600/400", imageHint: "dining room" },
-  { id: 12, name: "Curso de Culinária", goal: 1200, current: 400, description: "Para aprendermos novas receitas juntos.", image: "https://picsum.photos/seed/cookingclass/600/400", imageHint: "cooking lesson" },
-  { id: 13, name: "Fritadeira Elétrica", goal: 500, current: 250, description: "Para lanches rápidos e mais saudáveis.", image: "https://picsum.photos/seed/airfryer/600/400", imageHint: "kitchen appliance" },
-  { id: 14, name: "Aspirador de Pó Robô", goal: 1800, current: 900, description: "Para manter a casa limpa sem esforço.", image: "https://picsum.photos/seed/robotvacuum/600/400", imageHint: "home cleaning" },
-  { id: 15, name: "Jogo de Cama", goal: 600, current: 150, description: "Roupas de cama novas para nosso quarto.", image: "https://picsum.photos/seed/bedding/600/400", imageHint: "bed sheets" },
-  { id: 16, name: "Cafeteira Expresso", goal: 700, current: 200, description: "Para começar o dia com um café especial.", image: "https://picsum.photos/seed/coffeemaker/600/400", imageHint: "coffee machine" },
-  { id: 17, name: "Batedeira Planetária", goal: 900, current: 300, description: "Para preparar bolos e sobremesas deliciosas.", image: "https://picsum.photos/seed/mixer/600/400", imageHint: "baking equipment" },
-  { id: 18, name: "Adega Climatizada", goal: 1500, current: 500, description: "Para conservar nossos vinhos na temperatura ideal.", image: "https://picsum.photos/seed/winefridge/600/400", imageHint: "wine cooler" },
-  { id: 19, name: "Dia de Spa para o Casal", goal: 800, current: 200, description: "Um dia relaxante para cuidar de nós dois.", image: "https://picsum.photos/seed/spa/600/400", imageHint: "spa relaxation" },
-  { id: 20, name: "Bicicletas", goal: 2000, current: 600, description: "Para passeios ao ar livre e uma vida mais ativa.", image: "https://picsum.photos/seed/bikes/600/400", imageHint: "couple bicycle" },
-  { id: 21, name: "Churrasqueira", goal: 1300, current: 450, description: "Para os churrascos de fim de semana com amigos.", image: "https://picsum.photos/seed/bbq/600/400", imageHint: "barbecue grill" },
-  { id: 22, name: "Home Theater", goal: 2500, current: 700, description: "Para uma experiência de cinema em casa.", image: "https://picsum.photos/seed/hometheater/600/400", imageHint: "home cinema" },
-  { id: 23, name: "Jogo de Toalhas", goal: 400, current: 100, description: "Toalhas novas e macias para nosso banheiro.", image: "https://picsum.photos/seed/towels/600/400", imageHint: "bath towels" },
-  { id: 24, name: "Purificador de Ar", goal: 600, current: 200, description: "Para um ambiente mais saudável e livre de alérgenos.", image: "https://picsum.photos/seed/airpurifier/600/400", imageHint: "air purifier" },
-  { id: 25, name: "Cotas para o Enxoval", goal: 3000, current: 1200, description: "Para completar os itens que faltam em nosso enxoval.", image: "https://picsum.photos/seed/trousseau/600/400", imageHint: "wedding trousseau" },
-  { id: 26, name: "Micro-ondas", goal: 800, current: 400, description: "Um item essencial para a praticidade na cozinha.", image: "https://picsum.photos/seed/microwave/600/400", imageHint: "kitchen appliance" },
-  { id: 27, name: "Câmera Fotográfica", goal: 3200, current: 900, description: "Para registrar nossos melhores momentos e viagens.", image: "https://picsum.photos/seed/camera/600/400", imageHint: "vintage camera" },
-  { id: 28, name: "Toca-discos de Vinil", goal: 1200, current: 300, description: "Para curtir nossa coleção de vinis com estilo.", image: "https://picsum.photos/seed/turntable/600/400", imageHint: "record player" },
-  { id: 29, name: "Decoração da Sala", goal: 2000, current: 700, description: "Quadros, almofadas e mantas para um lar aconchegante.", image: "https://picsum.photos/seed/decoration/600/400", imageHint: "home decor" },
-  { id: 30, name: "Assinatura de Vinhos", goal: 1000, current: 250, description: "Para receber e degustar novos vinhos todo mês.", image: "https://picsum.photos/seed/winesubscription/600/400", imageHint: "wine tasting" },
-  { id: 31, name: "Piquenique Romântico", goal: 500, current: 150, description: "Uma cesta completa para um piquenique a dois.", image: "https://picsum.photos/seed/picnic/600/400", imageHint: "romantic picnic" },
-  { id: 32, name: "Hospedagem na Lua de Mel", goal: 5000, current: 2200, description: "Contribua para nossas diárias em um hotel especial.", image: "https://picsum.photos/seed/hotel/600/400", imageHint: "luxury hotel" },
-  { id: 33, name: "Passagens Aéreas", goal: 8000, current: 3500, description: "Ajude-nos a voar para nosso destino dos sonhos.", image: "https://picsum.photos/seed/airplane/600/400", imageHint: "airplane window" },
-  { id: 34, name: "Aluguel de Carro", goal: 1500, current: 500, description: "Para explorarmos nosso destino com liberdade.", image: "https://picsum.photos/seed/carrental/600/400", imageHint: "driving road" },
-  { id: 35, name: "Mergulho", goal: 1000, current: 300, description: "Uma experiência de mergulho para o casal.", image: "https://picsum.photos/seed/diving/600/400", imageHint: "scuba diving" },
-  { id: 36, name: "Poltrona de Leitura", goal: 1200, current: 400, description: "Um cantinho de leitura confortável em nossa casa.", image: "https://picsum.photos/seed/armchair/600/400", imageHint: "reading chair" },
-  { id: 37, name: "Luminária de Chão", goal: 600, current: 200, description: "Para criar um ambiente acolhedor na sala.", image: "https://picsum.photos/seed/floorlamp/600/400", imageHint: "floor lamp" },
-  { id: 38, name: "Tapete para a Sala", goal: 1500, current: 600, description: "Um tapete novo para completar a decoração.", image: "https://picsum.photos/seed/rug/600/400", imageHint: "livingroom rug" },
-  { id: 39, name: "Conjunto de Malas", goal: 900, current: 300, description: "Para nossas futuras viagens juntos.", image: "https://picsum.photos/seed/luggage/600/400", imageHint: "travel suitcase" },
-  { id: 40, name: "Aparador de Livros", goal: 150, current: 50, description: "Um detalhe charmoso para nossa estante.", image: "https://picsum.photos/seed/bookends/600/400", imageHint: "books shelf" },
-  { id: 41, name: "Aparelho de Jantar", goal: 1000, current: 400, description: "Para receber nossos convidados com elegância.", image: "https://picsum.photos/seed/dinnerset/600/400", imageHint: "dinnerware set" },
-  { id: 42, name: "Liquidificador", goal: 300, current: 100, description: "Para sucos, vitaminas e receitas práticas.", image: "https://picsum.photos/seed/blender/600/400", imageHint: "kitchen blender" },
-  { id: 43, name: "Ferro de Passar", goal: 250, current: 100, description: "Para manter nossas roupas sempre alinhadas.", image: "https://picsum.photos/seed/iron/600/400", imageHint: "clothing iron" },
-  { id: 44, name: "Cristaleira", goal: 1800, current: 700, description: "Para organizar e exibir nossas taças e cristais.", image: "https://picsum.photos/seed/cabinet/600/400", imageHint: "display cabinet" },
-  { id: 45, name: "Jogo de Facas", goal: 700, current: 250, description: "Facas de chef para aprimorar nossas habilidades.", image: "https://picsum.photos/seed/knifeset/600/400", imageHint: "kitchen knives" },
-  { id: 46, name: "Kit de Ferramentas", goal: 500, current: 150, description: "Para pequenos reparos e projetos em casa.", image: "https://picsum.photos/seed/tools/600/400", imageHint: "tool kit" },
-  { id: 47, name: "Cursos Online", goal: 800, current: 200, description: "Para aprendermos algo novo juntos.", image: "https://picsum.photos/seed/onlinecourse/600/400", imageHint: "online learning" },
-  { id: 48, name: "Doação para Caridade", goal: 1000, current: 500, description: "Contribua com uma causa que apoiamos.", image: "https://picsum.photos/seed/charity/600/400", imageHint: "charity donation" },
-  { id: 49, name: "Paisagismo do Jardim", goal: 2500, current: 800, description: "Para criar um jardim lindo em nosso lar.", image: "https://picsum.photos/seed/gardening/600/400", imageHint: "home garden" },
-  { id: 50, name: "Cortinas Novas", goal: 1200, current: 400, description: "Para dar mais privacidade e aconchego.", image: "https://picsum.photos/seed/curtains/600/400", imageHint: "window curtains" },
-];
 
 export default function GiftsPage() {
   const [gifts, setGifts] = useState<Gift[]>(allGifts);
@@ -132,5 +47,3 @@ export default function GiftsPage() {
     </div>
   );
 }
-
-    
