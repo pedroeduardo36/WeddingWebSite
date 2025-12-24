@@ -1,30 +1,45 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const Countdown = () => {
-  // This approach is not ideal and can cause hydration issues.
-  // It's kept this way for demonstration purposes. A better approach would be to use useEffect.
-  const weddingDate = new Date("2026-05-02T16:00:00");
-  const now = new Date();
-  const difference = weddingDate.getTime() - now.getTime();
-
-  let timeLeft = {
+  const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
     minutes: 0,
     seconds: 0,
-  };
+  });
 
-  if (difference > 0) {
-    timeLeft = {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
+  useEffect(() => {
+    const weddingDate = new Date("2026-05-02T16:00:00");
+
+    const calculateTimeLeft = () => {
+      const now = new Date();
+      const difference = weddingDate.getTime() - now.getTime();
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
     };
-  }
+
+    // Set initial time left
+    calculateTimeLeft();
+
+    // Update every second
+    const timer = setInterval(calculateTimeLeft, 1000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(timer);
+  }, []);
 
   return (
     <div className="grid grid-cols-4 gap-2 md:gap-4 text-center font-headline">
