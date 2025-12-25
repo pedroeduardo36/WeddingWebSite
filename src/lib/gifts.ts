@@ -17,7 +17,7 @@ export const allGifts: Gift[] = [
     goal: 3000,
     current: 0,
     description: "Pague uma parcela do aluguel.",
-    image: "https://picsum.photos/seed/apartment/600/400",
+    image: "https://plus.unsplash.com/premium_photo-1676321046262-4978a752fb15?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     imageHint: "modern apartment"
   },
   {
@@ -42,7 +42,7 @@ export const allGifts: Gift[] = [
   { id: 6, name: "TV 4K", goal: 4000, current: 800, description: "Para maratonar nossas séries favoritas em alta definição.", image: "https://picsum.photos/seed/tv/600/400", imageHint: "television screen" },
   { id: 7, name: "Geladeira Inox", goal: 4500, current: 2000, description: "Uma geladeira moderna para nossa cozinha nova.", image: "https://picsum.photos/seed/fridge/600/400", imageHint: "kitchen appliance" },
   { id: 8, name: "Máquina de Lavar", goal: 3000, current: 1500, description: "Para facilitar o dia a dia e manter tudo limpinho.", image: "https://picsum.photos/seed/washingmachine/600/400", imageHint: "laundry room" },
-  { id: 9, name: "Jogo de Panelas", goal: 800, current: 300, description: "Panelas de qualidade para nossas aventuras culinárias.", image: "https://picsum.photos/seed/pans/600/400", imageHint: "cooking pots" },
+  { id: 9, name: "Jogo de Panelas", goal: 800, current: 300, description: "Panelas de qualidade para nossas aventuras culinárias.", image: "https://imgs.ponto.com.br/55048505/1g.jpg?imwidth=500", imageHint: "cooking pots" },
   { id: 10, name: "Cama Queen Size", goal: 2800, current: 1000, description: "Para noites de sono mais confortáveis e espaçosas.", image: "https://picsum.photos/seed/bed/600/400", imageHint: "bedroom interior" },
   { id: 11, name: "Mesa de Jantar", goal: 2200, current: 500, description: "Para reunir amigos e família em jantares especiais.", image: "https://picsum.photos/seed/diningtable/600/400", imageHint: "dining room" },
   { id: 12, name: "Curso de Culinária", goal: 1200, current: 400, description: "Para aprendermos novas receitas juntos.", image: "https://picsum.photos/seed/cookingclass/600/400", imageHint: "cooking lesson" },
