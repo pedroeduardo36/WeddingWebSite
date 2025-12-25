@@ -30,16 +30,19 @@ export default function GiftsPage() {
   };
 
   const sortedGifts = useMemo(() => {
-    const sorted = [...gifts];
+    let sorted = [...gifts];
     switch (sortOption) {
       case "price-desc":
-        return sorted.sort((a, b) => b.goal - a.goal);
+        sorted.sort((a, b) => b.goal - a.goal);
+        break;
       case "price-asc":
-        return sorted.sort((a, b) => a.goal - b.goal);
-      default:
-        // Return original order based on ID for "default"
-        return sorted.sort((a, b) => a.id - b.id);
+        sorted.sort((a, b) => a.goal - b.goal);
+        break;
+      case "default":
+        sorted.sort((a, b) => a.id - b.id);
+        break;
     }
+    return sorted;
   }, [gifts, sortOption]);
 
   return (
