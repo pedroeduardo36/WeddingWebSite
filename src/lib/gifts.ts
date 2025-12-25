@@ -8,7 +8,7 @@ export const allGifts: Gift[] = [
     goal: 15000,
     current: 4500,
     description: "Ajude-nos a ter uma lua de mel inesquecível na Grécia!",
-    image: "https://picsum.photos/seed/honeymoon/600/400",
+    image: "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
     imageHint: "honeymoon travel"
   },
   {
@@ -17,7 +17,7 @@ export const allGifts: Gift[] = [
     goal: 3000,
     current: 0,
     description: "Pague uma parcela do aluguel.",
-    image: "https://plus.unsplash.com/premium_photo-1674676471104-3c4017645e6f?q=80&w=970&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://picsum.photos/seed/apartment/600/400",
     imageHint: "modern apartment"
   },
   {
