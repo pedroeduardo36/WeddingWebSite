@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
@@ -11,7 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
-import { CreditCard, QrCode } from "lucide-react";
+import { CreditCard, QrCode, ShoppingCart } from "lucide-react";
 
 export interface Gift {
   id: number;
@@ -21,6 +22,7 @@ export interface Gift {
   description: string;
   image: string;
   imageHint: string;
+  storeUrl?: string;
 }
 
 interface GiftCardProps {
@@ -77,7 +79,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
             </div>
         </div>
       </CardContent>
-      <CardFooter>
+      <CardFooter className="flex gap-2">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
             <Button className="w-full">Presentear</Button>
@@ -129,6 +131,13 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
             </DialogFooter>
           </DialogContent>
         </Dialog>
+        {gift.storeUrl && (
+            <Button variant="outline" asChild className="w-full">
+                <Link href={gift.storeUrl} target="_blank">
+                    <ShoppingCart className="mr-2" /> Ver na Loja
+                </Link>
+            </Button>
+        )}
       </CardFooter>
     </Card>
   );
