@@ -61,8 +61,8 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
 
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div className="relative h-48 w-full">
-        <Image src={gift.image} alt={gift.name} fill className="object-cover" data-ai-hint={gift.imageHint} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+      <div className="relative h-48 w-full bg-muted">
+        <Image src={gift.image} alt={gift.name} fill className="object-contain" data-ai-hint={gift.imageHint} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
       </div>
       <CardHeader>
         <CardTitle className="font-headline">{gift.name}</CardTitle>
