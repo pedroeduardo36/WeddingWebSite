@@ -38,11 +38,11 @@ export const allGifts: Gift[] = [
     image: "https://picsum.photos/seed/balloon/600/400",
     imageHint: "hot air balloon"
   },
-  { id: 5, name: "Colchão Liberty Ortobom", goal: 3500, current: 0, description: "Um terço da sua vida, você passa dormindo.", image: "https://picsum.photos/seed/sofa/600/400", imageHint: "living room", storeUrl: "https://www.ortobom.com.br/p/colchao/colchao-liberty/queen158" },
+  { id: 5, name: "Colchão Liberty Ortobom", goal: 2199, current: 0, description: "Um terço da sua vida, você passa dormindo.", image: "https://www.ortobom.com.br/arquivos/ids/221379-1000-1000/01-colchao-liberty-ortobom.jpg?v=638515033870630000", imageHint: "orthopedic mattress", storeUrl: "https://www.ortobom.com.br/p/colchao/colchao-liberty/queen158" },
   { id: 6, name: "TV 4K", goal: 4000, current: 0, description: "Para maratonar nossas séries favoritas em alta definição.", image: "https://picsum.photos/seed/tv/600/400", imageHint: "television screen" },
   { id: 7, name: "Geladeira Inox", goal: 4500, current: 0, description: "Uma geladeira moderna para nossa cozinha nova.", image: "https://picsum.photos/seed/fridge/600/400", imageHint: "kitchen appliance" },
   { id: 8, name: "Máquina de Lavar", goal: 3000, current: 0, description: "Para facilitar o dia a dia e manter tudo limpinho.", image: "https://picsum.photos/seed/washingmachine/600/400", imageHint: "laundry room" },
-  { id: 9, name: "Lava e seca", goal: 3798, current: 0, description: "Samsung WD11A para facilitar o dia a dia dos noivos", image: "https://imgs.ponto.com.br/55048505/1g.jpg?imwidth=500", imageHint: "cooking pots", storeUrl: "https://www.casasbahia.com.br/lava-e-seca-samsung-wd11a-3-em-1-inox-look-com-ecobubble-e-lavagem-a-seco-wd11a4453bx-11-kg/p/55048506?IdSku=55048506&idLojista=10037&tipoLojista=1P&&gad_campaignid=22444217737&gbraid=0AAAAADtAamgUU6Ya-1K2DmFN3sJhiw4mP" },
+  { id: 9, name: "Lava e seca", goal: 3798, current: 0, description: "Samsung WD11A para facilitar o dia a dia dos noivos", image: "https://imgs.ponto.com.br/55048505/1g.jpg?imwidth=500", imageHint: "washing machine", storeUrl: "https://www.casasbahia.com.br/lava-e-seca-samsung-wd11a-3-em-1-inox-look-com-ecobubble-e-lavagem-a-seco-wd11a4453bx-11-kg/p/55048506?IdSku=55048506&idLojista=10037&tipoLojista=1P&&gad_campaignid=22444217737&gbraid=0AAAAADtAamgUU6Ya-1K2DmFN3sJhiw4mP" },
   { id: 10, name: "Cama Queen Size", goal: 2800, current: 0, description: "Para noites de sono mais confortáveis e espaçosas.", image: "https://picsum.photos/seed/bed/600/400", imageHint: "bedroom interior" },
   { id: 11, name: "Mesa de Jantar", goal: 2200, current: 0, description: "Para reunir amigos e família em jantares especiais.", image: "https://picsum.photos/seed/diningtable/600/400", imageHint: "dining room" },
   { id: 12, name: "Curso de Culinária", goal: 1200, current: 0, description: "Para aprendermos novas receitas juntos.", image: "https://picsum.photos/seed/cookingclass/600/400", imageHint: "cooking lesson" },
@@ -86,4 +86,5 @@ export const allGifts: Gift[] = [
   { id: 50, name: "Cortinas Novas", goal: 1200, current: 0, description: "Para dar mais privacidade e aconchego.", image: "https://picsum.photos/seed/curtains/600/400", imageHint: "window curtains" },
 ];
 
+    
     
