@@ -23,10 +23,11 @@ export default function OurStorySection() {
             <div className="grid md:grid-cols-2 items-center">
               <div className="p-6 md:p-10 space-y-4">
                 <p className="text-muted-foreground leading-relaxed">
-                  Nossa história começou de forma inesperada, em um café charmoso no centro da cidade. Entre conversas, risadas e xícaras de café, descobrimos uma conexão que ia além da amizade. Cada momento juntos fortalecia nosso laço, e o que era um encontro casual se transformou em um amor para a vida toda.
+                Nossa história não começou com um solo, mas sim em uma harmonia perfeita conduzida por Deus dentro do nosso Pequeno Grupo (PG). O que era uma amizade firmada na fé logo ganhou o ritmo de um encontro inesquecível em 2023. Ali, percebemos que o Senhor já estava entrelaçando nossos propósitos.  
+                Desde então, entendemos que Amar é um verbo, um exercício diário de amar como Cristo nos amou, no cuidado e no caminhar juntos. Entre  uma boa conversa e aprendizados juntos, fomos compondo nossa rotina sob a benção Daquele que nos uniu.  
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  Compartilhamos sonhos, superamos desafios e construímos uma parceria baseada na confiança e no carinho. Agora, estamos prontos para dar o próximo passo e celebrar nossa união com as pessoas que mais amamos. Mal podemos esperar para compartilhar este dia especial com vocês!
+                O pedido de casamento no Rio de Janeiro, em 2 de janeiro de 2025, foi o prelúdio de uma nova estação que Deus preparou para nós. Hoje, entendemos que "o que Deus uniu, não o separe o homem", e é com essa certeza que estamos ansiosos para celebrar o nosso "sim" com vocês. Queremos uma festa que reflita nossa essência e a alegria de ter Jesus como o centro da nossa futura família e da trilha sonora das nossas vidas!
                 </p>
               </div>
               <div className="relative h-64 md:h-full w-full">
