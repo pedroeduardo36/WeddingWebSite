@@ -38,7 +38,7 @@ export const allGifts: Gift[] = [
     image: "https://picsum.photos/seed/balloon/600/400",
     imageHint: "hot air balloon"
   },
-  { id: 5, name: "Colchão Liberty Ortobom", goal: 2199, current: 0, description: "Um terço da sua vida, você passa dormindo.", image: "https://www.ortobom.com.br/arquivos/ids/221379-1000-1000/01-colchao-liberty-ortobom.jpg?v=638515033870630000", imageHint: "orthopedic mattress", storeUrl: "https://www.ortobom.com.br/p/colchao/colchao-liberty/queen158" },
+  { id: 5, name: "Colchão Liberty Ortobom", goal: 2199, current: 0, description: "Um terço da sua vida, você passa dormindo.", image: "https://cdn.ortobom.com.br/file/41ba5b4b-8ab3-43c0-9be6-b667bef6707e/liberty_2.png", imageHint: "orthopedic mattress", storeUrl: "https://www.ortobom.com.br/p/colchao/colchao-liberty/queen158" },
   { id: 6, name: "TV 4K", goal: 4000, current: 0, description: "Para maratonar nossas séries favoritas em alta definição.", image: "https://picsum.photos/seed/tv/600/400", imageHint: "television screen" },
   { id: 7, name: "Geladeira Inox", goal: 4500, current: 0, description: "Uma geladeira moderna para nossa cozinha nova.", image: "https://picsum.photos/seed/fridge/600/400", imageHint: "kitchen appliance" },
   { id: 8, name: "Máquina de Lavar", goal: 3000, current: 0, description: "Para facilitar o dia a dia e manter tudo limpinho.", image: "https://picsum.photos/seed/washingmachine/600/400", imageHint: "laundry room" },
