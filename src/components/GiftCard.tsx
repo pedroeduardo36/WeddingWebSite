@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -12,7 +13,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
-import { CreditCard, QrCode, ShoppingCart } from "lucide-react";
+import { CreditCard, QrCode, ShoppingCart, CheckCircle } from "lucide-react";
 
 export interface Gift {
   id: number;
@@ -37,6 +38,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
   const qrCodeImage = PlaceHolderImages.find((img) => img.id === "qr-code");
 
   const progress = Math.min((gift.current / gift.goal) * 100, 100);
+  const isGoalReached = gift.current >= gift.goal;
 
   const formatCurrency = (value: number) => {
     return value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
@@ -65,6 +67,12 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="relative h-48 w-full bg-muted">
         <Image src={gift.image} alt={gift.name} fill className="object-contain" data-ai-hint={gift.imageHint} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+        {isGoalReached && (
+          <div className="absolute inset-0 bg-primary/50 flex flex-col items-center justify-center text-primary-foreground">
+            <CheckCircle className="h-8 w-8" />
+            <span className="mt-2 text-lg font-semibold">Presenteado!</span>
+          </div>
+        )}
       </div>
       <CardHeader>
         <CardTitle className="font-headline">{gift.name}</CardTitle>
@@ -82,7 +90,9 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
       <CardFooter className="flex gap-2">
         <Dialog open={isOpen} onOpenChange={setIsOpen}>
           <DialogTrigger asChild>
-            <Button className="w-full">Presentear</Button>
+            <Button className="w-full" disabled={isGoalReached}>
+                {isGoalReached ? "Presenteado!" : "Presentear"}
+            </Button>
           </DialogTrigger>
           <DialogContent className="sm:max-w-[425px]">
             <DialogHeader>
