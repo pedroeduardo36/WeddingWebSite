@@ -13,13 +13,17 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Label } from "@/components/ui/label";
 import { allGifts } from "@/lib/gifts";
 
 type SortOption = "default" | "price-desc" | "price-asc";
+type GiftedFilterOption = "all" | "available" | "gifted";
 
 export default function GiftsPage() {
   const [gifts, setGifts] = useState<Gift[]>(allGifts);
   const [sortOption, setSortOption] = useState<SortOption>("default");
+  const [giftedFilter, setGiftedFilter] = useState<GiftedFilterOption>("all");
 
   const handleContribute = (giftId: number, amount: number) => {
     setGifts((prevGifts) =>
@@ -29,21 +33,28 @@ export default function GiftsPage() {
     );
   };
 
-  const sortedGifts = useMemo(() => {
-    let sorted = [...gifts];
+  const sortedAndFilteredGifts = useMemo(() => {
+    let filtered = [...gifts];
+
+    if (giftedFilter === "available") {
+      filtered = filtered.filter(gift => gift.current < gift.goal);
+    } else if (giftedFilter === "gifted") {
+      filtered = filtered.filter(gift => gift.current >= gift.goal);
+    }
+
     switch (sortOption) {
       case "price-desc":
-        sorted.sort((a, b) => b.goal - a.goal);
+        filtered.sort((a, b) => b.goal - a.goal);
         break;
       case "price-asc":
-        sorted.sort((a, b) => a.goal - b.goal);
+        filtered.sort((a, b) => a.goal - b.goal);
         break;
       case "default":
-        sorted.sort((a, b) => a.id - b.id);
+        filtered.sort((a, b) => a.id - b.id);
         break;
     }
-    return sorted;
-  }, [gifts, sortOption]);
+    return filtered;
+  }, [gifts, sortOption, giftedFilter]);
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background">
@@ -59,9 +70,24 @@ export default function GiftsPage() {
                 </p>
               </div>
             </div>
-            <div className="flex justify-end my-8">
+            <div className="flex flex-col md:flex-row justify-between items-center my-8 gap-4">
+               <RadioGroup defaultValue="all" onValueChange={(value: GiftedFilterOption) => setGiftedFilter(value)} className="flex items-center gap-4">
+                  <Label className="font-medium">Filtrar:</Label>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="all" id="all" />
+                    <Label htmlFor="all">Todos</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="available" id="available" />
+                    <Label htmlFor="available">Disponíveis</Label>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <RadioGroupItem value="gifted" id="gifted" />
+                    <Label htmlFor="gifted">Presenteados</Label>
+                  </div>
+                </RadioGroup>
               <Select onValueChange={(value: SortOption) => setSortOption(value)} defaultValue="default">
-                <SelectTrigger className="w-[240px]">
+                <SelectTrigger className="w-full md:w-[240px]">
                   <SelectValue placeholder="Ordenar por" />
                 </SelectTrigger>
                 <SelectContent>
@@ -73,7 +99,7 @@ export default function GiftsPage() {
             </div>
             <Separator />
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-8">
-              {sortedGifts.map((gift) => (
+              {sortedAndFilteredGifts.map((gift) => (
                 <GiftCard key={gift.id} gift={gift} onContribute={handleContribute} />
               ))}
             </div>
