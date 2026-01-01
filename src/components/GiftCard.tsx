@@ -8,12 +8,11 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription }
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
-import { CreditCard, QrCode, ShoppingCart, CheckCircle } from "lucide-react";
+import { QrCode, ShoppingCart, CheckCircle } from "lucide-react";
 
 export interface Gift {
   id: number;
@@ -88,59 +87,38 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
         </div>
       </CardContent>
       <CardFooter className="flex gap-2">
-        <Dialog open={isOpen} onOpenChange={setIsOpen}>
-          <DialogTrigger asChild>
-            <Button className="w-full" disabled={isGoalReached}>
-                {isGoalReached ? "Presenteado!" : "Presentear"}
-            </Button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[425px]">
-            <DialogHeader>
-              <DialogTitle className="font-headline">{gift.name}</DialogTitle>
-              <DialogDescription>
-                Escolha a forma de pagamento e o valor da sua contribuição.
-              </DialogDescription>
-            </DialogHeader>
-            <Tabs defaultValue="pix" className="w-full">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="pix"><QrCode className="mr-2" /> PIX</TabsTrigger>
-                <TabsTrigger value="credit-card"><CreditCard className="mr-2"/> Cartão</TabsTrigger>
-              </TabsList>
-              <TabsContent value="pix" className="mt-4">
-                <div className="flex flex-col items-center space-y-4">
-                  <p className="text-sm text-center text-muted-foreground">
-                    Escaneie o QR Code com o app do seu banco. Este é um QR Code de exemplo.
-                  </p>
-                  {qrCodeImage && <Image src={qrCodeImage.imageUrl} alt={qrCodeImage.description} width={200} height={200} data-ai-hint={qrCodeImage.imageHint} />}
-                  <Label htmlFor="pix-amount" className="sr-only">Valor</Label>
-                  <Input id="pix-amount" placeholder="Digite o valor (ex: 50.00)" value={contribution} onChange={(e) => setContribution(e.target.value)} />
-                </div>
-              </TabsContent>
-              <TabsContent value="credit-card" className="mt-4">
-                <div className="space-y-4">
-                    <p className="text-sm text-center text-muted-foreground">
-                        Esta é uma simulação. Nenhum dado de cartão será processado.
-                    </p>
-                    <div className="space-y-2">
-                        <Label htmlFor="card-amount">Valor</Label>
-                        <Input id="card-amount" placeholder="Digite o valor (ex: 50.00)" value={contribution} onChange={(e) => setContribution(e.target.value)} />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="card-name">Nome no Cartão</Label>
-                        <Input id="card-name" placeholder="Júlia S. Pedro" />
-                    </div>
-                    <div className="space-y-2">
-                        <Label htmlFor="card-number">Número do Cartão</Label>
-                        <Input id="card-number" placeholder="**** **** **** 1234" />
-                    </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-            <DialogFooter>
-              <Button type="submit" onClick={handleContributeClick} className="w-full">Contribuir {contribution && formatCurrency(parseFloat(contribution) || 0)}</Button>
-            </DialogFooter>
-          </DialogContent>
-        </Dialog>
+        {!isGoalReached && (
+          <Dialog open={isOpen} onOpenChange={setIsOpen}>
+            <DialogTrigger asChild>
+              <Button className="w-full">
+                Presentear
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="sm:max-w-[425px]">
+              <DialogHeader>
+                <DialogTitle className="font-headline">{gift.name}</DialogTitle>
+                <DialogDescription>
+                  Faça sua contribuição via PIX.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="flex flex-col items-center space-y-4 pt-4">
+                <p className="text-sm text-center text-muted-foreground">
+                  <QrCode className="inline-block mr-2" />
+                  Escaneie o QR Code com o app do seu banco. Este é um QR Code de exemplo.
+                </p>
+                {qrCodeImage && <Image src={qrCodeImage.imageUrl} alt={qrCodeImage.description} width={200} height={200} data-ai-hint={qrCodeImage.imageHint} />}
+                <Label htmlFor="pix-amount" className="sr-only">Valor</Label>
+                <Input id="pix-amount" placeholder="Digite o valor (ex: 50.00)" value={contribution} onChange={(e) => setContribution(e.target.value)} />
+              </div>
+              <DialogFooter>
+                <Button type="submit" onClick={handleContributeClick} className="w-full">Contribuir {contribution && formatCurrency(parseFloat(contribution) || 0)}</Button>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+        )}
+        {isGoalReached && !gift.storeUrl && (
+           <Button className="w-full" disabled>Presenteado!</Button>
+        )}
         {gift.storeUrl && (
             <Button variant="outline" asChild className="w-full">
                 <Link href={gift.storeUrl} target="_blank">
