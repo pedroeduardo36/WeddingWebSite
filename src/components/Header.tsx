@@ -39,7 +39,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={28} height={28} className="filter-primary" style={{filter: 'brightness(0) saturate(100%) invert(26%) sepia(18%) saturate(1458%) hue-rotate(85deg) brightness(91%) contrast(90%)'}} />
+          <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={28} height={28} />
           <span className="font-headline text-lg font-semibold tracking-wide">
             Júlia & Pedro
           </span>
@@ -70,7 +70,7 @@ export default function Header() {
                 className="flex items-center gap-2"
                 prefetch={false}
               >
-                <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={24} height={24} style={{filter: 'brightness(0) saturate(100%) invert(26%) sepia(18%) saturate(1458%) hue-rotate(85deg) brightness(91%) contrast(90%)'}} />
+                <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={24} height={24} />
                 <span className="font-headline text-lg font-semibold">
                   Júlia & Pedro
                 </span>
