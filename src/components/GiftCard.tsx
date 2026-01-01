@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
 import { QrCode, ShoppingCart, CheckCircle, Link2 } from "lucide-react";
@@ -33,6 +34,8 @@ interface GiftCardProps {
 
 export default function GiftCard({ gift, onContribute }: GiftCardProps) {
   const [contribution, setContribution] = useState("");
+  const [contributorName, setContributorName] = useState("");
+  const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
   const qrCodeImage = PlaceHolderImages.find((img) => img.id === "qr-code");
@@ -46,21 +49,42 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
 
   const handleContributeClick = () => {
     const amount = parseFloat(contribution);
-    if (!isNaN(amount) && amount > 0) {
-      onContribute(gift.id, amount);
-      setIsOpen(false);
-      setContribution("");
-      toast({
-        title: "Obrigado!",
-        description: `Sua contribuição de ${formatCurrency(amount)} foi registrada.`,
-      });
-    } else {
+    if (isNaN(amount) || amount <= 0) {
         toast({
             variant: "destructive",
             title: "Valor inválido",
-            description: "Por favor, insira um valor válido.",
+            description: "Por favor, insira um valor de contribuição válido.",
         });
+        return;
     }
+    if (!contributorName.trim()) {
+        toast({
+            variant: "destructive",
+            title: "Nome não preenchido",
+            description: "Por favor, preencha seu nome.",
+        });
+        return;
+    }
+
+    // Placeholder para enviar os dados para um backend
+    console.log("Nova Contribuição:", {
+      giftName: gift.name,
+      giftId: gift.id,
+      amount,
+      contributorName,
+      message,
+    });
+    
+    onContribute(gift.id, amount);
+    setIsOpen(false);
+    setContribution("");
+    setContributorName("");
+    setMessage("");
+
+    toast({
+      title: "Obrigado!",
+      description: `Sua contribuição de ${formatCurrency(amount)} foi registrada.`,
+    });
   };
 
   return (
@@ -99,7 +123,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
               <DialogHeader>
                 <DialogTitle className="font-headline">{gift.name}</DialogTitle>
                 <DialogDescription>
-                  Faça sua contribuição via PIX.
+                  Faça sua contribuição via PIX e depois registre abaixo.
                 </DialogDescription>
               </DialogHeader>
               <div className="space-y-4 pt-4">
@@ -124,13 +148,24 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
 
                 <Separator />
 
-                <div className="space-y-2">
-                    <Label htmlFor="pix-amount">Após pagar, registre sua contribuição:</Label>
-                    <Input id="pix-amount" placeholder="Digite o valor (ex: 50.00)" value={contribution} onChange={(e) => setContribution(e.target.value)} />
+                <div className="space-y-4">
+                    <p className="text-sm font-semibold text-center text-primary">Após pagar, registre sua contribuição:</p>
+                    <div className="space-y-2">
+                      <Label htmlFor="contributor-name">Seu Nome</Label>
+                      <Input id="contributor-name" placeholder="Digite seu nome completo" value={contributorName} onChange={(e) => setContributorName(e.target.value)} />
+                    </div>
+                     <div className="space-y-2">
+                      <Label htmlFor="pix-amount">Valor da Contribuição (R$)</Label>
+                      <Input id="pix-amount" placeholder="Ex: 50.00" value={contribution} onChange={(e) => setContribution(e.target.value)} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="message">Sua Mensagem (opcional)</Label>
+                      <Textarea id="message" placeholder="Deixe uma mensagem para os noivos" value={message} onChange={(e) => setMessage(e.target.value)} />
+                    </div>
                 </div>
               </div>
               <DialogFooter>
-                <Button type="submit" onClick={handleContributeClick} className="w-full">Confirmar Contribuição {contribution && formatCurrency(parseFloat(contribution) || 0)}</Button>
+                <Button type="submit" onClick={handleContributeClick} className="w-full">Confirmar Contribuição</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
@@ -139,11 +174,13 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
            <Button className="w-full" disabled>Presenteado!</Button>
         )}
         {gift.storeUrl && (
+          <div className="w-full flex justify-center">
             <Button variant="outline" asChild className="w-full">
                 <Link href={gift.storeUrl} target="_blank">
                     <ShoppingCart className="mr-2" /> Ver na Loja
                 </Link>
             </Button>
+          </div>
         )}
       </CardFooter>
     </Card>
