@@ -14,8 +14,8 @@
     },
     {
       "id": "qr-code",
-      "description": "A placeholder QR code for PIX payments",
-      "imageUrl": "https://images.unsplash.com/photo-1550482768-88b710a445fd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8cXIlMjBjb2RlfGVufDB8fHx8MTc2NjUxMzg4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "description": "A QR code for PIX payments",
+      "imageUrl": "https://storage.googleapis.com/alt-text-studio.appspot.com/google-pixel-20240723-181534.png",
       "imageHint": "qr code"
     }
   ]
