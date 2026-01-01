@@ -12,7 +12,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
-import { QrCode, ShoppingCart, CheckCircle } from "lucide-react";
+import { QrCode, ShoppingCart, CheckCircle, Link2 } from "lucide-react";
+import { Separator } from "@/components/ui/separator";
 
 export interface Gift {
   id: number;
@@ -101,17 +102,35 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
                   Faça sua contribuição via PIX.
                 </DialogDescription>
               </DialogHeader>
-              <div className="flex flex-col items-center space-y-4 pt-4">
-                <p className="text-sm text-center text-muted-foreground">
-                  <QrCode className="inline-block mr-2" />
-                  Escaneie o QR Code com o app do seu banco. Este é um QR Code de exemplo.
-                </p>
-                {qrCodeImage && <Image src={qrCodeImage.imageUrl} alt={qrCodeImage.description} width={200} height={200} data-ai-hint={qrCodeImage.imageHint} />}
-                <Label htmlFor="pix-amount" className="sr-only">Valor</Label>
-                <Input id="pix-amount" placeholder="Digite o valor (ex: 50.00)" value={contribution} onChange={(e) => setContribution(e.target.value)} />
+              <div className="space-y-4 pt-4">
+                <div className="flex flex-col items-center space-y-2">
+                    <p className="text-sm text-center text-muted-foreground">
+                      <QrCode className="inline-block mr-2" />
+                      Escaneie o QR Code com o app do seu banco.
+                    </p>
+                    {qrCodeImage && <Image src={qrCodeImage.imageUrl} alt={qrCodeImage.description} width={200} height={200} data-ai-hint={qrCodeImage.imageHint} />}
+                </div>
+
+                <div className="relative">
+                  <Separator />
+                  <span className="absolute left-1/2 -translate-x-1/2 -top-2.5 bg-background px-2 text-sm text-muted-foreground">OU</span>
+                </div>
+                
+                <Button variant="outline" asChild>
+                    <Link href="https://nubank.com.br/cobrar/pquj/6956ef41-a9d8-4e68-92dc-882088310601" target="_blank" className="w-full">
+                        <Link2 className="mr-2" /> Pagar com Link (Copia e Cola)
+                    </Link>
+                </Button>
+
+                <Separator />
+
+                <div className="space-y-2">
+                    <Label htmlFor="pix-amount">Após pagar, registre sua contribuição:</Label>
+                    <Input id="pix-amount" placeholder="Digite o valor (ex: 50.00)" value={contribution} onChange={(e) => setContribution(e.target.value)} />
+                </div>
               </div>
               <DialogFooter>
-                <Button type="submit" onClick={handleContributeClick} className="w-full">Contribuir {contribution && formatCurrency(parseFloat(contribution) || 0)}</Button>
+                <Button type="submit" onClick={handleContributeClick} className="w-full">Confirmar Contribuição {contribution && formatCurrency(parseFloat(contribution) || 0)}</Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
