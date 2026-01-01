@@ -31,16 +31,17 @@ export const allGifts: Gift[] = [
   },
   {
     id: 4,
-    name: "Passeio de Balão",
-    goal: 2500,
+    name: "Base Báu Queen",
+    goal: 969,
     current: 0,
-    description: "Uma aventura inesquecível para começar nossa vida de casados.",
-    image: "https://picsum.photos/seed/balloon/600/400",
-    imageHint: "hot air balloon"
+    description: "Base para colchão queen",
+    image: "https://cdn.iset.io/assets/73735/produtos/1056/c3a9c67f3f217351893295fa9a9560ec66c637693f121.png",
+    imageHint: "Cama bau",
+    storeUrl: "https://www.dfcolchoes.com.br/Base-Bau-Queen-Bipartida-1-Tampa-DF-Premium-Econ-36cm?sku=05422-CORINO-PRETA&gad_campaignid=19006258944&gbraid=0AAAAACtkcVDQxq1wLDYqEKSOXTW9nUH_S"
   },
   { id: 5, name: "Colchão Liberty Ortobom", goal: 3399, current: 0, description: "Um terço da sua vida, você passa dormindo.", image: "https://cdn.ortobom.com.br/file/41ba5b4b-8ab3-43c0-9be6-b667bef6707e/liberty_2.png", imageHint: "orthopedic mattress", storeUrl: "https://www.ortobom.com.br/p/colchao/colchao-liberty/queen158" },
   { id: 6, name: "TV", goal: 1199, current: 1199, description: "Pro noivo ver o jogo do Palmeiras ou pros dias de campus online.", image: "https://www.lg.com/content/dam/channel/wcms/br/images/tv/55ur8750psa_bwz_essp_br_c/gallery/DZ-3.jpg", imageHint: "television screen" },
-  { id: 7, name: "Geladeira Inox", goal: 4500, current: 0, description: "Uma geladeira moderna para nossa cozinha nova.", image: "https://picsum.photos/seed/fridge/600/400", imageHint: "kitchen appliance" },
+  { id: 7, name: "Bandeja Organizadara Home Style", goal: 99.99, current: 0, description: "Bandeja organizadora.", image: "https://img.camicado.com.br/item/101029398/zoom/1.jpg", imageHint: "kitchen appliance", storeUrl:"https://www.camicado.com.br/p/bandeja-organizadora-home-style-mediterranie-25-cm-x-14-cm/-/A-101029380-br.lc?sku=101029398" },
   { id: 8, name: "Máquina de Lavar", goal: 3000, current: 0, description: "Para facilitar o dia a dia e manter tudo limpinho.", image: "https://picsum.photos/seed/washingmachine/600/400", imageHint: "laundry room" },
   { id: 9, name: "Lava e seca", goal: 3798, current: 0, description: "Samsung WD11A para facilitar o dia a dia dos noivos", image: "https://imgs.ponto.com.br/55048505/1g.jpg?imwidth=500", imageHint: "washing machine", storeUrl: "https://www.casasbahia.com.br/lava-e-seca-samsung-wd11a-3-em-1-inox-look-com-ecobubble-e-lavagem-a-seco-wd11a4453bx-11-kg/p/55048506?IdSku=55048506&idLojista=10037&tipoLojista=1P&&gad_campaignid=22444217737&gbraid=0AAAAADtAamgUU6Ya-1K2DmFN3sJhiw4mP" },
   { id: 10, name: "Cama Queen Size", goal: 2800, current: 0, description: "Para noites de sono mais confortáveis e espaçosas.", image: "https://picsum.photos/seed/bed/600/400", imageHint: "bedroom interior" },
@@ -87,4 +88,6 @@ export const allGifts: Gift[] = [
 ];
 
     
+    
+
     
