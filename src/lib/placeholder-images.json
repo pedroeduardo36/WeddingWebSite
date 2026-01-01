@@ -14,8 +14,8 @@
     },
     {
       "id": "qr-code",
-      "description": "A QR code for PIX payments",
-      "imageUrl": "https://storage.googleapis.com/alt-text-studio.appspot.com/google-pixel-20240723-181534.png",
+      "description": "A QR code for PIX payments with the text 'Júlia & Pedro'",
+      "imageUrl": "https://images.unsplash.com/photo-1767306185679-8b6429e0857c?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "qr code"
     }
   ]
