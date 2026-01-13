@@ -42,10 +42,10 @@ export const allGifts: Gift[] = [
   { id: 5, name: "Colchão Liberty Ortobom", goal: 3399, current: 0, description: "Um terço da sua vida, você passa dormindo.", image: "https://cdn.ortobom.com.br/file/41ba5b4b-8ab3-43c0-9be6-b667bef6707e/liberty_2.png", imageHint: "orthopedic mattress", storeUrl: "https://www.ortobom.com.br/p/colchao/colchao-liberty/queen158" },
   { id: 6, name: "TV", goal: 1199, current: 1199, description: "Pro noivo ver o jogo do Palmeiras ou pros dias de campus online.", image: "https://www.lg.com/content/dam/channel/wcms/br/images/tv/55ur8750psa_bwz_essp_br_c/gallery/DZ-3.jpg", imageHint: "television screen" },
   { id: 7, name: "Bandeja Organizadara Home Style", goal: 99.99, current: 0, description: "Bandeja organizadora.", image: "https://img.camicado.com.br/item/101029398/zoom/1.jpg", imageHint: "kitchen appliance", storeUrl:"https://www.camicado.com.br/p/bandeja-organizadora-home-style-mediterranie-25-cm-x-14-cm/-/A-101029380-br.lc?sku=101029398" },
-  { id: 8, name: "Máquina de Lavar", goal: 3000, current: 0, description: "Para facilitar o dia a dia e manter tudo limpinho.", image: "https://picsum.photos/seed/washingmachine/600/400", imageHint: "laundry room" },
+  { id: 8, name: "Porta sabonete Líquido", goal: 89.99, current: 0, description: "Home Style.", image: "https://img.camicado.com.br/item/100828657/zoom/1.jpg", imageHint: "laundry room", storeUrl: "https://www.camicado.com.br/p/porta-sabonete-liquido-home-style-mediterranie/-/A-100828649-br.lc?sku=100828657" },
   { id: 9, name: "Lava e seca", goal: 3798, current: 0, description: "Samsung WD11A para facilitar o dia a dia dos noivos", image: "https://imgs.ponto.com.br/55048505/1g.jpg?imwidth=500", imageHint: "washing machine", storeUrl: "https://www.casasbahia.com.br/lava-e-seca-samsung-wd11a-3-em-1-inox-look-com-ecobubble-e-lavagem-a-seco-wd11a4453bx-11-kg/p/55048506?IdSku=55048506&idLojista=10037&tipoLojista=1P&&gad_campaignid=22444217737&gbraid=0AAAAADtAamgUU6Ya-1K2DmFN3sJhiw4mP" },
-  { id: 10, name: "Cama Queen Size", goal: 2800, current: 0, description: "Para noites de sono mais confortáveis e espaçosas.", image: "https://picsum.photos/seed/bed/600/400", imageHint: "bedroom interior" },
-  { id: 11, name: "Mesa de Jantar", goal: 2200, current: 0, description: "Para reunir amigos e família em jantares especiais.", image: "https://picsum.photos/seed/diningtable/600/400", imageHint: "dining room" },
+  { id: 10, name: "Porta Escova de dente", goal: 59.99, current: 0, description: "Home Style.", image: "https://img.camicado.com.br/item/100828711/zoom/1.jpg", imageHint: "bedroom interio", storeUrl: "https://www.camicado.com.br/p/porta-escova-home-style-mediterranie/-/A-100828702-br.lc?sku=100828711" },
+  { id: 11, name: "Porta cotonete", goal: 99.99, current: 0, description: "Para reunir amigos e família em jantares especiais.", image: "https://picsum.photos/seed/diningtable/600/400", imageHint: "dining room" },
   { id: 12, name: "Lava e seca Brastemp", goal: 2100, current: 2100, description: "Para os noivos não brigarem pela louça.", image: "https://brastemp.vtexassets.com/arquivos/ids/267500-300-300/01_Brastemp_Lava_loucas_BLF08BS_Imagem_Detalhe_BLF08BS_FRONTAL_4.jpg?v=638973414195430000", imageHint: "cooking lesson", storeUrl: "https://site.fastshop.com.br/lava-loucas-brastemp-cinza-metalico-com-08-servicos-e-05-programas-de-lavagem---blf08b-brblf08bsana_prd/p?idsku=2498&gad_campaignid=22746909051" },
   { id: 13, name: "Fritadeira Elétrica", goal: 500, current: 0, description: "Para lanches rápidos e mais saudáveis.", image: "https://picsum.photos/seed/airfryer/600/400", imageHint: "kitchen appliance" },
   { id: 14, name: "Aspirador de Pó Robô", goal: 1800, current: 0, description: "Para manter a casa limpa sem esforço.", image: "https://picsum.photos/seed/robotvacuum/600/400", imageHint: "home cleaning" },
@@ -86,8 +86,3 @@ export const allGifts: Gift[] = [
   { id: 49, name: "Paisagismo do Jardim", goal: 2500, current: 0, description: "Para criar um jardim lindo em nosso lar.", image: "https://picsum.photos/seed/gardening/600/400", imageHint: "home garden" },
   { id: 50, name: "Cortinas Novas", goal: 1200, current: 0, description: "Para dar mais privacidade e aconchego.", image: "https://picsum.photos/seed/curtains/600/400", imageHint: "window curtains" },
 ];
-
-    
-    
-
-    
