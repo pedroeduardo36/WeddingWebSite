@@ -7,6 +7,8 @@
     "genkit:dev": "genkit start -- tsx src/ai/dev.ts",
     "genkit:watch": "genkit start -- tsx --watch src/ai/dev.ts",
     "build": "NODE_ENV=production next build",
+    "export": "next export",
+    "deploy": "next build && next export && gh-pages -d out",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit"
@@ -60,6 +62,7 @@
     "@types/react": "^19.2.1",
     "@types/react-dom": "^19.2.1",
     "genkit-cli": "^1.20.0",
+    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
