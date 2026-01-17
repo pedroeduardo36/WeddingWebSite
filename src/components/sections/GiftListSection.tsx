@@ -27,8 +27,15 @@ export default function GiftListSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Lista de Presentes</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Seu carinho é nosso maior presente, mas se desejar nos presentear, aqui estão algumas sugestões.
+            <p className="text-justify max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              O maior presente é a presença de vocês!
+              Mas, como amor não compra sofá (infelizmente), criamos essa lista para quem quiser dar uma força na montagem do nosso cantinho.
+                <br />
+               O site é nosso e não cobra taxas: o valor do presente vai direto pra gente via Pix e vira móvel, decoração e eletrodoméstico pra gente não precisar sentar no chão da sala nova!
+                 <br />
+              Mas, se você prefere escolher o presente físico, sem problemas: também deixamos sugestões aqui com o link direto da loja para facilitar. Escolha o que ficar mais prático pra você! 
+                <br />
+              Obrigado pelo carinho de sempre.
             </p>
           </div>
         </div>
