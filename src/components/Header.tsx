@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from 'next/navigation'
+import headerLogo from '../assets/logoSite.svg'
 
 
 export default function Header() {
@@ -39,7 +40,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={28} height={28} />
+          <Image src={headerLogo} alt="Logo" width={12} height={12} />
           <span className="font-headline text-lg font-semibold tracking-wide">
             Júlia & Pedro
           </span>
