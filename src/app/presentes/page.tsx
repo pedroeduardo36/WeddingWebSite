@@ -3,8 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react"; // Ícone de voltar
-import GiftCard from "@/components/GiftCard";
-import type { Gift } from "@/lib/gifts";
+import GiftCard, { type Gift } from "@/components/GiftCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { allGifts } from "@/lib/gifts";

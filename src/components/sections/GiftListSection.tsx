@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import GiftCard from "@/components/GiftCard";
-import type { Gift } from "@/lib/gifts";
+import GiftCard, { Gift } from "@/components/GiftCard";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { allGifts } from "@/lib/gifts";
