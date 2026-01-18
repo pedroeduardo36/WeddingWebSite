@@ -2,13 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react"; // Ícone de voltar
-import GiftCard from "@/components/GiftCard";
-import type { Gift } from "@/lib/gifts";
+import { ArrowLeft } from "lucide-react"; 
+import GiftCard from "@/components/GiftCard"; // Importa apenas o Componente
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { allGifts } from "@/lib/gifts";
 import { supabase } from "@/lib/supabase";
+import type { Gift } from "@/lib/gifts";
 
 export default function GiftsPage() {
   // Inicializa com todos os presentes
