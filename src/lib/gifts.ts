@@ -1,5 +1,13 @@
-
-import type { Gift } from "@/components/GiftCard";
+export interface Gift {
+  id: number;
+  name: string;
+  goal: number;
+  current: number;
+  description: string;
+  image: string;
+  imageHint: string;
+  storeUrl?: string;
+}
 
 export const allGifts: Gift[] = [
     {
