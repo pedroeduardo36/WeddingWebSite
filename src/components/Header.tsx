@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -8,15 +7,17 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { usePathname } from 'next/navigation'
-
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
   const navLinks = [
-    { href: pathname === "/" ? "#historia" : "/#historia", label: "Nossa História" },
+    {
+      href: pathname === "/" ? "#historia" : "/#historia",
+      label: "Nossa História",
+    },
     { href: pathname === "/" ? "#local" : "/#local", label: "Local" },
     { href: "/presentes", label: "Lista de Presentes" },
     { href: pathname === "/" ? "#rsvp" : "/#rsvp", label: "RSVP" },
@@ -34,12 +35,17 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-card/50 shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-card/50 shadow-md backdrop-blur-sm" : "bg-transparent",
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={28} height={28} />
+          <Image
+            src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Logo"
+            width={28}
+            height={28}
+          />
           <span className="font-headline text-lg font-semibold tracking-wide">
             Júlia & Pedro
           </span>
@@ -70,7 +76,12 @@ export default function Header() {
                 className="flex items-center gap-2"
                 prefetch={false}
               >
-                <Image src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo" width={24} height={24} />
+                <Image
+                  src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Logo"
+                  width={24}
+                  height={24}
+                />
                 <span className="font-headline text-lg font-semibold">
                   Júlia & Pedro
                 </span>
