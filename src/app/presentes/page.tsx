@@ -74,7 +74,12 @@ export default function GiftsPage() {
   };
 
   // Função para salvar a doação
-  const handleContribute = async (giftId: number, amount: number) => {
+  const handleContribute = async (
+    giftId: number,
+    amount: number,
+    name: string,
+    message: string,
+  ) => {
     // Atualização otimista (UI)
     setGifts((prevGifts) =>
       prevGifts.map((gift) =>
@@ -83,14 +88,19 @@ export default function GiftsPage() {
     );
 
     // Salvar no Banco
-    const { error } = await supabase
-      .from("contributions")
-      .insert([{ gift_id: giftId, amount: amount }]);
+    const { error } = await supabase.from("contributions").insert([
+      {
+        gift_id: giftId,
+        amount: amount,
+        guest_name: name,
+        message: message,
+      },
+    ]);
 
     if (error) {
       console.error("Erro ao salvar doação:", error);
       alert("Erro ao processar a doação. Tente novamente.");
-      fetchContributions(); // Reverte em caso de erro
+      fetchContributions();
     }
   };
 

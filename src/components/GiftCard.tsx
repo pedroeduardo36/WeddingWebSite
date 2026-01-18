@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from "react";
@@ -13,23 +12,13 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { useToast } from "@/hooks/use-toast";
-import { QrCode, ShoppingCart, CheckCircle, Link2 } from "lucide-react";
+import { QrCode, ShoppingCart, CheckCircle, Link2, Gift as GiftIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
-
-export interface Gift {
-  id: number;
-  name: string;
-  goal: number;
-  current: number;
-  description: string;
-  image: string;
-  imageHint: string;
-  storeUrl?: string;
-}
+import type { Gift } from "@/lib/gifts";
 
 interface GiftCardProps {
   gift: Gift;
-  onContribute: (giftId: number, amount: number) => void;
+  onContribute: (giftId: number, amount: number, name: string, message: string) => void;
 }
 
 export default function GiftCard({ gift, onContribute }: GiftCardProps) {
@@ -38,6 +27,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
   const [message, setMessage] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
+  
   const qrCodeImage = PlaceHolderImages.find((img) => img.id === "qr-code");
 
   const progress = Math.min((gift.current / gift.goal) * 100, 100);
@@ -49,6 +39,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
 
   const handleContributeClick = () => {
     const amount = parseFloat(contribution);
+
     if (isNaN(amount) || amount <= 0) {
         toast({
             variant: "destructive",
@@ -61,21 +52,13 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
         toast({
             variant: "destructive",
             title: "Nome não preenchido",
-            description: "Por favor, preencha seu nome.",
+            description: "Por favor, preencha seu nome para sabermos quem agradeçer!",
         });
         return;
     }
 
-    // Placeholder para enviar os dados para um backend
-    console.log("Nova Contribuição:", {
-      giftName: gift.name,
-      giftId: gift.id,
-      amount,
-      contributorName,
-      message,
-    });
+    onContribute(gift.id, amount, contributorName, message);
     
-    onContribute(gift.id, amount);
     setIsOpen(false);
     setContribution("");
     setContributorName("");
@@ -90,98 +73,158 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
   return (
     <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
       <div className="relative h-48 w-full bg-muted">
-        <Image src={gift.image} alt={gift.name} fill className="object-contain" data-ai-hint={gift.imageHint} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
+        <Image 
+          src={gift.image} 
+          alt={gift.name} 
+          fill 
+          className="object-cover transition-transform hover:scale-105" 
+          data-ai-hint={gift.imageHint} 
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
+        />
+        
         {isGoalReached && (
-          <div className="absolute inset-0 bg-primary/50 flex flex-col items-center justify-center text-primary-foreground">
-            <CheckCircle className="h-8 w-8" />
-            <span className="mt-2 text-lg font-semibold">Presenteado!</span>
+          <div className="absolute inset-0 bg-primary/60 flex flex-col items-center justify-center text-primary-foreground backdrop-blur-[2px]">
+            <CheckCircle className="h-10 w-10 mb-2 drop-shadow-md" />
+            <span className="text-xl font-bold drop-shadow-md">Presenteado!</span>
           </div>
         )}
       </div>
+
       <CardHeader>
-        <CardTitle className="font-headline">{gift.name}</CardTitle>
-        <CardDescription>{gift.description}</CardDescription>
+        <CardTitle className="font-headline line-clamp-1" title={gift.name}>{gift.name}</CardTitle>
+        <CardDescription className="line-clamp-2 min-h-[40px]">{gift.description}</CardDescription>
       </CardHeader>
+
       <CardContent className="flex-grow space-y-4">
         <div className="space-y-2">
+            <div className="flex justify-between text-sm font-semibold">
+                <span className="text-primary">{formatCurrency(gift.current)}</span>
+                <span className="text-muted-foreground">{formatCurrency(gift.goal)}</span>
+            </div>
+            
             <Progress value={progress} className="h-2" />
-            <div className="flex justify-between text-sm text-muted-foreground">
-                <span>{formatCurrency(gift.current)}</span>
-                <span>{formatCurrency(gift.goal)}</span>
+            
+            <div className="text-xs text-right text-muted-foreground">
+                {progress.toFixed(0)}% atingido
             </div>
         </div>
       </CardContent>
-      <CardFooter className="flex gap-2">
-        {!isGoalReached && (
-          <Dialog open={isOpen} onOpenChange={setIsOpen}>
-            <DialogTrigger asChild>
-              <Button className="w-full">
-                Presentear
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle className="font-headline">{gift.name}</DialogTitle>
-                <DialogDescription>
-                  Faça sua contribuição via PIX e depois registre abaixo.
-                </DialogDescription>
-              </DialogHeader>
-              <div className="space-y-4 pt-4">
-                <div className="flex flex-col items-center space-y-2">
-                    <p className="text-sm text-center text-muted-foreground">
-                      <QrCode className="inline-block mr-2" />
-                      Escaneie o QR Code com o app do seu banco.
-                    </p>
-                    {qrCodeImage && <Image src={qrCodeImage.imageUrl} alt={qrCodeImage.description} width={200} height={200} data-ai-hint={qrCodeImage.imageHint} />}
-                </div>
 
-                <div className="relative">
-                  <Separator />
-                  <span className="absolute left-1/2 -translate-x-1/2 -top-2.5 bg-background px-2 text-sm text-muted-foreground">OU</span>
-                </div>
-                
-                <Button variant="outline" asChild>
-                    <Link href="https://nubank.com.br/cobrar/pquj/6956ef41-a9d8-4e68-92dc-882088310601" target="_blank" className="w-full">
-                        <Link2 className="mr-2" /> Pagar com Link (Copia e Cola)
+      <CardFooter className="pt-2 pb-4">
+        <div className="flex w-full gap-2">
+            
+            {/* Botão de Presentear */}
+            {!isGoalReached ? (
+              <Dialog open={isOpen} onOpenChange={setIsOpen}>
+                <DialogTrigger asChild>
+                  <Button className="flex-1 gap-2 font-semibold">
+                     <GiftIcon className="w-4 h-4" /> Presentear
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="font-headline text-xl text-primary">{gift.name}</DialogTitle>
+                    <DialogDescription>
+                      Faça sua contribuição via PIX e registre abaixo para sabermos que foi você!
+                    </DialogDescription>
+                  </DialogHeader>
+                  
+                  <div className="space-y-6 pt-4">
+                    <div className="bg-muted/50 p-4 rounded-lg border border-border flex flex-col items-center gap-3">
+                        <p className="text-sm font-medium text-center text-muted-foreground flex items-center gap-2">
+                          <QrCode className="w-4 h-4" />
+                          QR Code PIX
+                        </p>
+                        {qrCodeImage ? (
+                          <div className="bg-white p-2 rounded shadow-sm">
+                            <Image src={qrCodeImage.imageUrl} alt="QR Code Pix" width={180} height={180} />
+                          </div>
+                        ) : (
+                          <div className="w-[180px] h-[180px] bg-gray-200 flex items-center justify-center text-xs text-gray-500">
+                            QR Code não carregado
+                          </div>
+                        )}
+                        
+                        <div className="relative w-full flex items-center gap-2">
+                          <Separator className="flex-1" />
+                          <span className="text-xs text-muted-foreground uppercase">Ou Copia e Cola</span>
+                          <Separator className="flex-1" />
+                        </div>
+                        
+                        <Button variant="outline" size="sm" asChild className="w-full">
+                            <Link href="https://nubank.com.br/cobrar/pquj/6956ef41-a9d8-4e68-92dc-882088310601" target="_blank">
+                                <Link2 className="mr-2 w-3 h-3" /> Abrir Link
+                            </Link>
+                        </Button>
+                    </div>
+
+                    <Separator />
+
+                    <div className="space-y-4">
+                        <div className="flex items-center gap-2 text-primary">
+                            <CheckCircle className="w-4 h-4" />
+                            <h4 className="font-semibold text-sm">Registre sua contribuição</h4>
+                        </div>
+                        
+                        <div className="grid gap-4">
+                            <div className="space-y-2">
+                              <Label htmlFor="contributor-name">Seu Nome <span className="text-red-500">*</span></Label>
+                              <Input 
+                                id="contributor-name" 
+                                placeholder="Ex: João e Maria" 
+                                value={contributorName} 
+                                onChange={(e) => setContributorName(e.target.value)} 
+                              />
+                            </div>
+
+                            <div className="space-y-2">
+                              <Label htmlFor="pix-amount">Valor Pago (R$) <span className="text-red-500">*</span></Label>
+                              <Input 
+                                id="pix-amount" 
+                                type="number" 
+                                placeholder="Ex: 150.00" 
+                                value={contribution} 
+                                onChange={(e) => setContribution(e.target.value)} 
+                              />
+                            </div>
+
+                            <div className="space-y-2">
+                              <Label htmlFor="message">Mensagem (Opcional)</Label>
+                              <Textarea 
+                                id="message" 
+                                placeholder="Escreva algo especial..." 
+                                value={message} 
+                                onChange={(e) => setMessage(e.target.value)}
+                                className="resize-none"
+                                rows={2}
+                              />
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+
+                  <DialogFooter className="mt-4 gap-2 sm:gap-0">
+                    <Button variant="outline" onClick={() => setIsOpen(false)}>Cancelar</Button>
+                    <Button onClick={handleContributeClick} className="w-full sm:w-auto">Confirmar</Button>
+                  </DialogFooter>
+                </DialogContent>
+              </Dialog>
+            ) : (
+               <Button className="flex-1 bg-muted text-muted-foreground hover:bg-muted cursor-not-allowed" disabled>
+                 <CheckCircle className="mr-2 h-4 w-4" /> Completo!
+               </Button>
+            )}
+
+            {/* Botão da Loja Atualizado: Com texto "Ver na loja" */}
+            {gift.storeUrl && (
+                <Button variant="outline" asChild className="shrink-0 gap-2 px-3" title="Ver na Loja">
+                    <Link href={gift.storeUrl} target="_blank" rel="noopener noreferrer">
+                        <ShoppingCart className="h-4 w-4" />
+                        Ver na loja
                     </Link>
                 </Button>
-
-                <Separator />
-
-                <div className="space-y-4">
-                    <p className="text-sm font-semibold text-center text-primary">Após pagar, registre sua contribuição:</p>
-                    <div className="space-y-2">
-                      <Label htmlFor="contributor-name">Seu Nome</Label>
-                      <Input id="contributor-name" placeholder="Digite seu nome completo" value={contributorName} onChange={(e) => setContributorName(e.target.value)} />
-                    </div>
-                     <div className="space-y-2">
-                      <Label htmlFor="pix-amount">Valor da Contribuição (R$)</Label>
-                      <Input id="pix-amount" placeholder="Ex: 50.00" value={contribution} onChange={(e) => setContribution(e.target.value)} />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Sua Mensagem (opcional)</Label>
-                      <Textarea id="message" placeholder="Deixe uma mensagem para os noivos" value={message} onChange={(e) => setMessage(e.target.value)} />
-                    </div>
-                </div>
-              </div>
-              <DialogFooter>
-                <Button type="submit" onClick={handleContributeClick} className="w-full">Confirmar Contribuição</Button>
-              </DialogFooter>
-            </DialogContent>
-          </Dialog>
-        )}
-        {isGoalReached && !gift.storeUrl && (
-           <Button className="w-full" disabled>Presenteado!</Button>
-        )}
-        {gift.storeUrl && (
-          <div className="w-full flex justify-center">
-            <Button variant="outline" asChild className="w-full">
-                <Link href={gift.storeUrl} target="_blank">
-                    <ShoppingCart className="mr-2" /> Ver na Loja
-                </Link>
-            </Button>
-          </div>
-        )}
+            )}
+        </div>
       </CardFooter>
     </Card>
   );

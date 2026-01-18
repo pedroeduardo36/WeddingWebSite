@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import GiftCard, { type Gift } from "@/components/GiftCard";
+import GiftCard, { Gift } from "@/components/GiftCard";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { allGifts } from "@/lib/gifts";
@@ -77,8 +77,15 @@ export default function GiftListSection() {
     }
   };
 
-  const handleContribute = async (giftId: number, amount: number) => {
-    console.log(`Tentando salvar doação: Gift ${giftId}, Valor ${amount}`);
+  const handleContribute = async (
+    giftId: number,
+    amount: number,
+    name: string,
+    message: string,
+  ) => {
+    console.log(
+      `Tentando salvar doação: Gift ${giftId}, Valor ${amount}, De: ${name}`,
+    );
 
     // 1. Atualização visual imediata
     setGifts((prevGifts) =>
@@ -90,8 +97,15 @@ export default function GiftListSection() {
     // 2. Salvar no Supabase
     const { data, error } = await supabase
       .from("contributions")
-      .insert([{ gift_id: giftId, amount: amount }])
-      .select(); // O .select() retorna o dado inserido para confirmar que funcionou
+      .insert([
+        {
+          gift_id: giftId,
+          amount: amount,
+          guest_name: name, // Novo campo
+          message: message, // Novo campo
+        },
+      ])
+      .select();
 
     if (error) {
       console.error("ERRO AO SALVAR no banco:", error.message);
@@ -100,7 +114,6 @@ export default function GiftListSection() {
       console.log("Sucesso ao salvar no banco:", data);
     }
   };
-
   return (
     <section
       id="presentes"
