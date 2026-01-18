@@ -2,6 +2,8 @@ import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import fotoHistoria from '../../assets/fotosJP-6.jpeg';
+
 
 export default function OurStorySection() {
   const storyImage = PlaceHolderImages.find((img) => img.id === "our-story");
@@ -33,12 +35,12 @@ export default function OurStorySection() {
               <div className="relative h-64 md:h-full w-full">
                 {storyImage && (
                   <Image
-                    src={storyImage.imageUrl}
+                    src={fotoHistoria}
                     alt=""
                     fill
                     className="object-cover"
                     data-ai-hint={storyImage.imageHint}
-                    sizes="(max-width: 768px) 100vw, 50vw"
+                    sizes="(max-width: 768px) 200vw, 50vw"
                   />
                 )}
               </div>

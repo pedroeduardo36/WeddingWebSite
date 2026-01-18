@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
+import fotoHero from '../../assets/fotosJP-2.jpg';
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -58,13 +59,13 @@ export default function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-bg");
 
   return (
-    <section id="home" className="relative h-[100dvh] w-full">
+    <section id="home" className="relative h-[900px] w-full">
       {heroImage && (
         <Image
-          src={heroImage.imageUrl}
+          src={fotoHero}
           alt={heroImage.description}
           fill
-          className="object-cover"
+          className="object-cover object-[center_bottom]"
           priority
           data-ai-hint={heroImage.imageHint}
         />
