@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -18,7 +17,10 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: pathname === "/" ? "#historia" : "/#historia", label: "Nossa História" },
+    {
+      href: pathname === "/" ? "#historia" : "/#historia",
+      label: "Nossa História",
+    },
     { href: pathname === "/" ? "#local" : "/#local", label: "Local" },
     { href: "/presentes", label: "Lista de Presentes" },
     { href: pathname === "/" ? "#rsvp" : "/#rsvp", label: "RSVP" },
@@ -36,7 +38,7 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-card/50 shadow-md backdrop-blur-sm" : "bg-transparent"
+        isScrolled ? "bg-card/50 shadow-md backdrop-blur-sm" : "bg-transparent",
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">

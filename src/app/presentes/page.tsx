@@ -1,112 +1,160 @@
-
 "use client";
 
-import { useState, useMemo } from "react";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { ArrowLeft } from "lucide-react"; // Ícone de voltar
 import GiftCard, { type Gift } from "@/components/GiftCard";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
 import { allGifts } from "@/lib/gifts";
-
-type SortOption = "default" | "price-desc" | "price-asc";
-type GiftedFilterOption = "all" | "available" | "gifted";
+import { supabase } from "@/lib/supabase";
 
 export default function GiftsPage() {
+  // Inicializa com todos os presentes
   const [gifts, setGifts] = useState<Gift[]>(allGifts);
-  const [sortOption, setSortOption] = useState<SortOption>("default");
-  const [giftedFilter, setGiftedFilter] = useState<GiftedFilterOption>("all");
+  const [isLoading, setIsLoading] = useState(true);
 
-  const handleContribute = (giftId: number, amount: number) => {
-    setGifts((prevGifts) =>
-      prevGifts.map((gift) =>
-        gift.id === giftId ? { ...gift, current: gift.current + amount } : gift
+  // 1. Busca dados ao carregar a página
+  useEffect(() => {
+    fetchContributions();
+
+    // 2. Ativa o Realtime para atualizar se alguém doar enquanto você navega
+    const channel = supabase
+      .channel("realtime_gifts_page")
+      .on(
+        "postgres_changes",
+        { event: "INSERT", schema: "public", table: "contributions" },
+        (payload) => {
+          console.log("Nova doação detectada na página de presentes!", payload);
+          fetchContributions();
+        },
       )
-    );
+      .subscribe();
+
+    return () => {
+      supabase.removeChannel(channel);
+    };
+  }, []);
+
+  // Função para buscar o saldo atualizado de cada presente
+  const fetchContributions = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("contributions")
+        .select("gift_id, amount");
+
+      if (error) throw error;
+
+      if (data) {
+        const totalPorPresente: Record<number, number> = {};
+
+        data.forEach((item) => {
+          const id = item.gift_id;
+          const valor = Number(item.amount);
+          if (totalPorPresente[id]) {
+            totalPorPresente[id] += valor;
+          } else {
+            totalPorPresente[id] = valor;
+          }
+        });
+
+        // Atualiza a lista local com os valores do banco
+        setGifts((prevGifts) =>
+          prevGifts.map((gift) => ({
+            ...gift,
+            current: totalPorPresente[gift.id] || 0,
+          })),
+        );
+      }
+    } catch (error) {
+      console.error("Erro ao carregar presentes:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
-  const sortedAndFilteredGifts = useMemo(() => {
-    let filtered = [...gifts];
+  // Função para salvar a doação
+  const handleContribute = async (
+    giftId: number,
+    amount: number,
+    name: string,
+    message: string,
+  ) => {
+    // Atualização otimista (UI)
+    setGifts((prevGifts) =>
+      prevGifts.map((gift) =>
+        gift.id === giftId ? { ...gift, current: gift.current + amount } : gift,
+      ),
+    );
 
-    if (giftedFilter === "available") {
-      filtered = filtered.filter(gift => gift.current < gift.goal);
-    } else if (giftedFilter === "gifted") {
-      filtered = filtered.filter(gift => gift.current >= gift.goal);
-    }
+    // Salvar no Banco
+    const { error } = await supabase.from("contributions").insert([
+      {
+        gift_id: giftId,
+        amount: amount,
+        guest_name: name,
+        message: message,
+      },
+    ]);
 
-    switch (sortOption) {
-      case "price-desc":
-        filtered.sort((a, b) => b.goal - a.goal);
-        break;
-      case "price-asc":
-        filtered.sort((a, b) => a.goal - b.goal);
-        break;
-      case "default":
-        filtered.sort((a, b) => a.id - b.id);
-        break;
+    if (error) {
+      console.error("Erro ao salvar doação:", error);
+      alert("Erro ao processar a doação. Tente novamente.");
+      fetchContributions();
     }
-    return filtered;
-  }, [gifts, sortOption, giftedFilter]);
+  };
 
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-background">
-      <Header />
-      <main className="flex-1">
-        <section id="presentes" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Lista de Presentes</h2>
-                <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Seu carinho é nosso maior presente, mas se desejar nos presentear, aqui estão algumas sugestões.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col md:flex-row justify-between items-center my-8 gap-4">
-               <RadioGroup defaultValue="all" onValueChange={(value: GiftedFilterOption) => setGiftedFilter(value)} className="flex items-center gap-4">
-                  <Label className="font-medium">Filtrar:</Label>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="all" id="all" />
-                    <Label htmlFor="all">Todos</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="available" id="available" />
-                    <Label htmlFor="available">Disponíveis</Label>
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <RadioGroupItem value="gifted" id="gifted" />
-                    <Label htmlFor="gifted">Presenteados</Label>
-                  </div>
-                </RadioGroup>
-              <Select onValueChange={(value: SortOption) => setSortOption(value)} defaultValue="default">
-                <SelectTrigger className="w-full md:w-[240px]">
-                  <SelectValue placeholder="Ordenar por" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="default">Padrão</SelectItem>
-                  <SelectItem value="price-desc">Mais caro para mais barato</SelectItem>
-                  <SelectItem value="price-asc">Mais barato para mais caro</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <Separator />
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-8">
-              {sortedAndFilteredGifts.map((gift) => (
-                <GiftCard key={gift.id} gift={gift} onContribute={handleContribute} />
-              ))}
-            </div>
+    <main className="min-h-screen bg-background py-12 px-4 md:px-6">
+      <div className="container mx-auto">
+        {/* Cabeçalho da Página */}
+        <div className="flex flex-col space-y-4 mb-8">
+          <Button
+            asChild
+            variant="ghost"
+            className="w-fit pl-0 hover:bg-transparent"
+          >
+            <Link
+              href="/"
+              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Voltar para o início
+            </Link>
+          </Button>
+
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl text-primary">
+              Lista Completa de Presentes
+            </h1>
+            <p className="text-muted-foreground max-w-[800px]">
+              Fique à vontade para escolher o item que mais lhe agradar. Sua
+              presença já é o nosso maior presente!
+            </p>
           </div>
-        </section>
-      </main>
-      <Footer />
-    </div>
+        </div>
+
+        <Separator className="my-8" />
+
+        {/* Grid de Presentes */}
+        {isLoading ? (
+          <div className="flex justify-center items-center py-20">
+            <p className="text-muted-foreground animate-pulse">
+              Carregando lista de presentes...
+            </p>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-12">
+            {gifts.map((gift) => (
+              <GiftCard
+                key={gift.id}
+                gift={gift}
+                onContribute={handleContribute}
+              />
+            ))}
+          </div>
+        )}
+      </div>
+    </main>
   );
 }
