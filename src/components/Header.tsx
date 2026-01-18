@@ -9,6 +9,7 @@ import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from 'next/navigation'
 import headerLogo from '../assets/logoSite.svg'
+import fotoCapa from '../assets/fotosJP-15.jpg'
 
 
 export default function Header() {
@@ -73,12 +74,7 @@ export default function Header() {
                 className="flex items-center gap-2"
                 prefetch={false}
               >
-                <Image
-                  src="https://images.unsplash.com/vector-1767304584679-4a1ac0183f82?q=80&w=2960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  alt="Logo"
-                  width={24}
-                  height={24}
-                />
+                <Image src={fotoCapa} alt="Logo" width={24} height={24} />
                 <span className="font-headline text-lg font-semibold">
                   Júlia & Pedro
                 </span>
