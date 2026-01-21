@@ -77,6 +77,7 @@ export default function GiftsPage() {
   // Função para salvar a doação
   const handleContribute = async (
     giftId: number,
+    giftName: string,
     amount: number,
     name: string,
     message: string,
@@ -92,6 +93,7 @@ export default function GiftsPage() {
     const { error } = await supabase.from("contributions").insert([
       {
         gift_id: giftId,
+        gift_name: giftName,
         amount: amount,
         guest_name: name,
         message: message,
