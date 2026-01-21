@@ -18,7 +18,7 @@ import type { Gift } from "@/lib/gifts";
 
 interface GiftCardProps {
   gift: Gift;
-  onContribute: (giftId: number, amount: number, name: string, message: string) => void;
+  onContribute: (giftId: number, giftName: string, amount: number, name: string, message: string) => void;
 }
 
 export default function GiftCard({ gift, onContribute }: GiftCardProps) {
@@ -57,7 +57,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
         return;
     }
 
-    onContribute(gift.id, amount, contributorName, message);
+    onContribute(gift.id, gift.name, amount, contributorName, message);
     
     setIsOpen(false);
     setContribution("");

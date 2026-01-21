@@ -80,6 +80,7 @@ export default function GiftListSection() {
 
   const handleContribute = async (
     giftId: number,
+    giftName: string,
     amount: number,
     name: string,
     message: string,
@@ -101,6 +102,7 @@ export default function GiftListSection() {
       .insert([
         {
           gift_id: giftId,
+          gift_name: giftName,
           amount: amount,
           guest_name: name, // Novo campo
           message: message, // Novo campo
