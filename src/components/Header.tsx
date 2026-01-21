@@ -20,7 +20,7 @@ export default function Header() {
     },
     { href: pathname === "/" ? "#local" : "/#local", label: "Local" },
     { href: "/presentes", label: "Lista de Presentes" },
-    { href: pathname === "/" ? "#rsvp" : "/#rsvp", label: "RSVP" },
+    { href: pathname === "/" ? "#rsvp" : "/#rsvp", label: "Confirme sua presença" },
   ];
 
   useEffect(() => {
