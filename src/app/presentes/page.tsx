@@ -168,10 +168,10 @@ export default function GiftsPage() {
               <SelectContent>
                 <SelectItem value="all">Todos os presentes</SelectItem>
                 <SelectItem value="available">
-                  Disponíveis para presentear
+                  Disponíveis
                 </SelectItem>
                 <SelectItem value="gifted">
-                  Já Completos / Presenteados
+                  Presenteados
                 </SelectItem>
               </SelectContent>
             </Select>
@@ -189,8 +189,8 @@ export default function GiftsPage() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="default">Padrão</SelectItem>
-                <SelectItem value="price-desc">Maior valor primeiro</SelectItem>
-                <SelectItem value="price-asc">Menor valor primeiro</SelectItem>
+                <SelectItem value="price-desc">Decrescente</SelectItem>
+                <SelectItem value="price-asc">Crescente</SelectItem>
               </SelectContent>
             </Select>
           </div>
