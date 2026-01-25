@@ -126,7 +126,7 @@ export default function GiftListSection() {
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">
               Lista de Presentes
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <div className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               <p>
                 O maior presente é a presença de vocês!
                 <br />
@@ -136,7 +136,7 @@ export default function GiftListSection() {
                 <br />
                 Mas, se você prefere escolher o presente físico, sem problemas: também deixamos sugestões aqui com o link direto da loja para facilitar. Escolha o que ficar mais prático pra você! Obrigado pelo carinho de sempre
               </p>
-            </p>
+            </div>
           </div>
         </div>
         <Separator className="my-8" />
