@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import GiftCard from "@/components/GiftCard";
-import type { Gift } from "@/lib/gifts";
+import GiftCard from "@/components/GiftCard"; // Importa apenas o Componente
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 import { allGifts } from "@/lib/gifts";
 import { supabase } from "@/lib/supabase";
+import type { Gift } from "@/lib/gifts"; // [Novo] Importa o Tipo do lugar certo
 
 const GIFTS_PER_PAGE = 8;
 
@@ -80,6 +80,7 @@ export default function GiftListSection() {
 
   const handleContribute = async (
     giftId: number,
+    giftName: string,
     amount: number,
     name: string,
     message: string,
@@ -101,6 +102,7 @@ export default function GiftListSection() {
       .insert([
         {
           gift_id: giftId,
+          gift_name: giftName,
           amount: amount,
           guest_name: name, // Novo campo
           message: message, // Novo campo
