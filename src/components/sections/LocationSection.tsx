@@ -34,7 +34,7 @@ export default function LocationSection() {
                     </div>
                     <div className="flex items-center gap-2">
                         <Clock className="h-5 w-5 text-muted-foreground" />
-                        <span>A partir das 16:00</span>
+                        <span>Às 16:00</span>
                     </div>
                     <div className="flex items-center gap-2">
                         <GlassWater className="h-5 w-5 text-muted-foreground" />
