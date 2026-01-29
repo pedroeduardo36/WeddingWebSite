@@ -7,11 +7,13 @@ export interface Gift {
   image: string;
   imageHint: string;
   storeUrl?: string;
+  category?: string;
 }
 
 export const allGifts: Gift[] = [
   {
     id: 1,
+    category: "casamento",
     name: "Passeio na Lua de Mel",
     goal: 1000,
     current: 0,
@@ -22,6 +24,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 2,
+    category: "cha",
     name: "Aluguel de carro na Lua de Mel",
     goal: 651,
     current: 0,
@@ -752,5 +755,27 @@ export const allGifts: Gift[] = [
     imageHint: "faqueiro de inox",
     storeUrl:
       "https://www.amazon.com.br/Faqueiro-Pe%C3%A7as-A%C3%A7o-Inox-Berna/dp/B076PL2ZSP/ref=asc_df_B076PL2ZSP?tag=googleshopp00-20&hvadid=709964506220&hvpos=&hvnetw=g&hvrand=15991246309113898205&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-811779203418&language=pt_BR&th=1",
-  }
+  },
+  {
+    id: 65,
+    name: "Amolador de facas",
+    goal: 83.90,
+    current: 0,
+    description: "",
+    image: "https://http2.mlstatic.com/D_Q_NP_661386-MLB97818556506_112025-F-aco-tungstnio-magnetico-rolamento-afiador-ajustavel.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://produto.mercadolivre.com.br/MLB-5934272508-aco-tungstnio-magnetico-rolamento-afiador-ajustavel-_JM?matt_tool=31493002&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354070&matt_ad_group_id=173090533636&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882727487&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5679225946&matt_product_id=MLB5934272508&matt_product_partition_id=2391703468697&matt_target_id=aud-1966857867496:pla-2391703468697&cq_src=google_ads&cq_cmp=22090354070&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090354070&gbraid=0AAAAAD93qcCC_JSn3MPmyQjxI7OlYHyB9",
+  },
+  {
+    id: 66,
+    name: "Panela de Teflon",
+    goal: 50,
+    current: 0,
+    description: "",
+    image: "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+  },
 ];
