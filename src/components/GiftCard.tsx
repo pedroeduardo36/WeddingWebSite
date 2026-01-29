@@ -18,7 +18,7 @@ import type { Gift } from "@/lib/gifts";
 
 interface GiftCardProps {
   gift: Gift;
-  onContribute: (giftId: number, amount: number, name: string, message: string) => void;
+  onContribute: (giftId: number, giftName: string, amount: number, name: string, message: string) => void;
 }
 
 export default function GiftCard({ gift, onContribute }: GiftCardProps) {
@@ -57,7 +57,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
         return;
     }
 
-    onContribute(gift.id, amount, contributorName, message);
+    onContribute(gift.id, gift.name, amount, contributorName, message);
     
     setIsOpen(false);
     setContribution("");
@@ -71,13 +71,13 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
   };
 
   return (
-    <Card className="flex flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
-      <div className="relative h-48 w-full bg-muted">
+    <Card className="flex  flex-col h-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <div className="relative h-48 w-full bg-white">
         <Image 
           src={gift.image} 
           alt={gift.name} 
           fill 
-          className="object-cover transition-transform hover:scale-105" 
+          className="object-contain transition-transform hover:scale-105" 
           data-ai-hint={gift.imageHint} 
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" 
         />

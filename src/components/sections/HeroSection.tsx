@@ -75,7 +75,7 @@ export default function HeroSection() {
           src={fotoHero}
           alt={heroImage.description}
           fill
-          className="object-cover object-[center_bottom]"
+          className="object-cover object-[center_bottom]npm install embla-carousel-autoplay"
           priority
           data-ai-hint={heroImage.imageHint}
         />
