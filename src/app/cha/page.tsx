@@ -17,6 +17,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import ChaLocationSection from "@/components/sections/ChaLocationSection";
+import logoSite from "../../assets/logoSite.svg";
+import florUm from "../../assets/florUm.svg";
+import florDois from "../../assets/florDois.svg";
+import Image from "next/image";
 
 export default function GiftsPage() {
   // Inicializa com todos os presentes
@@ -126,53 +130,47 @@ export default function GiftsPage() {
     });
 
   return (
-    <main className="min-h-screen bg-background py-12 px-4 md:px-6">
+    <main className="min-h-screen bg-background py-12 ">
       <div className="container mx-auto">
+        <Image
+          src={florUm}
+          alt="flor direita"
+          className="absolute z-0 opacity-15 -right-48"
+        />
+        <Image
+          src={florDois}
+          alt="flor esquerda"
+          className="absolute z-0 opacity-15 -left-48"
+        />
+        <ArrowLeft className="w-4 h-4" />
         {/* Cabeçalho da Página */}
-        <div className="flex flex-row justify-center items-center space-y-4 mb-8">
-          <ArrowLeft />
+        <div className="flex z-10 flex-row justify-center items-center space-y-4">
+          <Image src={logoSite} alt="Logo do site" width={32} height={32} />
         </div>
-        <div className="flex flex-row justify-center items-center space-y-4 mb-8">
-          <Button
-            asChild
-            variant="ghost"
-            className="w-fit pl-0 hover:bg-transparent absolute left-14"
-          >
-            <Link
-              href="/"
-              className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="w-4 h-4" />
-            </Link>
-          </Button>
 
-          <div className="space-y-2">
-            <h1 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl text-primary">
-              Chá de Panela
-            </h1>
-          </div>
-        </div>
-        <div>
-          <div className="relative z-10 flex h-full flex-col items-center justify-center text-center font-headline text-primary p-4">
+        <div className="relative z-10">
+          <div className="relative z-10 mt-8 flex h-full flex-col items-center justify-center text-center font-headline text-primary p-4">
             <h1 className="font-headline text-5xl md:text-7xl font-bold">
               Júlia & Pedro
             </h1>
-            <p className="mt-4 font-body text-xl md:text-2xl">
-              02 de Maio de 2026
+
+            <p className="mt-16">
+              Estamos muito felizes em compartilhar esse momento especial com
+              você!
+              <br />
+              Com muita alegria, convidamos você para o nosso Chá de Panela!
             </p>
-            <p className="my-12">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Consequuntur praesentium quam sapiente est culpa reprehenderit
-              consequatur minima explicabo voluptates corrupti maiores quos hic
-              nesciunt, aspernatur quia labore magni libero vel.
-            </p>
+            <Separator className="my-8 bg-border/50" />
+            <h2 className="font-headline md:text-3xl font-bold">
+              07 • março • 2026
+            </h2>
+            <Separator className="my-8 bg-border/50" />
           </div>
+          <ChaLocationSection />
         </div>
 
-        <ChaLocationSection />
-
         {/* BARRA DE FERRAMENTAS: Filtro e Ordenação */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8 p-4 bg-muted/30 rounded-lg border shadow-sm">
+        <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-8 p-4 bg-muted/30 rounded-lg border shadow-sm">
           {/* 1. Dropdown de Filtro */}
           <div className="flex items-center gap-2 flex-1">
             <Filter className="w-4 h-4 text-muted-foreground" />
