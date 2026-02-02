@@ -7,7 +7,7 @@ export interface Gift {
   image: string;
   imageHint: string;
   storeUrl?: string;
-  category?: string;
+  category: "casamento" | "cha";
 }
 
 export const allGifts: Gift[] = [
@@ -24,7 +24,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 2,
-    category: "cha",
+    category: "casamento",
     name: "Aluguel de carro na Lua de Mel",
     goal: 651,
     current: 0,
@@ -35,6 +35,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 3,
+    category: "casamento",
     name: "Jantar Romântico na Lua de Mel",
     goal: 300,
     current: 0,
@@ -46,6 +47,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 4,
+    category: "casamento",
     name: "Base Báu Queen",
     goal: 969,
     current: 0,
@@ -58,6 +60,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 5,
+    category: "casamento",
     name: "Colchão Queen Ortobom",
     goal: 3399,
     current: 0,
@@ -69,6 +72,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 6,
+    category: "casamento",
     name: "TV",
     goal: 1199,
     current: 1199,
@@ -81,6 +85,7 @@ export const allGifts: Gift[] = [
   {
     id: 7,
     name: "Bandeja Organizadara Home Style",
+    category: "cha",
     goal: 99.99,
     current: 0,
     description: "Bandeja organizadora.",
@@ -92,6 +97,7 @@ export const allGifts: Gift[] = [
   {
     id: 8,
     name: "Porta sabonete Líquido",
+    category: "cha",
     goal: 89.99,
     current: 0,
     description: "Home Style.",
@@ -103,6 +109,7 @@ export const allGifts: Gift[] = [
   {
     id: 9,
     name: "Porta Escova de dente",
+    category: "cha",
     goal: 59.99,
     current: 0,
     description: "Home Style.",
@@ -114,6 +121,7 @@ export const allGifts: Gift[] = [
   {
     id: 10,
     name: "Porta cotonete e algodão",
+    category: "cha",
     goal: 99.99,
     current: 0,
     description: "",
@@ -125,6 +133,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 11,
+    category: "casamento",
     name: "Lava e seca",
     goal: 3798,
     current: 0,
@@ -136,6 +145,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 12,
+    category: "casamento",
     name: "Lava Louças Brastemp",
     goal: 2100,
     current: 2100,
@@ -149,6 +159,7 @@ export const allGifts: Gift[] = [
   {
     id: 13,
     name: "Jogo de Pano de Prato",
+    category: "cha",
     goal: 39.99,
     current: 0,
     description: "Home Style",
@@ -160,6 +171,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 14,
+    category: "casamento",
     name: "Almofadas",
     goal: 40,
     current: 0,
@@ -170,6 +182,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 15,
+    category: "casamento",
     name: "Jogo de Cama",
     goal: 460,
     current: 460,
@@ -180,6 +193,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 16,
+    category: "cha",
     name: "Assadeira",
     goal: 139.99,
     current: 0,
@@ -191,6 +205,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 17,
+    category: "cha",
     name: "Luva Térmica",
     goal: 29.9,
     current: 0,
@@ -203,6 +218,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 18,
+    category: "cha",
     name: "Escorredor de Massa",
     goal: 57.31,
     current: 0,
@@ -215,6 +231,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 19,
+    category: "cha",
     name: "Forma de gelo",
     goal: 29.99,
     current: 0,
@@ -227,6 +244,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 20,
+    category: "cha",
     name: "Jogo de Medidores",
     goal: 25.99,
     current: 0,
@@ -239,6 +257,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 21,
+    category: "cha",
     name: "Ralador",
     goal: 59.99,
     current: 0,
@@ -251,6 +270,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 22,
+    category: "cha",
     name: "Galheteiro de Azeite",
     goal: 59.99,
     current: 0,
@@ -263,6 +283,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 23,
+    category: "cha",
     name: "Escumadeira",
     goal: 29.99,
     current: 0,
@@ -275,6 +296,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 24,
+    category: "cha",
     name: "Concha",
     goal: 29.99,
     current: 0,
@@ -287,6 +309,8 @@ export const allGifts: Gift[] = [
   },
   {
     id: 25,
+    category: "cha",
+
     name: "Cortador de Pizza",
     goal: 35.36,
     current: 0,
@@ -299,6 +323,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 26,
+    category: "cha",
     name: "Espátula de Bolo",
     goal: 26.22,
     current: 0,
@@ -311,6 +336,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 27,
+    category: "cha",
     name: "Colher de Arroz",
     goal: 29.99,
     current: 0,
@@ -323,6 +349,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 28,
+    category: "cha",
     name: "Pilão",
     goal: 89.99,
     current: 0,
@@ -335,6 +362,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 29,
+    category: "cha",
     name: "Amassador de Batata",
     goal: 68.19,
     current: 0,
@@ -347,6 +375,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 30,
+    category: "cha",
     name: "Colher de silicone",
     goal: 76.9,
     current: 0,
@@ -359,6 +388,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 31,
+    category: "cha",
     name: "Tesoura de Cozinha",
     goal: 59.99,
     current: 0,
@@ -371,6 +401,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 32,
+    category: "cha",
     name: "Abridor de Latas",
     goal: 59.99,
     current: 0,
@@ -383,6 +414,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 33,
+    category: "cha",
     name: "Espátula Pão duro",
     goal: 29.99,
     current: 0,
@@ -395,6 +427,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 34,
+    category: "cha",
     name: "Espátula Vazada",
     goal: 29.99,
     current: 0,
@@ -407,6 +440,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 35,
+    category: "cha",
     name: "Pegador",
     goal: 35.99,
     current: 0,
@@ -419,6 +453,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 36,
+    category: "cha",
     name: "Colheres de Medida",
     goal: 44.9,
     current: 0,
@@ -431,6 +466,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 37,
+    category: "cha",
     name: "Secador de Salada",
     goal: 179.99,
     current: 0,
@@ -443,6 +479,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 38,
+    category: "cha",
     name: "Açucareiro",
     goal: 49.99,
     current: 0,
@@ -455,6 +492,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 39,
+    category: "cha",
     name: "Jarra para suco",
     goal: 79.99,
     current: 0,
@@ -467,6 +505,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 40,
+    category: "cha",
     name: "Toalha de Mesa",
     goal: 199.99,
     current: 0,
@@ -479,6 +518,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 41,
+    category: "cha",
     name: "Panela de Pressão",
     goal: 174,
     current: 0,
@@ -491,6 +531,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 42,
+    category: "cha",
     name: "Jogo de taças",
     goal: 149.99,
     current: 0,
@@ -503,6 +544,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 43,
+    category: "cha",
     name: "Jogo de xícaras",
     goal: 79.0,
     current: 0,
@@ -515,6 +557,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 44,
+    category: "cha",
     name: "Jogo de Tábuas para Corte",
     goal: 79.99,
     current: 0,
@@ -527,6 +570,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 45,
+    category: "cha",
     name: "Fuet",
     goal: 39.99,
     current: 0,
@@ -539,6 +583,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 46,
+    category: "cha",
     name: "Jogo com 6 Cumbucas",
     goal: 107.59,
     current: 0,
@@ -551,6 +596,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 47,
+    category: "cha",
     name: "Sanduicheira",
     goal: 99.99,
     current: 0,
@@ -563,6 +609,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 48,
+    category: "cha",
     name: "Jogo de Marinex de Vidro",
     goal: 129,
     current: 0,
@@ -574,6 +621,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 49,
+    category: "casamento",
     name: "Robo aspirador",
     goal: 2400,
     current: 0,
@@ -586,6 +634,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 50,
+    category: "casamento",
     name: "Fogão",
     goal: 1484.1,
     current: 0,
@@ -598,6 +647,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 51,
+    category: "cha",
     name: "Liquidificador",
     goal: 176.37,
     current: 0,
@@ -609,6 +659,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 52,
+    category: "cha",
     name: "Faqueiro Tramontina",
     goal: 174.31,
     current: 0,
@@ -621,6 +672,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 53,
+    category: "casamento",
     name: "Batedeira Kitchen aid",
     goal: 2377,
     current: 0,
@@ -633,6 +685,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 54,
+    category: "casamento",
     name: "Aspirador vertical",
     goal: 179,
     current: 0,
@@ -644,6 +697,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 55,
+    category: "cha",
     name: "Aparelho de Jantar",
     goal: 481,
     current: 0,
@@ -655,6 +709,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 56,
+    category: "casamento",
     name: "Gaveteiro para escrivaninha",
     goal: 439.98,
     current: 0,
@@ -667,6 +722,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 57,
+    category: "casamento",
     name: "Escrivaninha com gaveteiro",
     goal: 667.15,
     current: 0,
@@ -679,6 +735,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 58,
+    category: "cha",
     name: "Jogo de panelas 10 peças",
     goal: 739.9,
     current: 0,
@@ -690,6 +747,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 59,
+    category: "casamento",
     name: "Persiana",
     goal: 339.36,
     current: 0,
@@ -702,6 +760,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 60,
+    category: "cha",
     name: "Chaleira Elétrica",
     goal: 133.44,
     current: 0,
@@ -713,6 +772,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 61,
+    category: "cha",
     name: "Balança de alimentos",
     goal: 28.79,
     current: 0,
@@ -724,6 +784,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 62,
+    category: "cha",
     name: "Tábua de queijos",
     goal: 69.99,
     current: 0,
@@ -736,6 +797,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 63,
+    category: "cha",
     name: "Balde de Gelo",
     goal: 199,
     current: 0,
@@ -747,8 +809,9 @@ export const allGifts: Gift[] = [
   },
   {
     id: 64,
+    category: "cha",
     name: "Faqueiro",
-    goal: 281.20,
+    goal: 281.2,
     current: 0,
     description: "Nem tudo é finger food.",
     image: "https://m.media-amazon.com/images/I/51GB1-6mYXL._AC_SL1200_.jpg",
@@ -758,57 +821,133 @@ export const allGifts: Gift[] = [
   },
   {
     id: 65,
+    category: "cha",
     name: "Amolador de facas",
-    goal: 83.90,
+    goal: 83.9,
     current: 0,
     description: "",
-    image: "https://http2.mlstatic.com/D_Q_NP_661386-MLB97818556506_112025-F-aco-tungstnio-magnetico-rolamento-afiador-ajustavel.webp",
+    image:
+      "https://http2.mlstatic.com/D_Q_NP_661386-MLB97818556506_112025-F-aco-tungstnio-magnetico-rolamento-afiador-ajustavel.webp",
     imageHint: "faqueiro de inox",
     storeUrl:
       "https://produto.mercadolivre.com.br/MLB-5934272508-aco-tungstnio-magnetico-rolamento-afiador-ajustavel-_JM?matt_tool=31493002&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354070&matt_ad_group_id=173090533636&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882727487&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5679225946&matt_product_id=MLB5934272508&matt_product_partition_id=2391703468697&matt_target_id=aud-1966857867496:pla-2391703468697&cq_src=google_ads&cq_cmp=22090354070&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090354070&gbraid=0AAAAAD93qcCC_JSn3MPmyQjxI7OlYHyB9",
   },
   {
     id: 66,
+    category: "cha",
     name: "Panela de Teflon",
     goal: 50,
     current: 0,
     description: "",
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
     imageHint: "faqueiro de inox",
     storeUrl:
       "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
   },
   {
     id: 67,
+    category: "casamento",
     name: "Micro-ondas",
     goal: 50,
     current: 0,
     description: "",
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
     imageHint: "faqueiro de inox",
     storeUrl:
       "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
   },
   {
     id: 68,
+    category: "casamento",
     name: "Banqueta",
     goal: 50,
     current: 0,
     description: "",
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
     imageHint: "faqueiro de inox",
     storeUrl:
       "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
   },
   {
     id: 69,
+    category: "casamento",
     name: "Tapete",
     goal: 50,
     current: 0,
     description: "",
-    image: "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
     imageHint: "faqueiro de inox",
     storeUrl:
       "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
   },
+  {
+    id: 70,
+    category: "cha",
+    name: "Ralador de queijo",
+    goal: 50,
+    current: 0,
+    description: "",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+  },
+  {
+    id: 71,
+    category: "cha",
+    name: "Pipoqueira elétrica",
+    goal: 50,
+    current: 0,
+    description: "",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+  },
+  {
+    id: 72,
+    category: "casamento",
+    name: "Espelho orgânico",
+    goal: 50,
+    current: 0,
+    description: "",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+  },
+  {
+    id: 73,
+    category: "casamento",
+    name: "Porta Chaves",
+    goal: 50,
+    current: 0,
+    description: "",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+  },
+  {
+    id: 74,
+    category: "casamento",
+    name: "Cafeteira Italiana",
+    goal: 50,
+    current: 0,
+    description: "",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
+    imageHint: "faqueiro de inox",
+    storeUrl:
+      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+  },
+
 ];

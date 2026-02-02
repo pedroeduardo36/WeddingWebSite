@@ -24,7 +24,9 @@ import Image from "next/image";
 
 export default function GiftsPage() {
   // Inicializa com todos os presentes
-  const [gifts, setGifts] = useState<Gift[]>(allGifts);
+  const [gifts, setGifts] = useState<Gift[]>(
+    allGifts.filter((g) => g.category === "cha"),
+  );
   const [isLoading, setIsLoading] = useState(true);
 
   const [filter, setFilter] = useState("all");
@@ -68,15 +70,17 @@ export default function GiftsPage() {
             (totalPorPresente[item.gift_id] || 0) + Number(item.amount);
         });
 
-        setGifts((prevGifts) =>
-          prevGifts.map((gift) => ({
-            ...gift,
-            current: totalPorPresente[gift.id] || 0,
-          })),
+        setGifts(
+          allGifts
+            .filter((g) => g.category === "cha") // Garante que só mostra Chá
+            .map((gift) => ({
+              ...gift,
+              current: totalPorPresente[gift.id] || 0,
+            })),
         );
       }
     } catch (error) {
-      console.error("Erro ao carregar presentes:", error);
+      console.error(error);
     } finally {
       setIsLoading(false);
     }
