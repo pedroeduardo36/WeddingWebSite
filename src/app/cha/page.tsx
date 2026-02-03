@@ -21,6 +21,10 @@ import logoSite from "../../assets/logoSite.svg";
 import florUm from "../../assets/florUm.svg";
 import florDois from "../../assets/florDois.svg";
 import Image from "next/image";
+import preto from "../../assets/preto.avif";
+import branco from "../../assets/branco.avif";
+import inox from "../../assets/inox.avif";
+import transparente from "../../assets/transparente.avif";
 
 export default function GiftsPage() {
   // Inicializa com todos os presentes
@@ -146,7 +150,7 @@ export default function GiftsPage() {
           alt="flor esquerda"
           className="absolute z-0 opacity-15 -left-48"
         />
-        <ArrowLeft className="w-4 h-4" />
+
         {/* Cabeçalho da Página */}
         <div className="flex z-10 flex-row justify-center items-center space-y-4">
           <Image src={logoSite} alt="Logo do site" width={32} height={32} />
@@ -171,6 +175,37 @@ export default function GiftsPage() {
             <Separator className="my-8 bg-border/50" />
           </div>
           <ChaLocationSection />
+        </div>
+
+
+        <div className="flex flex-col text-center mt-8 mx-4 justify-center">
+            <h1 className="w-full font-headline text-primary md:text-3xl font-bold">
+              Sugestão de cores
+            </h1>
+        </div>
+
+
+        <div className="mt-8 w-full flex justify-center mb-8 relative z-10">
+         
+          <div className="flex flex-col text-center mx-4 justify-center">
+            <Image src={branco} alt="" className="rounded-full" />
+            <p>Branco</p>
+          </div>
+
+          <div className="flex flex-col text-center mx-4 justify-center">
+            <Image src={preto} alt="" className="rounded-full" />
+            <p>Preto</p>
+          </div>
+
+          <div className="flex flex-col text-center mx-4 justify-center">
+            <Image src={inox} alt="" className="rounded-full" />
+            <p>Inox</p>
+          </div>
+
+          <div className="flex flex-col text-center mx-4 justify-center">
+            <Image src={transparente} alt="" className="rounded-full" />
+            <p>Transparente</p>
+          </div>
         </div>
 
         {/* BARRA DE FERRAMENTAS: Filtro e Ordenação */}

@@ -23,7 +23,6 @@ export default function Header() {
     },
     { href: pathname === "/" ? "#local" : "/#local", label: "Local" },
     { href: "/presentes", label: "Lista de Presentes" },
-    { href: "/cha", label: "Chá de Panela" },
     { href: pathname === "/" ? "#rsvp" : "/#rsvp", label: "Confirme sua presença" },
   ];
 
