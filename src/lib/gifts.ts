@@ -5,7 +5,7 @@ export interface Gift {
   current: number;
   description: string;
   image: string;
-  imageHint: string;
+  imageHint?: string;
   storeUrl?: string;
   category: "casamento" | "cha";
 }
@@ -828,7 +828,6 @@ export const allGifts: Gift[] = [
     description: "",
     image:
       "https://http2.mlstatic.com/D_Q_NP_661386-MLB97818556506_112025-F-aco-tungstnio-magnetico-rolamento-afiador-ajustavel.webp",
-    imageHint: "faqueiro de inox",
     storeUrl:
       "https://produto.mercadolivre.com.br/MLB-5934272508-aco-tungstnio-magnetico-rolamento-afiador-ajustavel-_JM?matt_tool=31493002&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354070&matt_ad_group_id=173090533636&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882727487&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5679225946&matt_product_id=MLB5934272508&matt_product_partition_id=2391703468697&matt_target_id=aud-1966857867496:pla-2391703468697&cq_src=google_ads&cq_cmp=22090354070&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090354070&gbraid=0AAAAAD93qcCC_JSn3MPmyQjxI7OlYHyB9",
   },
@@ -838,10 +837,9 @@ export const allGifts: Gift[] = [
     name: "Panela de Teflon",
     goal: 50,
     current: 0,
-    description: "",
+    description: "Pras omeletes nunca mais grudarem.",
     image:
       "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
     storeUrl:
       "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
   },
@@ -849,105 +847,120 @@ export const allGifts: Gift[] = [
     id: 67,
     category: "casamento",
     name: "Micro-ondas",
-    goal: 50,
+    goal: 611,
     current: 0,
-    description: "",
-    image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+    description: "Esquentar aquela marmita.",
+    image: "https://m.media-amazon.com/images/I/41ombLtjrUL._AC_SL1200_.jpg",
+
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.amazon.com.br/Micro-ondas-Philco-PMO38S-Limpa-F%C3%A1cil/dp/B0D3N79CZX/ref=asc_df_B0D3N79CZX?tag=googleshopp00-20&hvadid=709989056369&hvpos=&hvnetw=g&hvrand=13167591723790615765&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2377832529340&psc=1&language=pt_BR",
   },
   {
     id: 68,
     category: "casamento",
     name: "Banqueta",
-    goal: 50,
+    goal: 599,
     current: 0,
-    description: "",
+    description: "Bater um papo no balcão",
     image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+      "https://www.havan.com.br/media/catalog/product/cache/820af7facfa7aca6eb3c138e3457dc8d/b/a/banqueta-giratoria-turim-104-cm-havan-casa_993236.webp",
+
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.havan.com.br/banqueta-giratoria-turim-104-cm-havan-casa-off-white/p",
   },
   {
     id: 69,
     category: "casamento",
     name: "Tapete",
-    goal: 50,
+    goal: 99,
     current: 0,
-    description: "",
-    image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+    description: "A criatividade pra descrição às vezes falta.",
+    image: "https://m.media-amazon.com/images/I/81JkcCT1xUL._AC_SL1500_.jpg",
+
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.amazon.com.br/FIicy-boas-vindas-decora%C3%A7%C3%A3o-vers%C3%ADculo-aben%C3%A7oado/dp/B0DYVDKCM8",
   },
   {
     id: 70,
     category: "cha",
     name: "Ralador de queijo",
-    goal: 50,
+    goal: 119.99,
     current: 0,
-    description: "",
-    image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+    description: "Pra noiva não sofrer ralando o queijo do carbonara.",
+    image: "https://img.camicado.com.br/item/100876202/zoom/1.jpg",
+
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.camicado.com.br/p/ralador-de-queijo-home-style-utile/-/A-100876190-br.lc?sku=100876202&gad_campaignid=20305907174",
   },
   {
     id: 71,
     category: "cha",
     name: "Pipoqueira elétrica",
-    goal: 50,
+    goal: 299.99,
     current: 0,
-    description: "",
+    description: "Melhor amiga do filminho",
     image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_820311-MLA99954207047_112025-F.webp",
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.mercadolivre.com.br/pipoqueira-eletrica-sem-oleo-philco-1200w-ppie01a-cor-preto/p/MLB43201177#polycard_client=search-desktop&search_layout=grid&position=18&type=product&tracking_id=1d845443-746f-4646-b7ca-44bf4724f94f&wid=MLB6077376208&sid=search",
   },
   {
     id: 72,
     category: "casamento",
     name: "Espelho orgânico",
-    goal: 50,
+    goal: 120,
     current: 0,
-    description: "",
+    description: "Espelho orgânico para o apartamento",
     image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+      "https://casavee.cdn.magazord.com.br/img/2022/11/produto/2185/espelho-organico-2-1.jpg?ims=fit-in/1000x1000/filters:fill(white)",
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.casavee.com.br/espelho-eros-42cm-x-100cm-tauari?gad_campaignid=20131686643&gbraid=0AAAAAoR_JWWTwj3SEFP2H5EtTYOmEsS_Q",
   },
   {
     id: 73,
     category: "casamento",
     name: "Porta Chaves",
-    goal: 50,
+    goal: 119,
     current: 0,
-    description: "",
+    description: "Para guardar as chaves do apartamento",
     image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_866950-MLA99937525023_112025-F.webp",
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.mercadolivre.com.br/chaveiro-pluginz-marshall-jcm-800-jack-rack-pendurar-chave/p/MLB24281558?pdp_filters=item_id:MLB3450880235&from=gshop&matt_tool=31493002&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090354070&matt_ad_group_id=173090534076&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727882727502&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735098639&matt_product_id=MLB24281558-product&matt_product_partition_id=2388010515786&matt_target_id=aud-1966857867496:pla-2388010515786&cq_src=google_ads&cq_cmp=22090354070&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090354070&gbraid=0AAAAAD93qcDnH21YKHczu6KU9dIN4hU0s",
   },
   {
     id: 74,
-    category: "casamento",
+    category: "cha",
     name: "Cafeteira Italiana",
-    goal: 50,
+    goal: 79.99,
     current: 0,
-    description: "",
+    description: "QUERO CAFÉ!",
     image:
-      "https://http2.mlstatic.com/D_NQ_NP_2X_750628-MLA95682075414_102025-F.webp",
-    imageHint: "faqueiro de inox",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_752986-MLB99033632496_112025-F.webp",
     storeUrl:
-      "https://www.mercadolivre.com.br/kit-3-frigideiras-tramontina-antiaderente-com-tampa-de-vidro-cor-preto/p/MLB48599351?pdp_filters=item_id:MLB5779429248&matt_tool=52461461&matt_internal_campaign_id=353905140&matt_word=&matt_source=google&matt_campaign_id=23048606139&matt_ad_group_id=188383143778&matt_match_type=&matt_network=g&matt_device=c&matt_creative=780310479598&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=635100077&matt_product_id=MLB5779429248&matt_product_partition_id=2446956872313&matt_target_id=aud-1966858076296:pla-2446956872313&cq_src=google_ads&cq_cmp=23048606139&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606139&gbraid=0AAAAAD93qcDlwQ2kSy7I9JbmaaQvzcGuS",
+      "https://www.mercadolivre.com.br/cafeteira-italiana-inox-luxo-9-xicaras-450ml-fogao-inducao/up/MLBU3625006021?pdp_filters=item_id:MLB5971078226&matt_tool=11873655&matt_internal_campaign_id=355098473&matt_word=&matt_source=google&matt_campaign_id=23048606145&matt_ad_group_id=196846483808&matt_match_type=&matt_network=g&matt_device=c&matt_creative=791246553735&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5682894244&matt_product_id=MLB5971078226&matt_product_partition_id=2459361005454&matt_target_id=aud-1966858076296:pla-2459361005454&cq_src=google_ads&cq_cmp=23048606145&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=23048606145&gbraid=0AAAAAD93qcBUpHQWIpcklvxVOKXNh2WUJ",
   },
-
+  {
+    id: 75,
+    category: "casamento",
+    name: "Sapateira",
+    goal: 681.48,
+    current: 0,
+    description: "Sapateira para guardar os sapatos do noivo.",
+    image: "https://m.media-amazon.com/images/I/71vJia3IQcL._AC_SL1500_.jpg",
+    storeUrl:
+      "https://pt.aliexpress.com/i/1005010670114153.html?gatewayAdapt=fra2bra",
+  },
+  {
+    id: 76,
+    category: "cha",
+    name: "Moedor de pimenta",
+    goal: 29.9,
+    current: 0,
+    description: "Vamos evitar comida de hospital, ok?",
+    image:
+      "https://down-br.img.susercontent.com/file/sg-11134201-7rd5y-luyxhsb44tyeea.webp",
+    storeUrl:
+      "https://shopee.com.br/product/352576129/21599235506?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVEdTU3BlMW9zMXB6bGYrZ0J1VEdQdUsrRmY4Y2dKOWVxMlpoMktmQ1pjR3hxdGFnM2VXS0tETlpNMFY0L0k3NlFKUGl5K3RTYWZzSHB4ODNwMTZCUXhybTVkd21MQ1JGKzJnbjBtck56Y04zQVh2cm56RnNqcnJoUzFFWG84bHZ3PT0&gad_campaignid=23451162212&gbraid=0AAAAACoEtRnIfCF3OM8SHA7e6IWKy3B-k",
+  },
 ];
