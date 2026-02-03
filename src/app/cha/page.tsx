@@ -34,7 +34,7 @@ export default function GiftsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   const [filter, setFilter] = useState("all");
-  const [sortOrder, setSortOrder] = useState("default");
+  const [sortOrder, setSortOrder] = useState("price-desc");
 
   // 1. Busca dados ao carregar a página
   useEffect(() => {
