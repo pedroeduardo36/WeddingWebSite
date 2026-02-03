@@ -187,23 +187,23 @@ export default function GiftsPage() {
 
         <div className="mt-8 w-full flex justify-center mb-8 relative z-10">
          
-          <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={branco} alt="" className="rounded-full" />
+          <div className="flex flex-col text-center mx-4 justify-center ">
+            <Image src={branco} alt="" className="rounded-full" width={76} height={76} />
             <p>Branco</p>
           </div>
 
           <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={preto} alt="" className="rounded-full" />
+            <Image src={preto} alt="" className="rounded-full" width={76} height={76} />
             <p>Preto</p>
           </div>
 
           <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={inox} alt="" className="rounded-full" />
+            <Image src={inox} alt="" className="rounded-full" width={76} height={76}/>
             <p>Inox</p>
           </div>
 
           <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={transparente} alt="" className="rounded-full" />
+            <Image src={transparente} alt="" className="rounded-full" width={76} height={76} />
             <p>Transparente</p>
           </div>
         </div>

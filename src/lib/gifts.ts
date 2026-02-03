@@ -845,7 +845,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 67,
-    category: "casamento",
+    category: "cha",
     name: "Micro-ondas",
     goal: 611,
     current: 0,
@@ -962,5 +962,28 @@ export const allGifts: Gift[] = [
       "https://down-br.img.susercontent.com/file/sg-11134201-7rd5y-luyxhsb44tyeea.webp",
     storeUrl:
       "https://shopee.com.br/product/352576129/21599235506?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkVEdTU3BlMW9zMXB6bGYrZ0J1VEdQdUsrRmY4Y2dKOWVxMlpoMktmQ1pjR3hxdGFnM2VXS0tETlpNMFY0L0k3NlFKUGl5K3RTYWZzSHB4ODNwMTZCUXhybTVkd21MQ1JGKzJnbjBtck56Y04zQVh2cm56RnNqcnJoUzFFWG84bHZ3PT0&gad_campaignid=23451162212&gbraid=0AAAAACoEtRnIfCF3OM8SHA7e6IWKy3B-k",
+  },
+  {
+    id: 77,
+    category: "cha",
+    name: "Air Fryer Oven",
+    goal: 350,
+    current: 0,
+    description: "Top 5 invenções da humanidade.",
+    image: "https://imgs.casasbahia.com.br/55065682/1g.jpg?imwidth=500",
+    storeUrl:
+      "https://www.casasbahia.com.br/fritadeira-eletrica-sem-oleo-air-fryer-oven-2-em-1-mondial-afon-12l-bi-12l-digital-preta-inox/p/55065682?IdSku=55065682&idLojista=10037&tipoLojista=1P&&gad_campaignid=22440145884&gbraid=0AAAAADtAamjAV4mwa3nWaaUR-lnuXsTVC",
+  },
+  {
+    id: 78,
+    category: "cha",
+    name: "Panela Elétrica",
+    goal: 361.5,
+    current: 0,
+    description: "Quem sabe a gente não arrisca um sushi",
+    image:
+      "https://m.magazineluiza.com.br/a-static/420x420/panela-de-pressao-eletrica-digital-mondial-5l-900w-digital-master-cooker-pe-38/magazineluiza/236680400/7b4d7c601ba9dab8b092fc417f42153a.jpg",
+    storeUrl:
+      "https://www.magazineluiza.com.br/panela-de-pressao-eletrica-digital-mondial-5l-900w-digital-master-cooker-pe-38/p/236680400/ep/eppe/?&seller_id=magazineluiza&partner_id=83254&gad_campaignid=23347244387&gbraid=0AAAAAD4zZmTTaiBh_XdzmONnJdqGjaf4F",
   },
 ];
