@@ -310,7 +310,6 @@ export const allGifts: Gift[] = [
   {
     id: 25,
     category: "cha",
-
     name: "Cortador de Pizza",
     goal: 35.36,
     current: 0,
@@ -735,7 +734,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 58,
-    category: "cha",
+    category: "casamento",
     name: "Jogo de panelas 10 peças",
     goal: 739.9,
     current: 0,
@@ -749,14 +748,14 @@ export const allGifts: Gift[] = [
     id: 59,
     category: "casamento",
     name: "Persiana",
-    goal: 339.36,
+    goal: 270.18,
     current: 0,
     description: "Para dar mais privacidade e aconchego.",
     image:
-      "https://cdn.leroymerlin.com.br/products/persiana_vertical_tecido_com_bando_l_1,50_x_1,50_a_branca_bra_1567101996_6cc4_600x600.jpg",
+      "https://cdn.leroymerlin.com.br/products/cortina_persiana_rolo_tela_solar_5percent_1,40_larg_x_1,30_alt_bege_1570807584_3a5d_600x600.jpg",
     imageHint: "window curtains",
     storeUrl:
-      "https://www.leroymerlin.com.br/persiana-vertical-tecido-com-bando-l-1,50-x-1,50-a-branca-brancabranca_1567101996?region=outros",
+      "https://www.leroymerlin.com.br/cortina-persiana-rolo-tela-solar-5percent-1,40-larg-x-1,30-alt-bege_1570807584",
   },
   {
     id: 60,
@@ -764,7 +763,7 @@ export const allGifts: Gift[] = [
     name: "Chaleira Elétrica",
     goal: 133.44,
     current: 0,
-    description: "Para dar mais privacidade e aconchego.",
+    description: "Para preparar um chazinho.",
     image: "https://m.media-amazon.com/images/I/5157j9NnlaL._AC_SX679_.jpg",
     imageHint: "Chaleira elétrica",
     storeUrl:
@@ -845,7 +844,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 67,
-    category: "cha",
+    category: "casamento",
     name: "Micro-ondas",
     goal: 611,
     current: 0,
@@ -859,7 +858,7 @@ export const allGifts: Gift[] = [
     id: 68,
     category: "casamento",
     name: "Banqueta",
-    goal: 599,
+    goal: 1200,
     current: 0,
     description: "Bater um papo no balcão",
     image:
@@ -943,13 +942,13 @@ export const allGifts: Gift[] = [
   {
     id: 75,
     category: "casamento",
-    name: "Sapateira",
-    goal: 681.48,
+    name: "Sofá",
+    goal: 1418.53,
     current: 0,
-    description: "Sapateira para guardar os sapatos do noivo.",
-    image: "https://m.media-amazon.com/images/I/71vJia3IQcL._AC_SL1500_.jpg",
+    description: "Sofazinho pra assistir Netflix juntinhos",
+    image: "https://cdn.leroymerlin.com.br/products/sofa_4_lugares_living_linho_bronze_viero_moveis_1572240312_a57d_600x600.jpg",
     storeUrl:
-      "https://pt.aliexpress.com/i/1005010670114153.html?gatewayAdapt=fra2bra",
+      "https://www.leroymerlin.com.br/sofa-4-lugares-living-linho-bronze-viero-moveis_1572240312?region=outros",
   },
   {
     id: 76,
@@ -965,7 +964,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 77,
-    category: "cha",
+    category: "casamento",
     name: "Air Fryer Oven",
     goal: 350,
     current: 0,
@@ -985,5 +984,209 @@ export const allGifts: Gift[] = [
       "https://m.magazineluiza.com.br/a-static/420x420/panela-de-pressao-eletrica-digital-mondial-5l-900w-digital-master-cooker-pe-38/magazineluiza/236680400/7b4d7c601ba9dab8b092fc417f42153a.jpg",
     storeUrl:
       "https://www.magazineluiza.com.br/panela-de-pressao-eletrica-digital-mondial-5l-900w-digital-master-cooker-pe-38/p/236680400/ep/eppe/?&seller_id=magazineluiza&partner_id=83254&gad_campaignid=23347244387&gbraid=0AAAAAD4zZmTTaiBh_XdzmONnJdqGjaf4F",
+  },
+  {
+    id: 79,
+    category: "casamento",
+    name: "Mesa de jantar",
+    goal: 1899.98,
+    current: 0,
+    description: "Mesa de jantar para receber os amigos",
+    image:
+      "https://product-hub-prd.madeiramadeira.com.br/872306/images/20bbcb44-8222-4705-aa9f-7a0b8abd9515ilaMesaExtensC3ADvel1500px.jpg?width=700&canvas=1:1&bg-color=FFF",
+    storeUrl:
+      "https://www.madeiramadeira.com.br/mesa-extensivel-redonda-de-160cm-tarsila-cabecasa-madeiraoriginals-872306.html",
+  },
+  {
+    id: 80,
+    category: "casamento",
+    name: "Cadeiras de jantar",
+    goal: 2099.96,
+    current: 0,
+    description: "Cadeiras de jantar para os amigos não sentarem no chão",
+    image:
+      "https://product-hub-prd.madeiramadeira.com.br/975335/images/0ff529d1-5836-475a-ae42-45d12c975c0e83ffa58a9753351951500x1500.jpg?width=700&canvas=1:1&bg-color=FFF",
+    storeUrl:
+      "https://www.madeiramadeira.com.br/kit-4-cadeiras-sala-de-jantar-pequi-cabecasa-madeiraoriginals-975335.html",
+  },
+  {
+    id: 81,
+    category: "casamento",
+    name: "Rack para TV",
+    goal: 2099.96,
+    current: 0,
+    description: "Rack para TV para dar aquele toque especial na sala",
+    image:
+      "https://product-hub-prd.madeiramadeira.com.br/414626198/images/d8edc286-f9bb-44f5-ac58-8e9ed5225e262689tb312freijoperspectiva.jpg?width=700&canvas=1:1&bg-color=FFF",
+    storeUrl:
+      "https://www.madeiramadeira.com.br/rack-para-tv-ate-55-135cm-com-01-porta-de-correr-100-mdf-tb312-dalla-costa-freijo-414626198.html?index=prod-poc-madeira&seller=13320",
+  },
+  {
+    id: 82,
+    category: "cha",
+    name: "Ferro de passar roupas",
+    goal: 0,
+    current: 0,
+    description: "Ferro de passar já que a sociedade não aceita roupas amassadas",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 83,
+    category: "cha",
+    name: "Processador de Alimentos",
+    goal: 0,
+    current: 0,
+    description: "Preparar refeições mais rápidas",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 84,
+    category: "cha",
+    name: "Mixer",
+    goal: 0,
+    current: 0,
+    description: "Para preparar o pré treino",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 85,
+    category: "casamento",
+    name: "Exaustor",
+    goal: 0,
+    current: 0,
+    description: "Exaustor para a cozinha",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 86,
+    category: "cha",
+    name: "Jogo de Sobremesa",
+    goal: 0,
+    current: 0,
+    description: "Para degustar docinhos fit",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 87,
+    category: "cha",
+    name: "Boleira",
+    goal: 0,
+    current: 0,
+    description: "Para guardar os bolos deliciosos",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 88,
+    category: "cha",
+    name: "Porta condimentos",
+    goal: 0,
+    current: 0,
+    description: "Tempeirinhos sempre a mão",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 89,
+    category: "cha",
+    name: "Porta-guardanapo",
+    goal: 0,
+    current: 0,
+    description: "Uma mesa posta nunca fez mal a ninguém",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 90,
+    category: "cha",
+    name: "Jogo de Copos",
+    goal: 0,
+    current: 0,
+    description: "Para brindar os bons momentos",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 91,
+    category: "cha",
+    name: "Lixeira Grande de Inox",
+    goal: 0,
+    current: 0,
+    description: "Para manter a cozinha limpa",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 92,
+    category: "cha",
+    name: "Lixeira Pequena de Inox",
+    goal: 0,
+    current: 0,
+    description: "Para manter o banheiro limpo",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 93,
+    category: "cha",
+    name: "Porta Mantimentos",
+    goal: 0,
+    current: 0,
+    description: "Para organizar a despensa",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 94,
+    category: "cha",
+    name: "Manteigueira Francesa",
+    goal: 0,
+    current: 0,
+    description: "Armazenar a manteiga com estilo",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 95,
+    category: "cha",
+    name: "Escorredor de Louças",
+    goal: 0,
+    current: 0,
+    description: "Deixando o ar seco de BSB secar as louças",
+    image:
+      " ",
+    storeUrl:
+      " ",
   },
 ];
