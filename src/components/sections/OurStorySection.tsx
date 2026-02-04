@@ -69,7 +69,7 @@ export default function OurStorySection() {
               </p>  
               </div>
           
-              <div className="relative h-full min-h-[400px] w-full bg-muted flex items-center justify-center overflow-hidden">
+              <div className="relative h-full min-h-[500px] w-full bg-muted flex items-center justify-center overflow-hidden">
                 <Carousel
                   className="w-full h-full"
                   plugins={[
