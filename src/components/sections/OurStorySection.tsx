@@ -15,6 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 import fotoJP1 from "@/assets/fotosJP-1.jpg";
 import fotoJP2 from "@/assets/fotosJP-2.jpg";
 import fotoJP3 from "@/assets/fotosJP-3.jpg";
+import fotoJP4 from "@/assets/fotosJP-4.jpg";
 import fotoJP5 from "@/assets/fotosJP-5.jpg";
 import fotoJP6 from "@/assets/fotosJP-6.jpeg";
 import fotoJP7 from "@/assets/fotosJP-7.jpg";
@@ -26,11 +27,15 @@ import fotoJP12 from "@/assets/fotosJP-12.jpg";
 import fotoJP13 from "@/assets/fotosJP-13.jpg";
 import fotoJP14 from "@/assets/fotosJP-14.jpg";
 import fotoJP15 from "@/assets/fotosJP-15.jpg";
+import fotoJP16 from "@/assets/fotosJP-16.jpg";
+import fotoJP17 from "@/assets/fotosJP-17.jpg";
+import fotoJP18 from "@/assets/fotosJP-18.jpg";
 
 const carouselPhotos = [
   fotoJP1,
   fotoJP2,
   fotoJP3,
+  fotoJP4,
   fotoJP5,
   fotoJP6,
   fotoJP7,
@@ -42,6 +47,9 @@ const carouselPhotos = [
   fotoJP13,
   fotoJP14,
   fotoJP15,
+  fotoJP16,
+  fotoJP17,
+  fotoJP18,
 ];
 
 export default function OurStorySection() {
