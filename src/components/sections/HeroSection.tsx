@@ -36,11 +36,7 @@ const Countdown = () => {
 
     // Set initial time left
     calculateTimeLeft();
-
-    // Update every second
     const timer = setInterval(calculateTimeLeft, 1000);
-
-    // Cleanup interval on component unmount
     return () => clearInterval(timer);
   }, []);
 
@@ -59,7 +55,6 @@ const Countdown = () => {
 
 export default function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-bg");
-
   const { scrollY } = useScroll();
 
   // Configuração da animação baseada no scroll
@@ -73,15 +68,15 @@ export default function HeroSection() {
       {heroImage && (
         <Image
           src={fotoHero}
-          alt={heroImage.description}
+          alt={heroImage?.description || "Foto Júlia e Pedro"}
           fill
-          className="object-cover object-[center_bottom]npm install embla-carousel-autoplay"
+          className="object-cover object-[center_bottom]"
           priority
-          data-ai-hint={heroImage.imageHint}
+          data-ai-hint={heroImage?.imageHint}
         />
       )}
 
-{/* Overlay Escuro para leitura */}
+      {/* Overlay Escuro para leitura */}
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white p-4 space-y-10">
@@ -103,7 +98,7 @@ export default function HeroSection() {
              /> 
           </div>
 
-          <h1 className="font-headline text-5xl md:text-8xl font-bold tracking-tight drop-shadow-lg">
+          <h1 className="font-headline text-5xl md:text-8xl font-bold tracking-tight drop-shadow-lg text-center ml-8 md:ml-14">
             Júlia & Pedro
           </h1>
         </motion.div>
