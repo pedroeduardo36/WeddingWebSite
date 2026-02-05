@@ -128,15 +128,13 @@ export default function GiftListSection() {
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">
               Lista de Presentes
             </h2>
-            <div className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <div className="max-w-[900px] text-muted-foreground text-justify md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               <p>
-                O maior presente é a presença de vocês!
+                O maior presente é a presença de vocês! Mas, como amor não compra sofá (infelizmente), criamos essa lista para quem quiser dar uma força na montagem do nosso cantinho.
                 <br />
-                Mas, como amor não compra sofá (infelizmente), criamos essa lista para quem quiser dar uma força na montagem do nosso cantinho.
+                O site é nosso e não cobra taxas: o valor do presente vai direto pra gente via Pix.
                 <br />
-                O site é nosso e não cobra taxas: o valor do presente vai direto pra gente via Pix e vira móvel, decoração e eletrodoméstico pra gente não precisar sentar no chão da sala nova!
-                <br />
-                Mas, se você prefere escolher o presente físico, sem problemas: também deixamos sugestões aqui com o link direto da loja para facilitar. Escolha o que ficar mais prático pra você! Obrigado pelo carinho de sempre
+                Mas, se você prefere escolher o presente físico, sem problemas: também deixamos sugestões aqui com o link direto da loja para facilitar. Escolha o que ficar mais prático pra você! Obrigado pelo carinho de sempre!
               </p>
             </div>
           </div>
