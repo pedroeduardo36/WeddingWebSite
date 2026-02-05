@@ -69,10 +69,10 @@ export default function OurStorySection() {
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2 items-center">
               <div className="p-6 md:p-10 space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-justify leading-relaxed">
                 Nossa história começou como as melhores costumam começar: sem pressa, dentro do nosso PG. Ali, enquanto buscávamos a Deus, acabamos encontrando também um ao outro. O namoro em 2023 foi só a confirmação de que nossos propósitos estavam alinhados e de que amar é, acima de tudo, uma escolha diária de cuidar e crescer junto.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-justify leading-relaxed">
                 Em janeiro de 2025, no Rio de Janeiro, decidimos que queriamos essa parceriapara a vida toda. O "sim" do noivado foi o primeiro passo para o grande dia que vem por aí. Estamos ansiosos para celebrar com vocês o inicio da nossa família, com a ceteza que Jesus estará guiando cada passo e sendo o dono da trilha sonora da nossa vida!
               </p>  
               </div>
