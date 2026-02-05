@@ -7,10 +7,13 @@ export default function Footer() {
         <div className="flex items-center gap-2">
             <span>Feito com</span>
             <Heart className="h-4 w-4 fill-primary text-primary" />
-            <span>para</span>
+            <span>por</span>
         </div>
         <p className="font-headline text-lg font-semibold text-foreground">
-          Júlia & Pedro
+          Vilamargo Wedding 
+          <div>
+          (Júlia & Pedro)
+          </div>
         </p>
         <p>© 2026</p>
       </div>

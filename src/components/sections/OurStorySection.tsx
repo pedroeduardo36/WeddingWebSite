@@ -60,7 +60,7 @@ export default function OurStorySection() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Nossa História</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Uma jornada de amor, amizade e muita que nos trouxe até aqui.
+              Uma jornada de amor, amizade e muita fé que nos trouxe até aqui.
             </p>
           </div>
         </div>
