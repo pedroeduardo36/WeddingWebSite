@@ -10,7 +10,8 @@ export default function LocationSection() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Cerimônia e Festa</h2>
             <p className="max-w-[900px] text-accent-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Celebre conosco neste lugar especial.
+              
+              Um pedido especial: Nossa cerimônia terá início às 16h00. Contamos com a presença de vocês no horário para vivermos esse momento do início ao fim.
             </p>
           </div>
         </div>

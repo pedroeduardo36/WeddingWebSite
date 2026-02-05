@@ -15,6 +15,7 @@ import Autoplay from "embla-carousel-autoplay";
 import fotoJP1 from "@/assets/fotosJP-1.jpg";
 import fotoJP2 from "@/assets/fotosJP-2.jpg";
 import fotoJP3 from "@/assets/fotosJP-3.jpg";
+import fotoJP4 from "@/assets/fotosJP-4.jpg";
 import fotoJP5 from "@/assets/fotosJP-5.jpg";
 import fotoJP6 from "@/assets/fotosJP-6.jpeg";
 import fotoJP7 from "@/assets/fotosJP-7.jpg";
@@ -26,11 +27,15 @@ import fotoJP12 from "@/assets/fotosJP-12.jpg";
 import fotoJP13 from "@/assets/fotosJP-13.jpg";
 import fotoJP14 from "@/assets/fotosJP-14.jpg";
 import fotoJP15 from "@/assets/fotosJP-15.jpg";
+import fotoJP16 from "@/assets/fotosJP-16.jpg";
+import fotoJP17 from "@/assets/fotosJP-17.jpg";
+import fotoJP18 from "@/assets/fotosJP-18.jpg";
 
 const carouselPhotos = [
   fotoJP1,
   fotoJP2,
   fotoJP3,
+  fotoJP4,
   fotoJP5,
   fotoJP6,
   fotoJP7,
@@ -42,6 +47,9 @@ const carouselPhotos = [
   fotoJP13,
   fotoJP14,
   fotoJP15,
+  fotoJP16,
+  fotoJP17,
+  fotoJP18,
 ];
 
 export default function OurStorySection() {
@@ -52,7 +60,7 @@ export default function OurStorySection() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">Nossa História</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Uma jornada de amor, amizade e muita que nos trouxe até aqui.
+              Uma jornada de amor, amizade e muita fé que nos trouxe até aqui.
             </p>
           </div>
         </div>
@@ -61,10 +69,10 @@ export default function OurStorySection() {
           <CardContent className="p-0">
             <div className="grid md:grid-cols-2 items-center">
               <div className="p-6 md:p-10 space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-justify leading-relaxed">
                 Nossa história começou como as melhores costumam começar: sem pressa, dentro do nosso PG. Ali, enquanto buscávamos a Deus, acabamos encontrando também um ao outro. O namoro em 2023 foi só a confirmação de que nossos propósitos estavam alinhados e de que amar é, acima de tudo, uma escolha diária de cuidar e crescer junto.
                 </p>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground text-justify leading-relaxed">
                 Em janeiro de 2025, no Rio de Janeiro, decidimos que queriamos essa parceriapara a vida toda. O "sim" do noivado foi o primeiro passo para o grande dia que vem por aí. Estamos ansiosos para celebrar com vocês o inicio da nossa família, com a ceteza que Jesus estará guiando cada passo e sendo o dono da trilha sonora da nossa vida!
               </p>  
               </div>
