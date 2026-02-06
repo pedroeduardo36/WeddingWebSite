@@ -37,9 +37,9 @@ export default function RsvpSection() {
             </h2>
             <p className="max-w-[900px] text-accent-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Sua presença é muito importante para nós. Por favor, confirme abaixo até
-              <div> 
+              <br/> 
                 02/04/2026. 
-              </div>
+              <br/>
             </p>
           </div>
         </div>

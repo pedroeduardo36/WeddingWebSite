@@ -57,14 +57,19 @@ export default function HeroSection() {
   const heroImage = PlaceHolderImages.find((img) => img.id === "hero-bg");
   const { scrollY } = useScroll();
 
-  // Configuração da animação baseada no scroll
-  // [0, 150] = pixels scrollados. [0, 1] = valor da opacidade.
-  // Significa: No topo (0px) está invisível (0). Ao rolar 150px, fica visível (1).
+  const logoOpacity = useTransform(scrollY, [0, 250], [1, 0]);
+  const logoY = useTransform(scrollY, [0, 250], [0, -100]);
+  const logoScale = useTransform(scrollY, [0, 250], [1, 0.6]);
+
+  const contentOpacity = useTransform(scrollY, [50, 300], [0, 1]);
+  const contentY = useTransform(scrollY, [50, 300], [50, 0]);
+  
   const opacity = useTransform(scrollY, [0, 200], [0, 1]);
   const yMovement = useTransform(scrollY, [0, 200], [20, 0]); // Sobe levemente enquanto aparece
 
   return (
-    <section id="home" className="relative h-[900px] w-full overflow-hidden">
+    <section id="home" className="relative h-[100dvh] w-full overflow-hidden">
+      
       {heroImage && (
         <Image
           src={fotoHero}
@@ -73,6 +78,7 @@ export default function HeroSection() {
           className="object-cover object-[center_bottom]"
           priority
           data-ai-hint={heroImage?.imageHint}
+          quality={100}
         />
       )}
 
@@ -105,8 +111,8 @@ export default function HeroSection() {
 
         {/* PARTE 2: Aparece com o Scroll (Data e Countdown) */}
         <motion.div
-          style={{ opacity: opacity, y: yMovement }} // Conectado ao Scroll aqui
-          className="flex flex-col items-center space-y-8"
+          style={{ opacity: contentOpacity, y: contentY }}
+          className="flex flex-col items-center space-y-8 mt-64 md:mt-80"
         >
           <p className="font-body text-xl md:text-2xl tracking-[0.2em] py-2 px-8">
             02 de MAIO de 2026
@@ -127,6 +133,12 @@ export default function HeroSection() {
         <span className="text-xs uppercase tracking-widest">Role para ver</span>
         <div className="w-1 h-8 rounded-full bg-white/50 animate-pulse" />
       </motion.div>
+
+      {/* GRADIENTE DE TRANSIÇÃO (BLEND) */}
+      <motion.div 
+        style={{ opacity: contentOpacity }} // Usando a mesma variável do countdown
+        className="absolute bottom-0 left-0 w-full h-48 bg-gradient-to-t from-background via-background/80 to-transparent z-20 pointer-events-none" 
+      />
     </section>
   );
 }
