@@ -96,7 +96,7 @@ export default function OurStorySection() {
                             src={photo}
                             alt={`Foto Nossa História ${index + 1}`}
                             fill
-                            className="object-cover"
+                            className="object-contain bg-white rounded-lg shadow-md"
                             priority={index === 0}
                           />
                       </CarouselItem>
