@@ -28,7 +28,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 250);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -37,8 +37,10 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-300",
-        isScrolled ? "bg-card/50 shadow-md backdrop-blur-sm" : "bg-transparent",
+        "fixed top-0 z-50 w-full transition-all duration-700 transform",
+        isScrolled 
+        ? "bg-white/80 shadow-md backdrop-blur-sm translate-y-0 opacity-100 py-2" 
+        : "-translate-y-full opacity-0 py-4",
       )}
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">

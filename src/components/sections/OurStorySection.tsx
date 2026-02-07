@@ -73,7 +73,7 @@ export default function OurStorySection() {
                 Nossa história começou como as melhores costumam começar: sem pressa, dentro do nosso PG. Ali, enquanto buscávamos a Deus, acabamos encontrando também um ao outro. O namoro em 2023 foi só a confirmação de que nossos propósitos estavam alinhados e de que amar é, acima de tudo, uma escolha diária de cuidar e crescer junto.
                 </p>
                 <p className="text-muted-foreground text-justify leading-relaxed">
-                Em janeiro de 2025, no Rio de Janeiro, decidimos que queriamos essa parceriapara a vida toda. O "sim" do noivado foi o primeiro passo para o grande dia que vem por aí. Estamos ansiosos para celebrar com vocês o inicio da nossa família, com a ceteza que Jesus estará guiando cada passo e sendo o dono da trilha sonora da nossa vida!
+                Em janeiro de 2025, no Rio de Janeiro, decidimos que queriamos essa parceriapara a vida toda. O "sim" do noivado foi o primeiro passo para o grande dia que vem por aí. Estamos ansiosos para celebrar com vocês o inicio da nossa família, com a certeza que Jesus estará guiando cada passo e sendo o dono da trilha sonora da nossa vida!
               </p>  
               </div>
           
@@ -96,7 +96,7 @@ export default function OurStorySection() {
                             src={photo}
                             alt={`Foto Nossa História ${index + 1}`}
                             fill
-                            className="object-cover"
+                            className="object-contain bg-white rounded-lg shadow-md"
                             priority={index === 0}
                           />
                       </CarouselItem>
