@@ -36,10 +36,10 @@ export default function RsvpSection() {
               Confirme sua Presença
             </h2>
             <p className="max-w-[900px] text-accent-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Sua presença é muito importante para nós. Por favor, confirme abaixo até
-              <div> 
-                02/04/2026. 
-              </div>
+              Sua presença é muito importante para nós. Por favor, confirme
+              abaixo até
+              <br />
+              02/04/2026.
             </p>
           </div>
         </div>
