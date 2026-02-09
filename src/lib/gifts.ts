@@ -1061,13 +1061,13 @@ export const allGifts: Gift[] = [
     id: 85,
     category: "casamento",
     name: "Exaustor",
-    goal: 0,
+    goal: 378,
     current: 0,
     description: "Exaustor para a cozinha",
     image:
-      " ",
+      "https://m.media-amazon.com/images/I/41reXjYlagL._AC_SL1200_.jpg",
     storeUrl:
-      " ",
+      "https://www.amazon.com.br/SUGGAR-DEPURADOR-SLIM-PRETO-DPS182PT/dp/B0B3SJ8YLP/ref=asc_df_B0B3SJ8YLP?mcid=136ba5f7419c37bbb89a04941fbe57c2&tag=googleshopp06-20&linkCode=df0&hvadid=721147801917&hvpos=&hvnetw=g&hvrand=10882227228122705847&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-2374768378214&gad_source=1&th=1",
   },
   {
     id: 86,
@@ -1188,5 +1188,89 @@ export const allGifts: Gift[] = [
       " ",
     storeUrl:
       " ",
+  },
+  {
+    id: 96,
+    category: "cha",
+    name: "Modelador de hambúrguer",
+    goal: 29.9,
+    current: 0,
+    description: "O hambúrguer do noivo é especial.",
+    image:
+      "https://m.media-amazon.com/images/I/61sH6luMu3L._AC_SL1001_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Forma-para-Moldar-Hamb%C3%BArguer-Recheado/dp/B0FS7RLRFS/ref=sr_1_3_sspa?crid=26NEPKSEB7OKH&dib=eyJ2IjoiMSJ9.KcEHDqevXNwfOmtcUQCFOL7EZLjm-66pPig-EGBCs_lBSdEFuKhWRUPf2gu5-i6XlczMHj2WBxrOconWqvkO-NfdlUaxqalKpwPqaBvSXN-ItRpaQKmt03fS_M26op4n4Ef1333HaWUkjgDa_boJxsjk3FTI730R5UKC0sCWQDi7NVy6JtWnmZLkS951-xkz-1e1_hly2HY9fwC3KyDEl20lf063hRHqCHkzbJrdugjlTood0XyqbYf5gHUzkXuXiaD2IpKz-Iy7DfHksUKsGyGCfGtm7vmJKzmThkAtQYg.TP35U5xaLQdtybAjbwu-281wvAUVrxpCS1gbCTsm9do&dib_tag=se&keywords=molde+de+hamburguer&qid=1770607244&sprefix=molde+de+,aps,315&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
+  },
+  {
+    id: 97,
+    category: "casamento",
+    name: "Geladeira",
+    goal: 2903.12,
+    current: 0,
+    description: "",
+    image:
+      "https://imgs.casasbahia.com.br/1565163222/1xg.jpg?imwidth=500",
+    storeUrl:
+      "https://www.casasbahia.com.br/geladeira-duplex-evolution-smartthings-samsung-rt38-391l-bivolt-black-inox/p/1565163222?IdSku=1565163222&idLojista=228168&tipoLojista=3P&&gad_campaignid=22788743736&gbraid=0AAAAADtAamhK3k7AxzYp4Hiclm_5zOkAn",
+  },
+  {
+    id: 98,
+    category: "casamento",
+    name: "Alexa",
+    goal: 409,
+    current: 0,
+    description: "",
+    image:
+      "https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Echo-Dot-5%C2%AA-gera%C3%A7%C3%A3o-Cor-Preta/dp/B09B8VGCR8/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.14cZBgy_n6hLGjrn9NIG4vUhPEOu670jrELSqdecXonVOVyY_mscW4n7JkUTEU7SeGZFTdhYWhHnMuJ81gncDlybzNJ2WHiBQLcJFWFY1IqxpeEEVV4RXFg1Rw8piDXaf9A5ozCf5kUnxVFSU8snlojXar7sZ5w0ZTL1uP2cW6Aj-myr1PPx6rvx-wTLB8gnnT8BgU8LKGegP8tGtcDvdIA-_OCeb0zIkIyGguh9AKkgoz9rpQ9tqxPA0XSsGr-A1hxTXW7AuNkVTDoro1L-7qq67V3ajfFkyTAO9UBjir4.iI3phMqpl5yBkhAO8ngyDsYzbj1XS8H_Y3cj8y3aVk8&dib_tag=se&keywords=alexa&qid=1770607840&sr=8-1&ufe=app_do:amzn1.fos.e05b01e0-91a7-477e-a514-15a32325a6d6&th=1",
+  },
+  {
+    id: 99,
+    category: "casamento",
+    name: "Chuveiro",
+    goal: 392.64,
+    current: 0,
+    description: "Sábado é dia de tomar banho.",
+    image:
+      "https://m.magazineluiza.com.br/a-static/420x420/chuveiro-eletrico-de-parede-acqua-storm-ultra-preto-220v-lorenzetti/livencasa/158771/8b3c19c217942dbb5e393daab8675b2e.jpeg",
+    storeUrl:
+      "https://www.magazineluiza.com.br/chuveiro-eletrico-de-parede-acqua-storm-ultra-preto-220v-lorenzetti/p/ck3073f78d/cj/duxx/?&seller_id=livencasa&partner_id=83244&gad_campaignid=23341738725&gbraid=0AAAAAD4zZmTQ7DvMmg9IOaTY26GsGw6tG",
+  },
+  {
+    id: 100,
+    category: "cha",
+    name: "Tábua de corte",
+    goal: 1,
+    current: 0,
+    description: " ",
+    image:
+      " ",
+    storeUrl:
+      " ",
+  },
+  {
+    id: 101,
+    category: "casamento",
+    name: "Mesa de cabeceira",
+    goal: 396.20,
+    current: 0,
+    description: "Kit 2 mesas de cabeceira",
+    image:
+      "https://product-hub-prd.madeiramadeira.com.br/435167488/images/bca07e00-87a8-437a-829b-11d4fec822121e8fd8418b2e7e1668ebb452b6.jpg?width=700&canvas=1:1&bg-color=FFF",
+    storeUrl:
+      "https://www.madeiramadeira.com.br/kit-2-mesas-de-cabeceira-com-gaveta-channel-nature-com-off-white-fabrimoveis-435167488.html?origem=pla-435167488&utm_source=google&utm_medium=cpc&utm_content=mesas-de-cabeceira-5083&utm_term=&utm_id=22811606548&gad_source=1&gad_campaignid=22811606548&gbraid=0AAAAADr4g_F6-jsxhx2tjSn5cjXogU_iS&gclid=Cj0KCQiAhaHMBhD2ARIsAPAU_D4NLil0Be0z58IH5mJxiDF5Tm6Vrp5iwRgeZ0knjdLJu1tj7O8cdrMaAkqbEALw_wcB",
+  },
+  {
+    id: 102,
+    category: "casamento",
+    name: "Cadeira ergonômica",
+    goal: 405.55,
+    current: 0,
+    description: "Home office ergonômico",
+    image:
+      "https://m.media-amazon.com/images/I/61H3dhK2+BL._AC_SL1200_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/escrit%C3%B3rio-ergon%C3%B4mico-independente-respir%C3%A1vel-ajust%C3%A1vel%EF%BC%88Preto/dp/B0CG8J3N2H/ref=asc_df_B0CG8J3N2H?tag=googleshopp00-20&hvadid=721185796203&hvpos=&hvnetw=g&hvrand=13589312507683787360&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2381201824264&th=1",
   },
 ];
