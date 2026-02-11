@@ -128,7 +128,7 @@ export default function GiftListSection() {
             <h2 className="text-3xl font-bold font-headline tracking-tighter sm:text-5xl text-primary">
               Lista de Presentes
             </h2>
-            <div className="max-w-[900px] text-muted-foreground text-justify md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <div className="w-full p-8 text-muted-foreground text-justify md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               <p>
                 O maior presente é a presença de vocês! Mas, como amor não compra sofá (infelizmente), criamos essa lista para quem quiser dar uma força na montagem do nosso cantinho.
                 <br />
