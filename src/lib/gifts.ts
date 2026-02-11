@@ -1292,4 +1292,14 @@ export const allGifts: Gift[] = [
     storeUrl:
       "https://www.casasbahia.com.br/pack-console-playstation-5-edicao-digital-825gb-astro-bot-e-gran-turismo-7/p/1572582933?IdSku=1572582933&idLojista=232923&tipoLojista=3P&&gad_campaignid=22846606777&gbraid=0AAAAADtAamiUz49yVlPZTOvB4nB0qX3ST",
   },
+  {
+    id: 107,
+    category: "casamento",
+    name: "Contribua com um valor livre",
+    goal: 5000,
+    current: 0,
+    description: "Contribua com um valor livre para ajudar a realizar nossos sonhos juntos!",
+    image:
+      "https://images.unsplash.com/photo-1770773068832-acae58b52b5f?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
 ];
