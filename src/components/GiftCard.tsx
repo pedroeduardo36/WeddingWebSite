@@ -125,7 +125,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
       </div>
 
       <CardHeader>
-        <CardTitle className="font-headline line-clamp-1" title={gift.name}>
+        <CardTitle className="font-headline" title={gift.name}>
           {gift.name}
         </CardTitle>
         <CardDescription className="line-clamp-2 min-h-[40px]">

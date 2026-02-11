@@ -25,7 +25,7 @@ export default function GiftsPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   const [filter, setFilter] = useState("all");
-  const [sortOrder, setSortOrder] = useState("price-desc");
+  const [sortOrder, setSortOrder] = useState("");
 
   // 1. Busca dados ao carregar a página
   useEffect(() => {
@@ -150,9 +150,18 @@ export default function GiftsPage() {
             <h1 className="text-3xl font-bold font-headline tracking-tighter sm:text-4xl md:text-5xl text-primary">
               Lista Completa de Presentes
             </h1>
-            <p className="text-muted-foreground max-w-[800px]">
-              Fique à vontade para escolher o item que mais lhe agradar. Sua
-              presença já é o nosso maior presente!
+            <p className="text-muted-foreground w-full">
+              Como funciona nossa lista: Você pode nos{" "}
+              <strong> presentear de duas formas!</strong> Ao clicar em um item,
+              <strong>
+                use o QR Code para contribuir com o valor total ou uma cota via
+                Pix.
+              </strong>{" "}
+              <strong>Se preferir dar o produto físico</strong>, basta usar o
+              link da loja (disponível em alguns itens) e mandar{" "}
+              <strong>entregar no nosso endereço.</strong>
+              Escolha a opção mais confortável para você; o que realmente
+              importa é o seu carinho!
             </p>
           </div>
         </div>

@@ -73,14 +73,12 @@ export const allGifts: Gift[] = [
   {
     id: 6,
     category: "casamento",
-    name: "TV",
-    goal: 1199,
-    current: 1199,
-    description:
-      "Pro noivo ver o jogo do Palmeiras ou pros dias de campus online.",
+    name: "Diária noite de núpcias",
+    goal: 668.76,
+    current: 0,
+    description: " ",
     image:
-      "https://www.lg.com/content/dam/channel/wcms/br/images/tv/55ur8750psa_bwz_essp_br_c/gallery/DZ-3.jpg",
-    imageHint: "television screen",
+      "https://images.trvl-media.com/lodging/3000000/2060000/2050600/2050555/9fc56328.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
   },
   {
     id: 7,
@@ -517,7 +515,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 41,
-    category: "cha",
+    category: "casamento",
     name: "Panela de Pressão",
     goal: 174,
     current: 0,
@@ -557,15 +555,14 @@ export const allGifts: Gift[] = [
   {
     id: 44,
     category: "cha",
-    name: "Jogo de Tábuas para Corte",
-    goal: 79.99,
+    name: "Tábuas para Corte",
+    goal: 174.99,
     current: 0,
     description: " ",
-    image:
-      "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQMtEXOuruQL1OAvx_KGhmBlyrnJTePiovR09Qo9CHkGAhR2w",
+    image: "https://m.media-amazon.com/images/I/71+H93fQ-ML._AC_SL1200_.jpg",
     imageHint: "tábuas para corte",
     storeUrl:
-      "https://www.camicado.com.br/p/jogo-de-tabuas-de-corte-home-style-sofia/-/A-101027000-br.lc?sku=101027018",
+      "https://www.amazon.com.br/T%C3%A1bua-Madeira-Invertida-Canaleta-Stolf/dp/B0821SHKZV/ref=asc_df_B0821SHKZV?tag=googleshopp00-20&hvadid=709885039594&hvpos=&hvnetw=g&hvrand=15641890093906329261&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-913212534619&psc=1&language=pt_BR",
   },
   {
     id: 45,
@@ -595,7 +592,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 47,
-    category: "cha",
+    category: "casamento",
     name: "Sanduicheira",
     goal: 99.99,
     current: 0,
@@ -612,7 +609,7 @@ export const allGifts: Gift[] = [
     name: "Jogo de Marinex de Vidro",
     goal: 129,
     current: 0,
-    description: "Contribua com uma causa que apoiamos.",
+    description: "Serve pra tudo.",
     image: "https://m.media-amazon.com/images/I/51X6C1aXaxL._AC_SL1000_.jpg",
     imageHint: "jogo de assadeira",
     storeUrl:
@@ -639,14 +636,14 @@ export const allGifts: Gift[] = [
     current: 0,
     description: "Pro noivo fazer bastante macarrão.",
     image:
-      "https://fastshopbr.vtexassets.com/arquivos/ids/3671569/17581241571504.jpg?v=639048764398570000",
+      "https://fastshopbr.vtexassets.com/arquivos/ids/3848388-1280-auto/17581241571504.webp?v=639058121310000000&quality=8",
     imageHint: "Fogão",
     storeUrl:
       "https://site.fastshop.com.br/fogao-4-bocas-electrolux-cinza-efficient-mesa-vidro-tripla-chama-e-perfectcook--fe4gg--119728/p?idsku=126977&gad_campaignid=22827161028",
   },
   {
     id: 51,
-    category: "cha",
+    category: "casamento",
     name: "Liquidificador",
     goal: 176.37,
     current: 0,
@@ -696,7 +693,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 55,
-    category: "cha",
+    category: "casamento",
     name: "Aparelho de Jantar",
     goal: 481,
     current: 0,
@@ -759,7 +756,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 60,
-    category: "cha",
+    category: "casamento",
     name: "Chaleira Elétrica",
     goal: 133.44,
     current: 0,
@@ -869,7 +866,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 69,
-    category: "casamento",
+    category: "cha",
     name: "Tapete",
     goal: 99,
     current: 0,
@@ -946,7 +943,8 @@ export const allGifts: Gift[] = [
     goal: 1418.53,
     current: 0,
     description: "Sofazinho pra assistir Netflix juntinhos",
-    image: "https://cdn.leroymerlin.com.br/products/sofa_4_lugares_living_linho_bronze_viero_moveis_1572240312_a57d_600x600.jpg",
+    image:
+      "https://cdn.leroymerlin.com.br/products/sofa_4_lugares_living_linho_bronze_viero_moveis_1572240312_a57d_600x600.jpg",
     storeUrl:
       "https://www.leroymerlin.com.br/sofa-4-lugares-living-linho-bronze-viero-moveis_1572240312?region=outros",
   },
@@ -975,7 +973,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 78,
-    category: "cha",
+    category: "casamento",
     name: "Panela Elétrica",
     goal: 361.5,
     current: 0,
@@ -1023,39 +1021,38 @@ export const allGifts: Gift[] = [
   },
   {
     id: 82,
-    category: "cha",
+    category: "casamento",
     name: "Ferro de passar roupas",
-    goal: 0,
+    goal: 87.9,
     current: 0,
-    description: "Ferro de passar já que a sociedade não aceita roupas amassadas",
+    description:
+      "Ferro de passar já que a sociedade não aceita roupas amassadas",
     image:
-      " ",
+      "https://m.magazineluiza.com.br/a-static/420x420/ferro-de-passar-a-vapor-oster-gcstbs5002-220v-base-antiaderente-200ml-filtro-anticalcario-1400w-verde/generaleletro/102650/fb90e45d3d2e95d2e53969578cea36c3.jpeg",
     storeUrl:
-      " ",
+      "https://www.magazineluiza.com.br/ferro-de-passar-a-vapor-oster-gcstbs5002-220v-base-antiaderente-200ml-filtro-anticalcario-1400w-verde/p/gh1jd41ckd/ep/elfv/?seller_id=generaleletro",
   },
   {
     id: 83,
-    category: "cha",
+    category: "casamento",
     name: "Processador de Alimentos",
-    goal: 0,
+    goal: 117.9,
     current: 0,
     description: "Preparar refeições mais rápidas",
-    image:
-      " ",
+    image: "https://m.media-amazon.com/images/I/51yYe4QlyQL._AC_SL1000_.jpg",
     storeUrl:
-      " ",
+      "https://www.amazon.com.br/Mixer-Turbo-Elgin-42MIX2002000-Preto/dp/B09VQ2PQRN/ref=asc_df_B09VQ2PQRN?tag=googleshopp00-20&hvadid=709874962041&hvpos=&hvnetw=g&hvrand=11042364895265923654&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-1667684182034&language=pt_BR&th=1",
   },
   {
     id: 84,
     category: "cha",
-    name: "Mixer",
-    goal: 0,
+    name: "Funil",
+    goal: 11,
     current: 0,
-    description: "Para preparar o pré treino",
-    image:
-      " ",
+    description: "Para facilitar o processo de despejo de líquidos",
+    image: "https://m.media-amazon.com/images/I/71V+vs9ytQL._SL1500_.jpg",
     storeUrl:
-      " ",
+      "https://www.amazon.com.br/Conjunto-inoxid%C3%A1vel-aliment%C3%ADcio-recipientes-ferramentas/dp/B0FWXM8B83/ref=asc_df_B0FWXM8B83?tag=googleshopp00-20&hvadid=773381654827&hvpos=&hvnetw=g&hvrand=156957948833557635&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2451974827145&psc=1&language=pt_BR",
   },
   {
     id: 85,
@@ -1064,8 +1061,7 @@ export const allGifts: Gift[] = [
     goal: 378,
     current: 0,
     description: "Exaustor para a cozinha",
-    image:
-      "https://m.media-amazon.com/images/I/41reXjYlagL._AC_SL1200_.jpg",
+    image: "https://m.media-amazon.com/images/I/41reXjYlagL._AC_SL1200_.jpg",
     storeUrl:
       "https://www.amazon.com.br/SUGGAR-DEPURADOR-SLIM-PRETO-DPS182PT/dp/B0B3SJ8YLP/ref=asc_df_B0B3SJ8YLP?mcid=136ba5f7419c37bbb89a04941fbe57c2&tag=googleshopp06-20&linkCode=df0&hvadid=721147801917&hvpos=&hvnetw=g&hvrand=10882227228122705847&hvpone=&hvptwo=&hvqmt=&hvdev=m&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-2374768378214&gad_source=1&th=1",
   },
@@ -1076,10 +1072,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Para degustar docinhos fit",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 87,
@@ -1088,10 +1082,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Para guardar os bolos deliciosos",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 88,
@@ -1100,10 +1092,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Tempeirinhos sempre a mão",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 89,
@@ -1112,10 +1102,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Uma mesa posta nunca fez mal a ninguém",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 90,
@@ -1124,10 +1112,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Para brindar os bons momentos",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 91,
@@ -1136,10 +1122,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Para manter a cozinha limpa",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 92,
@@ -1148,10 +1132,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Para manter o banheiro limpo",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 93,
@@ -1160,10 +1142,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Para organizar a despensa",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 94,
@@ -1172,10 +1152,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Armazenar a manteiga com estilo",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 95,
@@ -1184,10 +1162,8 @@ export const allGifts: Gift[] = [
     goal: 0,
     current: 0,
     description: "Deixando o ar seco de BSB secar as louças",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 96,
@@ -1196,8 +1172,7 @@ export const allGifts: Gift[] = [
     goal: 29.9,
     current: 0,
     description: "O hambúrguer do noivo é especial.",
-    image:
-      "https://m.media-amazon.com/images/I/61sH6luMu3L._AC_SL1001_.jpg",
+    image: "https://m.media-amazon.com/images/I/61sH6luMu3L._AC_SL1001_.jpg",
     storeUrl:
       "https://www.amazon.com.br/Forma-para-Moldar-Hamb%C3%BArguer-Recheado/dp/B0FS7RLRFS/ref=sr_1_3_sspa?crid=26NEPKSEB7OKH&dib=eyJ2IjoiMSJ9.KcEHDqevXNwfOmtcUQCFOL7EZLjm-66pPig-EGBCs_lBSdEFuKhWRUPf2gu5-i6XlczMHj2WBxrOconWqvkO-NfdlUaxqalKpwPqaBvSXN-ItRpaQKmt03fS_M26op4n4Ef1333HaWUkjgDa_boJxsjk3FTI730R5UKC0sCWQDi7NVy6JtWnmZLkS951-xkz-1e1_hly2HY9fwC3KyDEl20lf063hRHqCHkzbJrdugjlTood0XyqbYf5gHUzkXuXiaD2IpKz-Iy7DfHksUKsGyGCfGtm7vmJKzmThkAtQYg.TP35U5xaLQdtybAjbwu-281wvAUVrxpCS1gbCTsm9do&dib_tag=se&keywords=molde+de+hamburguer&qid=1770607244&sprefix=molde+de+,aps,315&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
   },
@@ -1208,8 +1183,7 @@ export const allGifts: Gift[] = [
     goal: 2903.12,
     current: 0,
     description: "",
-    image:
-      "https://imgs.casasbahia.com.br/1565163222/1xg.jpg?imwidth=500",
+    image: "https://imgs.casasbahia.com.br/1565163222/1xg.jpg?imwidth=500",
     storeUrl:
       "https://www.casasbahia.com.br/geladeira-duplex-evolution-smartthings-samsung-rt38-391l-bivolt-black-inox/p/1565163222?IdSku=1565163222&idLojista=228168&tipoLojista=3P&&gad_campaignid=22788743736&gbraid=0AAAAADtAamhK3k7AxzYp4Hiclm_5zOkAn",
   },
@@ -1220,8 +1194,7 @@ export const allGifts: Gift[] = [
     goal: 409,
     current: 0,
     description: "",
-    image:
-      "https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg",
+    image: "https://m.media-amazon.com/images/I/71xoR4A6q-L._AC_SL1000_.jpg",
     storeUrl:
       "https://www.amazon.com.br/Echo-Dot-5%C2%AA-gera%C3%A7%C3%A3o-Cor-Preta/dp/B09B8VGCR8/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dib=eyJ2IjoiMSJ9.14cZBgy_n6hLGjrn9NIG4vUhPEOu670jrELSqdecXonVOVyY_mscW4n7JkUTEU7SeGZFTdhYWhHnMuJ81gncDlybzNJ2WHiBQLcJFWFY1IqxpeEEVV4RXFg1Rw8piDXaf9A5ozCf5kUnxVFSU8snlojXar7sZ5w0ZTL1uP2cW6Aj-myr1PPx6rvx-wTLB8gnnT8BgU8LKGegP8tGtcDvdIA-_OCeb0zIkIyGguh9AKkgoz9rpQ9tqxPA0XSsGr-A1hxTXW7AuNkVTDoro1L-7qq67V3ajfFkyTAO9UBjir4.iI3phMqpl5yBkhAO8ngyDsYzbj1XS8H_Y3cj8y3aVk8&dib_tag=se&keywords=alexa&qid=1770607840&sr=8-1&ufe=app_do:amzn1.fos.e05b01e0-91a7-477e-a514-15a32325a6d6&th=1",
   },
@@ -1244,16 +1217,14 @@ export const allGifts: Gift[] = [
     goal: 1,
     current: 0,
     description: " ",
-    image:
-      " ",
-    storeUrl:
-      " ",
+    image: " ",
+    storeUrl: " ",
   },
   {
     id: 101,
     category: "casamento",
     name: "Mesa de cabeceira",
-    goal: 396.20,
+    goal: 396.2,
     current: 0,
     description: "Kit 2 mesas de cabeceira",
     image:
@@ -1268,9 +1239,67 @@ export const allGifts: Gift[] = [
     goal: 405.55,
     current: 0,
     description: "Home office ergonômico",
-    image:
-      "https://m.media-amazon.com/images/I/61H3dhK2+BL._AC_SL1200_.jpg",
+    image: "https://m.media-amazon.com/images/I/61H3dhK2+BL._AC_SL1200_.jpg",
     storeUrl:
       "https://www.amazon.com.br/escrit%C3%B3rio-ergon%C3%B4mico-independente-respir%C3%A1vel-ajust%C3%A1vel%EF%BC%88Preto/dp/B0CG8J3N2H/ref=asc_df_B0CG8J3N2H?tag=googleshopp00-20&hvadid=721185796203&hvpos=&hvnetw=g&hvrand=13589312507683787360&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2381201824264&th=1",
+  },
+  {
+    id: 103,
+    category: "casamento",
+    name: "TV",
+    goal: 1199,
+    current: 0,
+    description:
+      "Pro noivo ver o jogo do Palmeiras ou pros dias de campus online.",
+    image:
+      "https://www.lg.com/content/dam/channel/wcms/br/images/tv/55ur8750psa_bwz_essp_br_c/gallery/DZ-3.jpg",
+    imageHint: "television screen",
+  },
+  {
+    id: 104,
+    category: "casamento",
+    name: "Escada",
+    goal: 159,
+    current: 0,
+    description: "Pro noivo trocar a lâmpada.",
+    image:
+      "https://cdn.leroymerlin.com.br/products/escada_aluminio_5_degraus_1,53m_120kg_prata_e_vermelho_91713286_0001_600x600.jpg",
+    imageHint: "television screen",
+    storeUrl:
+      "https://www.leroymerlin.com.br/escada-aluminio-5-degraus-1,53m-120kg-prata-e-vermelho-reisam_91713286?region=outros&region_id=31000&gad_campaignid=23148513989&gbraid=0AAAAADkzLZ4Gc75A_O_dKdHf2CJsm5hIb",
+  },
+  {
+    id: 105,
+    category: "casamento",
+    name: "Filtro d'água",
+    goal: 1199.9,
+    current: 0,
+    description: "Pra sobreviver à seca de Brasília.",
+    image:
+      "https://mundodosfiltros.com.br/cdn/shop/files/Star-frontal-Branco_800x.webp?v=1759934879",
+    storeUrl:
+      "https://mundodosfiltros.com.br/products/purificador-de-agua-everest-star?variant=41512844918843&country=BR&currency=BRL&gad_campaignid=23315168575&gbraid=0AAAAApGDSb7XNbPWeodt22-C0u9xGQYYE",
+  },
+  {
+    id: 106,
+    category: "casamento",
+    name: "Playstation 5",
+    goal: 3300,
+    current: 0,
+    description: "GTA VI tá aí.",
+    image:
+      "https://imgs.casasbahia.com.br/1572582933/3xg.jpg?imwidth=500",
+    storeUrl:
+      "https://www.casasbahia.com.br/pack-console-playstation-5-edicao-digital-825gb-astro-bot-e-gran-turismo-7/p/1572582933?IdSku=1572582933&idLojista=232923&tipoLojista=3P&&gad_campaignid=22846606777&gbraid=0AAAAADtAamiUz49yVlPZTOvB4nB0qX3ST",
+  },
+  {
+    id: 107,
+    category: "casamento",
+    name: "Contribua com um valor livre",
+    goal: 5000,
+    current: 0,
+    description: "Contribua com um valor livre para ajudar a realizar nossos sonhos juntos!",
+    image:
+      "https://images.unsplash.com/photo-1770773068832-acae58b52b5f?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
