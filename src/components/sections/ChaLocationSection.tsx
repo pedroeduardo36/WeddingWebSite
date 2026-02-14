@@ -35,7 +35,7 @@ export default function ChaLocationSection() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Clock className="h-5 w-5 text-muted-foreground" />
-                    <span>Às 14:00</span>
+                    <span>Às 16:00</span>
                   </div>
                 </div>
               </CardContent>
