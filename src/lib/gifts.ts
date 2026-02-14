@@ -656,7 +656,7 @@ export const allGifts: Gift[] = [
   {
     id: 52,
     category: "cha",
-    name: "Faqueiro Tramontina",
+    name: "Jogo de facas",
     goal: 174.31,
     current: 0,
     description: "Faca afiada não passa vergonha.",
@@ -1287,8 +1287,7 @@ export const allGifts: Gift[] = [
     goal: 3300,
     current: 0,
     description: "GTA VI tá aí.",
-    image:
-      "https://imgs.casasbahia.com.br/1572582933/3xg.jpg?imwidth=500",
+    image: "https://imgs.casasbahia.com.br/1572582933/3xg.jpg?imwidth=500",
     storeUrl:
       "https://www.casasbahia.com.br/pack-console-playstation-5-edicao-digital-825gb-astro-bot-e-gran-turismo-7/p/1572582933?IdSku=1572582933&idLojista=232923&tipoLojista=3P&&gad_campaignid=22846606777&gbraid=0AAAAADtAamiUz49yVlPZTOvB4nB0qX3ST",
   },
@@ -1298,8 +1297,184 @@ export const allGifts: Gift[] = [
     name: "Contribua com um valor livre",
     goal: 5000,
     current: 0,
-    description: "Contribua com um valor livre para ajudar a realizar nossos sonhos juntos!",
+    description:
+      "Contribua com um valor livre para ajudar a realizar nossos sonhos juntos!",
     image:
       "https://images.unsplash.com/photo-1770773068832-acae58b52b5f?q=80&w=927&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 108,
+    category: "casamento",
+    name: "Caixa de ferramentas",
+    goal: 109,
+    current: 0,
+    description:
+      "Pro noivo conseguir prender um quadro na parede. (spoiler: é de Drywall)",
+    image:
+      "https://cdn.leroymerlin.com.br/products/jogo_de_ferramentas_com_129_pecas_sparta_89954333_0001_1800x1800.jpg",
+    storeUrl:
+      "https://www.leroymerlin.com.br/kit-de-ferramentas-sparta-aco-carbono-com-maleta-129-pecas_89954333?store_code=28&gad_campaignid=23148513989&gbraid=0AAAAADkzLZ7fivual9pXHPMKMnX5xWNLR",
+  },
+  {
+    id: 109,
+    category: "casamento",
+    name: "Furadeira",
+    goal: 132,
+    current: 0,
+    description: "Vruum",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_707948-MLA83202915938_042025-F.webp",
+    storeUrl:
+      "https://www.mercadolivre.com.br/parafusadeira-e-furadeira-a-bateria-li-ion-wap-wf-12k32-carregador-com-maleta-e-kit-de-11-acessorios/p/MLB46189259?pdp_filters=item_id:MLB4361263765&from=gshop&matt_tool=56938998&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090193672&matt_ad_group_id=174661944604&matt_match_type=&matt_network=g&matt_device=c&matt_creative=727914178240&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735125422&matt_product_id=MLB46189259-product&matt_product_partition_id=2388009257986&matt_target_id=aud-1966857867496:pla-2388009257986&cq_src=google_ads&cq_cmp=22090193672&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090193672&gbraid=0AAAAAD93qcA0Qxyf19azgIUHkuI5AAOTu",
+  },
+  {
+    id: 110,
+    category: "casamento",
+    name: "Taxa para noiva JOGAR o buquê para sua namorada.",
+    goal: 250,
+    current: 0,
+    description: "💍",
+    image:
+      "https://images.unsplash.com/photo-1758810409984-aba17272627b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 111,
+    category: "casamento",
+    name: "Taxa para noiva NÃO jogar o buquê para sua namorada.",
+    goal: 500,
+    current: 0,
+    description: "💍",
+    image:
+      "https://images.unsplash.com/photo-1747102098766-6ea49bcd77fa?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 112,
+    category: "casamento",
+    name: "Ganhe um agradecimento especial dos noivos.",
+    goal: 500,
+    current: 0,
+    description: "Tamo Junto!",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6RB3XFtnwJQH-iVHde2kqGB2lSg0colQUg&s",
+  },
+  {
+    id: 113,
+    category: "cha",
+    name: "Zester.",
+    goal: 80.44,
+    current: 0,
+    description: "Aquela raspinha na torta de limão",
+    image:
+      "https://m.media-amazon.com/images/I/41puBWMce3L._AC_SL1200_.jpg",
+    storeUrl: "https://www.amazon.com.br/Microplane-40020-GRATER-ZESTER/dp/B00004S7V8/ref=asc_df_B00004S7V8?tag=googleshopp00-20&hvadid=709964506241&hvpos=&hvnetw=g&hvrand=16268248562095527595&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-387297469372&psc=1&language=pt_BR"
+  },
+  {
+    id: 114,
+    category: "casamento",
+    name: "Cesto de Roupas.",
+    goal: 84.24,
+    current: 0,
+    description: "Bagunça organizada",
+    image:
+      "https://m.media-amazon.com/images/I/51Ch-xiRjjL._AC_SL1500_.jpg",
+    storeUrl: "https://www.amazon.com.br/Organizador-Lavanderia-Dobr%C3%A1vel-Port%C3%A1til-Divis%C3%B3rias/dp/B0CL787GLD/ref=asc_df_B0CL787GLD?tag=googleshopp00-20&hvadid=709968340963&hvpos=&hvnetw=g&hvrand=743882835395488326&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2299741106393&psc=1&language=pt_BR"
+  },
+  {
+    id: 115,
+    category: "cha",
+    name: "Peneiras.",
+    goal: 33.19,
+    current: 0,
+    description: "Coar um suquinho",
+    image:
+      "https://m.media-amazon.com/images/I/51E5IJI0JQL._AC_SL1300_.jpg",
+    storeUrl: "https://www.amazon.com.br/Conjunto-Peneiras-Coador-Resistentes-Cozinha/dp/B0D4JMMJ9V/ref=asc_df_B0D4JMMJ9V?tag=googleshopp00-20&hvadid=709964506295&hvpos=&hvnetw=g&hvrand=880991048014220565&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2323403493036&psc=1&language=pt_BR"
+  },
+  {
+    id: 116,
+    category: "casamento",
+    name: "Mala para lua de mel.",
+    goal: 143.10,
+    current: 0,
+    description: "Trazer vários souvenirs",
+    image:
+      "https://m.media-amazon.com/images/I/510Yrajv+WL._AC_SL1000_.jpg",
+    storeUrl: "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1"
+  },
+  {
+    id: 117,
+    category: "casamento",
+    name: "Mala para lua de mel.",
+    goal: 143.10,
+    current: 0,
+    description: "Trazer vários souvenirs",
+    image:
+      "https://m.media-amazon.com/images/I/51EKS337q6L._AC_SL1000_.jpg",
+    storeUrl: "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1"
+  },
+  {
+    id: 118,
+    category: "casamento",
+    name: "Ar-condicionado portátil.",
+    goal: 2469.50,
+    current: 0,
+    description: "Trazer vários souvenirs",
+    image:
+      "https://imgs.casasbahia.com.br/1571322381/1xg.jpg?imwidth=500",
+    storeUrl: "https://www.casasbahia.com.br/ar-condicionado-portatil-electrolux-12000-btus-frio-com-wi-fi-branco-sp12f/p/1571322381?IdSku=1571322381&idLojista=24506&tipoLojista=3P&&gad_campaignid=22819970585&gbraid=0AAAAADtAamgGLZMaFZUKzt_QmXueOSq-J"
+  },
+  {
+    id: 118,
+    category: "cha",
+    name: "Cesto Air Fryer oven.",
+    goal: 109.50,
+    current: 0,
+    description: "O noivo compro a Air Fryer errada kkkkk",
+    image:
+      "https://http2.mlstatic.com/D_NQ_NP_2X_793046-MLB92669507504_092025-F.webp",
+    storeUrl: "https://www.mercadolivre.com.br/cesto-quadrado-5l-original-p-air-fryer-mondial-oven-afo12l/up/MLBU3440026516?pdp_filters=item_id:MLB5730465458&from=gshop&matt_tool=82549977&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22120855437&matt_ad_group_id=179138689851&matt_match_type=&matt_network=g&matt_device=c&matt_creative=729092955325&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5703590571&matt_product_id=MLBU3440026516&matt_product_partition_id=2391385612761&matt_target_id=aud-1966857867496:pla-2391385612761&cq_src=google_ads&cq_cmp=22120855437&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22120855437&gbraid=0AAAAAD93qcA1I5CWteFwNqOpMMzRQWhTJ"
+  },
+  {
+    id: 119,
+    category: "cha",
+    name: "Forma de silicone Air Fryer.",
+    goal: 23.88,
+    current: 0,
+    description: "Deixar mais fácil de limpar",
+    image:
+      "https://m.media-amazon.com/images/I/61LXaniK8XL._AC_SL1500_.jpg",
+    storeUrl: "https://www.amazon.com.br/Formas-Silicone-Quadrada-Antiaderente-18x18x5/dp/B0CY3L5XQ3/ref=asc_df_B0CY3L5XQ3?tag=googleshopp00-20&hvadid=709886750320&hvpos=&hvnetw=g&hvrand=7748593810246664989&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2295915393058&psc=1&language=pt_BR"
+  },
+  {
+    id: 120,
+    category: "casamento",
+    name: "Euros para a viagem de lua de mel.",
+    goal: 619.58,
+    current: 0,
+    description: "O cambio tá maluco",
+    image:
+      "https://images.unsplash.com/photo-1621280336935-ed7cae618aac?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 121,
+    category: "casamento",
+    name: "Ventilador.",
+    goal: 188.90,
+    current: 0,
+    description: "Tufão silencioso",
+    image:
+      "https://m.media-amazon.com/images/I/8194vs7pwxL._AC_SL1500_.jpg",
+      storeUrl: "https://www.amazon.com.br/WAP-FLOW-TURBO-Ventilador-Velocidades/dp/B0BT4Z9LZB/ref=sr_1_34?dib=eyJ2IjoiMSJ9.BQZS4_3fq_LYySH5Zp2bKZC_A00Sf3s6ehjkvJx73L8bwZh8V-rZu9W5ff76n9VLkf7dE9ByJblv7r3CgBUHwHUCSp67qxgC8t8APBVWAIpJJXoYUYRAkjUZpnsT3csFEcvSmQZaXC9iUlD9jssW2PFpe6ZjOymT3sG0NmzOvzw.XOhk9iTt0ue7VeCuRNCFPS1g7vz_JYrRMBN3z5WFjuM&dib_tag=se&qid=1771027028&s=home&sr=1-34&ufe=app_do:amzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&xpid=BfyVrD9_kXNvL"
+  },
+  {
+    id: 122,
+    category: "casamento",
+    name: "Lixeira automática.",
+    goal: 79.90,
+    current: 0,
+    description: "Ok google",
+    image:
+      "https://m.media-amazon.com/images/I/61AHIRNXBBL._SL1200_.jpg",
+      storeUrl: "https://www.amazon.com.br/Lixeira-litros-autom%C3%A1tica-inteligente-aproxima%C3%A7%C3%A3o/dp/B0CLDGBYGL/ref=sr_1_213?dib=eyJ2IjoiMSJ9.Lt8X9aiZsjPNxN5TocuihD6qNi8Key05kMi9pAfDJC5d7RvNQJImCetiDI2OehHHE8k3lcv7yzy5tkAqdD-MXhP3DSwGo7X3NDjT3hqXHh8h42V8aQSGpyopAfCAhfcC3rZ90B3OJJUjb_HpxnNaf-zmL7MWHeai19JJRD_IDFc.wIAkcSYPTNNYgWzmK937C7XAtXrN61XggTI0u7zdH5o&dib_tag=se&qid=1771027448&s=home&sr=1-213&ufe=app_do:amzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9&xpid=BfyVrD9_kXNvL&th=1"
   },
 ];
