@@ -571,11 +571,10 @@ export const allGifts: Gift[] = [
     goal: 39.99,
     current: 0,
     description: " ",
-    image:
-      "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT3osBWPeGkfl1oEkNOdSz0oxKzgWrZyCZgELlGPGh6NMZszQ",
+    image: "https://m.media-amazon.com/images/I/41VEGNIGjoL._AC_SL1000_.jpg",
     imageHint: "fuet",
     storeUrl:
-      "https://www.camicado.com.br/p/batedor-multiuso-home-style-utile-28-cm/-/A-100720304-br.lc?sku=100720312",
+      "https://www.amazon.com.br/Batedor-A%C3%A7o-Inox-Marffim-Tramontina/dp/B086YHYJPB/ref=asc_df_B086YHYJPB?tag=googleshopp00-20&hvadid=709964506241&hvpos=&hvnetw=g&hvrand=1093062790629447688&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-1194829311048&psc=1&language=pt_BR",
   },
   {
     id: 46,
@@ -656,15 +655,14 @@ export const allGifts: Gift[] = [
   {
     id: 52,
     category: "cha",
-    name: "Jogo de facas",
-    goal: 174.31,
+    name: "Faca do Chef Inox",
+    goal: 191.81,
     current: 0,
     description: "Faca afiada não passa vergonha.",
-    image:
-      "https://assets.tramontina.com.br/upload/tramon/imagens/CUT/23699081PDM001G.jpg",
+    image: "https://m.media-amazon.com/images/I/31gtodIHiTL._AC_SL1500_.jpg",
     imageHint: "jogo de faca preta",
     storeUrl:
-      "https://www.tramontina.com.br/jogo-de-facas-tramontina-nygma-com-laminas-em-aco-inox-e-cabos-de-polipropileno-texturizados-preto-6-pecas/23699081.html",
+      "https://www.amazon.com.br/Faca-Chef-Tramontina-Profissional-Sublime/dp/B0CJFV8S1G/?_encoding=UTF8&pd_rd_w=9Tqc5&content-id=amzn1.sym.812ea633-abc7-4b1d-b3cf-adb0fac8c69c:amzn1.symc.5a16118f-86f0-44cd-8e3e-6c5f82df43d0&pf_rd_p=812ea633-abc7-4b1d-b3cf-adb0fac8c69c&pf_rd_r=MRBSNZE26X5917JQHHJE&pd_rd_wg=89UnC&pd_rd_r=8074c22d-ba68-4bd9-8527-ca577eea758f",
   },
   {
     id: 53,
@@ -1069,101 +1067,112 @@ export const allGifts: Gift[] = [
     id: 86,
     category: "cha",
     name: "Jogo de Sobremesa",
-    goal: 0,
+    goal: 55.9,
     current: 0,
     description: "Para degustar docinhos fit",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/71YRKI04U2L._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Conjunto-Caneladas-Elegante-Sobremesa-Resistente/dp/B0FZDFTMSB/ref=asc_df_B0FZDFTMSB?tag=googleshopp00-20&hvadid=775796362723&hvpos=&hvnetw=g&hvrand=4243411698005435754&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2450520752853&psc=1&language=pt_BR",
   },
   {
     id: 87,
     category: "cha",
     name: "Boleira",
-    goal: 0,
+    goal: 159.9,
     current: 0,
     description: "Para guardar os bolos deliciosos",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/51w9cESBnzL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/WOLFF-Prato-Vidro-Tampa-Bangkok/dp/B0CYNBJMPZ/ref=asc_df_B0CYNBJMPZ?tag=googleshopp00-20&hvadid=709964506304&hvpos=&hvnetw=g&hvrand=7986866585619089799&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2310963379172&psc=1&language=pt_BR",
   },
   {
     id: 88,
     category: "cha",
     name: "Porta condimentos",
-    goal: 0,
+    goal: 59.9,
     current: 0,
     description: "Tempeirinhos sempre a mão",
-    image: " ",
-    storeUrl: " ",
+    image:
+      "https://www.havan.com.br/media/catalog/product/cache/820af7facfa7aca6eb3c138e3457dc8d/j/o/jogo-de-porta-condimentos-cristal-com-suporte-plasutil_1146258.webp",
+    storeUrl:
+      "https://www.havan.com.br/jogo-de-porta-condimentos-cristal-com-suporte-plasutil-7-peas/p",
   },
   {
     id: 89,
     category: "cha",
     name: "Porta-guardanapo",
-    goal: 0,
+    goal: 28.9,
     current: 0,
     description: "Uma mesa posta nunca fez mal a ninguém",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/515ddE9TmEL._AC_SL1104_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Suporte-Rolos-Porta-Toalha-Passerini/dp/B07P5J5WCQ/ref=asc_df_B07P5J5WCQ?tag=googleshopp00-20&hvadid=709864975911&hvpos=&hvnetw=g&hvrand=5164868768774381459&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-985062320396&psc=1&language=pt_BR",
   },
   {
     id: 90,
     category: "cha",
     name: "Jogo de Copos",
-    goal: 0,
+    goal: 41.9,
     current: 0,
     description: "Para brindar os bons momentos",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/61iO5Jz4WQL._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Jogo-Copos-Vidro-Luxo-465ml/dp/B0FJPJ9NZ1/ref=asc_df_B0FJPJ9NZ1?tag=googleshopp00-20&hvadid=733520772620&hvpos=&hvnetw=g&hvrand=5025529259554370349&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2442441210625&psc=1&language=pt_BR",
   },
   {
     id: 91,
     category: "cha",
     name: "Lixeira Grande de Inox",
-    goal: 0,
+    goal: 155.9,
     current: 0,
     description: "Para manter a cozinha limpa",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/51Y2Rii0GJL._SL1280_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Lixeira-Pedal-Balde-Interno-Litros/dp/B0FRJH6P1Z/ref=asc_df_B0FRJH6P1Z?tag=googleshopp00-20&hvadid=744064087802&hvpos=&hvnetw=g&hvrand=8187229579125183801&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2442498897806&psc=1&language=pt_BR",
   },
   {
     id: 92,
     category: "cha",
     name: "Lixeira Pequena de Inox",
-    goal: 0,
+    goal: 38.9,
     current: 0,
     description: "Para manter o banheiro limpo",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/51WL5FuUQWL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Lixeira-Redonda-Litros-Pedal-Emborrachado/dp/B08W28Z2XW/ref=asc_df_B08W28Z2XW?tag=googleshopp00-20&hvadid=709968341236&hvpos=&hvnetw=g&hvrand=18142956474129023295&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-1646777958667&psc=1&language=pt_BR",
   },
   {
     id: 93,
     category: "cha",
     name: "Porta Mantimentos",
-    goal: 0,
+    goal: 65.99,
     current: 0,
     description: "Para organizar a despensa",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/31STxo+pzSL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Pote-Mantimentos-Metal-Linha-Sense/dp/B0D1SJY7B6?source=ps-sl-shoppingads-lpcontext&psc=1&smid=A2QLMZWZW3KIO",
   },
   {
     id: 94,
     category: "cha",
     name: "Manteigueira Francesa",
-    goal: 0,
+    goal: 57.9,
     current: 0,
     description: "Armazenar a manteiga com estilo",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/31TByo8mr4L._AC_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Manteigueira-Francesa-Redonda-Servir-Decorar/dp/B09TG5LLMS/ref=asc_df_B09TG5LLMS?tag=googleshopp00-20&hvadid=709878548112&hvpos=&hvnetw=g&hvrand=9257653954168176403&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-1645925547975&psc=1&language=pt_BR",
   },
   {
     id: 95,
     category: "cha",
     name: "Escorredor de Louças",
-    goal: 0,
+    goal: 118.9,
     current: 0,
     description: "Deixando o ar seco de BSB secar as louças",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/71JRIdVx+xL._AC_SL1200_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Decolab-Escorredor-Lou%C3%A7a-Bandeja-Talheres/dp/B0F1DRKPBL/ref=asc_df_B0F1DRKPBL?tag=googleshopp00-20&hvadid=742212429005&hvpos=&hvnetw=g&hvrand=14467424541673862981&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2420896794858&language=pt_BR&th=1",
   },
   {
     id: 96,
@@ -1213,12 +1222,13 @@ export const allGifts: Gift[] = [
   {
     id: 100,
     category: "cha",
-    name: "Tábua de corte",
-    goal: 1,
+    name: "Termômetro culinário",
+    goal: 59.99,
     current: 0,
     description: " ",
-    image: " ",
-    storeUrl: " ",
+    image: "https://m.media-amazon.com/images/I/51BwJtd-4iL._SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Term%C3%B4metro-Digital-Infravermelho-Culin%C3%A1rio-Laser/dp/B0F2Z78F4J/ref=asc_df_B0F2Z78F4J?tag=googleshopp00-20&hvadid=754710229179&hvpos=&hvnetw=g&hvrand=7542002732959074299&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2438934655905&psc=1&language=pt_BR",
   },
   {
     id: 101,
@@ -1364,9 +1374,9 @@ export const allGifts: Gift[] = [
     goal: 80.44,
     current: 0,
     description: "Aquela raspinha na torta de limão",
-    image:
-      "https://m.media-amazon.com/images/I/41puBWMce3L._AC_SL1200_.jpg",
-    storeUrl: "https://www.amazon.com.br/Microplane-40020-GRATER-ZESTER/dp/B00004S7V8/ref=asc_df_B00004S7V8?tag=googleshopp00-20&hvadid=709964506241&hvpos=&hvnetw=g&hvrand=16268248562095527595&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-387297469372&psc=1&language=pt_BR"
+    image: "https://m.media-amazon.com/images/I/41puBWMce3L._AC_SL1200_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Microplane-40020-GRATER-ZESTER/dp/B00004S7V8/ref=asc_df_B00004S7V8?tag=googleshopp00-20&hvadid=709964506241&hvpos=&hvnetw=g&hvrand=16268248562095527595&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-387297469372&psc=1&language=pt_BR",
   },
   {
     id: 114,
@@ -1375,9 +1385,9 @@ export const allGifts: Gift[] = [
     goal: 84.24,
     current: 0,
     description: "Bagunça organizada",
-    image:
-      "https://m.media-amazon.com/images/I/51Ch-xiRjjL._AC_SL1500_.jpg",
-    storeUrl: "https://www.amazon.com.br/Organizador-Lavanderia-Dobr%C3%A1vel-Port%C3%A1til-Divis%C3%B3rias/dp/B0CL787GLD/ref=asc_df_B0CL787GLD?tag=googleshopp00-20&hvadid=709968340963&hvpos=&hvnetw=g&hvrand=743882835395488326&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2299741106393&psc=1&language=pt_BR"
+    image: "https://m.media-amazon.com/images/I/51Ch-xiRjjL._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Organizador-Lavanderia-Dobr%C3%A1vel-Port%C3%A1til-Divis%C3%B3rias/dp/B0CL787GLD/ref=asc_df_B0CL787GLD?tag=googleshopp00-20&hvadid=709968340963&hvpos=&hvnetw=g&hvrand=743882835395488326&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2299741106393&psc=1&language=pt_BR",
   },
   {
     id: 115,
@@ -1386,53 +1396,54 @@ export const allGifts: Gift[] = [
     goal: 33.19,
     current: 0,
     description: "Coar um suquinho",
-    image:
-      "https://m.media-amazon.com/images/I/51E5IJI0JQL._AC_SL1300_.jpg",
-    storeUrl: "https://www.amazon.com.br/Conjunto-Peneiras-Coador-Resistentes-Cozinha/dp/B0D4JMMJ9V/ref=asc_df_B0D4JMMJ9V?tag=googleshopp00-20&hvadid=709964506295&hvpos=&hvnetw=g&hvrand=880991048014220565&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2323403493036&psc=1&language=pt_BR"
+    image: "https://m.media-amazon.com/images/I/51E5IJI0JQL._AC_SL1300_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Conjunto-Peneiras-Coador-Resistentes-Cozinha/dp/B0D4JMMJ9V/ref=asc_df_B0D4JMMJ9V?tag=googleshopp00-20&hvadid=709964506295&hvpos=&hvnetw=g&hvrand=880991048014220565&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2323403493036&psc=1&language=pt_BR",
   },
   {
     id: 116,
     category: "casamento",
     name: "Mala para lua de mel.",
-    goal: 143.10,
+    goal: 143.1,
     current: 0,
     description: "Trazer vários souvenirs",
-    image:
-      "https://m.media-amazon.com/images/I/510Yrajv+WL._AC_SL1000_.jpg",
-    storeUrl: "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1"
+    image: "https://m.media-amazon.com/images/I/510Yrajv+WL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1",
   },
   {
     id: 117,
     category: "casamento",
     name: "Mala para lua de mel.",
-    goal: 143.10,
+    goal: 143.1,
     current: 0,
     description: "Trazer vários souvenirs",
-    image:
-      "https://m.media-amazon.com/images/I/51EKS337q6L._AC_SL1000_.jpg",
-    storeUrl: "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1"
+    image: "https://m.media-amazon.com/images/I/51EKS337q6L._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1",
   },
   {
     id: 118,
     category: "casamento",
     name: "Ar-condicionado portátil.",
-    goal: 2469.50,
+    goal: 2469.5,
     current: 0,
     description: "Trazer vários souvenirs",
-    image:
-      "https://imgs.casasbahia.com.br/1571322381/1xg.jpg?imwidth=500",
-    storeUrl: "https://www.casasbahia.com.br/ar-condicionado-portatil-electrolux-12000-btus-frio-com-wi-fi-branco-sp12f/p/1571322381?IdSku=1571322381&idLojista=24506&tipoLojista=3P&&gad_campaignid=22819970585&gbraid=0AAAAADtAamgGLZMaFZUKzt_QmXueOSq-J"
+    image: "https://imgs.casasbahia.com.br/1571322381/1xg.jpg?imwidth=500",
+    storeUrl:
+      "https://www.casasbahia.com.br/ar-condicionado-portatil-electrolux-12000-btus-frio-com-wi-fi-branco-sp12f/p/1571322381?IdSku=1571322381&idLojista=24506&tipoLojista=3P&&gad_campaignid=22819970585&gbraid=0AAAAADtAamgGLZMaFZUKzt_QmXueOSq-J",
   },
   {
     id: 118,
     category: "cha",
     name: "Cesto Air Fryer oven.",
-    goal: 109.50,
+    goal: 109.5,
     current: 0,
     description: "O noivo compro a Air Fryer errada kkkkk",
     image:
       "https://http2.mlstatic.com/D_NQ_NP_2X_793046-MLB92669507504_092025-F.webp",
-    storeUrl: "https://www.mercadolivre.com.br/cesto-quadrado-5l-original-p-air-fryer-mondial-oven-afo12l/up/MLBU3440026516?pdp_filters=item_id:MLB5730465458&from=gshop&matt_tool=82549977&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22120855437&matt_ad_group_id=179138689851&matt_match_type=&matt_network=g&matt_device=c&matt_creative=729092955325&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5703590571&matt_product_id=MLBU3440026516&matt_product_partition_id=2391385612761&matt_target_id=aud-1966857867496:pla-2391385612761&cq_src=google_ads&cq_cmp=22120855437&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22120855437&gbraid=0AAAAAD93qcA1I5CWteFwNqOpMMzRQWhTJ"
+    storeUrl:
+      "https://www.mercadolivre.com.br/cesto-quadrado-5l-original-p-air-fryer-mondial-oven-afo12l/up/MLBU3440026516?pdp_filters=item_id:MLB5730465458&from=gshop&matt_tool=82549977&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22120855437&matt_ad_group_id=179138689851&matt_match_type=&matt_network=g&matt_device=c&matt_creative=729092955325&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=5703590571&matt_product_id=MLBU3440026516&matt_product_partition_id=2391385612761&matt_target_id=aud-1966857867496:pla-2391385612761&cq_src=google_ads&cq_cmp=22120855437&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22120855437&gbraid=0AAAAAD93qcA1I5CWteFwNqOpMMzRQWhTJ",
   },
   {
     id: 119,
@@ -1441,9 +1452,9 @@ export const allGifts: Gift[] = [
     goal: 23.88,
     current: 0,
     description: "Deixar mais fácil de limpar",
-    image:
-      "https://m.media-amazon.com/images/I/61LXaniK8XL._AC_SL1500_.jpg",
-    storeUrl: "https://www.amazon.com.br/Formas-Silicone-Quadrada-Antiaderente-18x18x5/dp/B0CY3L5XQ3/ref=asc_df_B0CY3L5XQ3?tag=googleshopp00-20&hvadid=709886750320&hvpos=&hvnetw=g&hvrand=7748593810246664989&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2295915393058&psc=1&language=pt_BR"
+    image: "https://m.media-amazon.com/images/I/61LXaniK8XL._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Formas-Silicone-Quadrada-Antiaderente-18x18x5/dp/B0CY3L5XQ3/ref=asc_df_B0CY3L5XQ3?tag=googleshopp00-20&hvadid=709886750320&hvpos=&hvnetw=g&hvrand=7748593810246664989&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9198389&hvtargid=pla-2295915393058&psc=1&language=pt_BR",
   },
   {
     id: 120,
@@ -1459,22 +1470,77 @@ export const allGifts: Gift[] = [
     id: 121,
     category: "casamento",
     name: "Ventilador.",
-    goal: 188.90,
+    goal: 188.9,
     current: 0,
     description: "Tufão silencioso",
-    image:
-      "https://m.media-amazon.com/images/I/8194vs7pwxL._AC_SL1500_.jpg",
-      storeUrl: "https://www.amazon.com.br/WAP-FLOW-TURBO-Ventilador-Velocidades/dp/B0BT4Z9LZB/ref=sr_1_34?dib=eyJ2IjoiMSJ9.BQZS4_3fq_LYySH5Zp2bKZC_A00Sf3s6ehjkvJx73L8bwZh8V-rZu9W5ff76n9VLkf7dE9ByJblv7r3CgBUHwHUCSp67qxgC8t8APBVWAIpJJXoYUYRAkjUZpnsT3csFEcvSmQZaXC9iUlD9jssW2PFpe6ZjOymT3sG0NmzOvzw.XOhk9iTt0ue7VeCuRNCFPS1g7vz_JYrRMBN3z5WFjuM&dib_tag=se&qid=1771027028&s=home&sr=1-34&ufe=app_do:amzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&xpid=BfyVrD9_kXNvL"
+    image: "https://m.media-amazon.com/images/I/8194vs7pwxL._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/WAP-FLOW-TURBO-Ventilador-Velocidades/dp/B0BT4Z9LZB/ref=sr_1_34?dib=eyJ2IjoiMSJ9.BQZS4_3fq_LYySH5Zp2bKZC_A00Sf3s6ehjkvJx73L8bwZh8V-rZu9W5ff76n9VLkf7dE9ByJblv7r3CgBUHwHUCSp67qxgC8t8APBVWAIpJJXoYUYRAkjUZpnsT3csFEcvSmQZaXC9iUlD9jssW2PFpe6ZjOymT3sG0NmzOvzw.XOhk9iTt0ue7VeCuRNCFPS1g7vz_JYrRMBN3z5WFjuM&dib_tag=se&qid=1771027028&s=home&sr=1-34&ufe=app_do:amzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&xpid=BfyVrD9_kXNvL",
   },
   {
     id: 122,
     category: "casamento",
     name: "Lixeira automática.",
-    goal: 79.90,
+    goal: 79.9,
     current: 0,
     description: "Ok google",
-    image:
-      "https://m.media-amazon.com/images/I/61AHIRNXBBL._SL1200_.jpg",
-      storeUrl: "https://www.amazon.com.br/Lixeira-litros-autom%C3%A1tica-inteligente-aproxima%C3%A7%C3%A3o/dp/B0CLDGBYGL/ref=sr_1_213?dib=eyJ2IjoiMSJ9.Lt8X9aiZsjPNxN5TocuihD6qNi8Key05kMi9pAfDJC5d7RvNQJImCetiDI2OehHHE8k3lcv7yzy5tkAqdD-MXhP3DSwGo7X3NDjT3hqXHh8h42V8aQSGpyopAfCAhfcC3rZ90B3OJJUjb_HpxnNaf-zmL7MWHeai19JJRD_IDFc.wIAkcSYPTNNYgWzmK937C7XAtXrN61XggTI0u7zdH5o&dib_tag=se&qid=1771027448&s=home&sr=1-213&ufe=app_do:amzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9&xpid=BfyVrD9_kXNvL&th=1"
+    image: "https://m.media-amazon.com/images/I/61AHIRNXBBL._SL1200_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Lixeira-litros-autom%C3%A1tica-inteligente-aproxima%C3%A7%C3%A3o/dp/B0CLDGBYGL/ref=sr_1_213?dib=eyJ2IjoiMSJ9.Lt8X9aiZsjPNxN5TocuihD6qNi8Key05kMi9pAfDJC5d7RvNQJImCetiDI2OehHHE8k3lcv7yzy5tkAqdD-MXhP3DSwGo7X3NDjT3hqXHh8h42V8aQSGpyopAfCAhfcC3rZ90B3OJJUjb_HpxnNaf-zmL7MWHeai19JJRD_IDFc.wIAkcSYPTNNYgWzmK937C7XAtXrN61XggTI0u7zdH5o&dib_tag=se&qid=1771027448&s=home&sr=1-213&ufe=app_do:amzn1.fos.6d798eae-cadf-45de-946a-f477d47705b9&xpid=BfyVrD9_kXNvL&th=1",
+  },
+  {
+    id: 123,
+    category: "cha",
+    name: "Tapete de silicone.",
+    goal: 25.9,
+    current: 0,
+    description: "Não gruda nada.",
+    image: "https://m.media-amazon.com/images/I/61xruwPDxML._AC_SL1024_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Culin%C3%A1rio-Silicone-Cozinhar-Americano-Antiaderente/dp/B0CSF3VK8H/ref=asc_df_B0CSF3VK8H?tag=googleshopp00-20&hvadid=709964506214&hvpos=&hvnetw=g&hvrand=14976376871228541808&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2284583800758&psc=1&language=pt_BR",
+  },
+  {
+    id: 124,
+    category: "cha",
+    name: "Grade de descanso.",
+    goal: 19.9,
+    current: 0,
+    description: "Pro noivo errar o bolo com propriedade.",
+    image: "https://m.media-amazon.com/images/I/61Z4-LfyKjL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Antiaderente-Resfriar-Biscoitos-Mimo-Style/dp/B08T6Q3KF4/ref=sr_1_1?dib=eyJ2IjoiMSJ9.QnQaz_QrPvPd94MArYP-HlobT0boS7GqQzIrCkHP_ypVnvVDV7Ab9W7uMnua1OjbKTflNoewCudh_V5ZS5Af6o21xDxb2gD77ANT5YrtSBtOpME7T6q8l7FTrnZcmsrT1MaS2vEGAZWuPmTXWhi_dGy2bsTy0Cd3QSqHp6JpQhDs9MfTrtV5GI9-L3ZIfKSjK_G1D28I8TccwbUbq3CYJxgAzFF_phVFRXM9ZzToYqFBjZGbNBHfxTTVvqkC0uPI15LEh5z4Byv5iANQBh185W-cpFuOnkOKc_4M4zxmxus.rVF3Jn9LPqduCUfK1pfYS554xAX0Md16FUn7421q300&dib_tag=se&keywords=grade+de+descanso&qid=1771554534&sr=8-1",
+  },
+  {
+    id: 125,
+    category: "cha",
+    name: "Espátula culinária.",
+    goal: 15.28,
+    current: 0,
+    description: "Aquela massa fresca.",
+    image: "https://m.media-amazon.com/images/I/61wa0vESFoS._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Esp%C3%A1tula-Pr%C3%A1tica-Mimo-Style-ASA1619/dp/B076JLCYFR/ref=pd_bxgy_d_sccl_1/143-0154244-4098363?pd_rd_w=TeQU4&content-id=amzn1.sym.47455c19-0288-451a-a02f-0d639e613616&pf_rd_p=47455c19-0288-451a-a02f-0d639e613616&pf_rd_r=N8451EZRB0BV1MPJ2DVF&pd_rd_wg=fOiWu&pd_rd_r=bbe8144e-48e7-48bc-a519-bf592a93ebb8&pd_rd_i=B076JLCYFR&psc=1",
+  },
+  {
+    id: 126,
+    category: "cha",
+    name: "Jogo de prato simples.",
+    goal: 150.37,
+    current: 0,
+    description: "Os pratos do dia a dia.",
+    image: "https://m.media-amazon.com/images/I/51P4Qbl1PcL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Duralex-1643-Aparelho-Jantar-Incolor/dp/B076X6D54J/ref=asc_df_B076X6D54J?tag=googleshopp00-20&hvadid=709964506244&hvpos=&hvnetw=g&hvrand=6430091682400716820&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-810816540909&psc=1&language=pt_BR",
+  },
+  {
+    id: 127,
+    category: "cha",
+    name: "Rodinho de pia.",
+    goal: 19.9,
+    current: 0,
+    description: "Pra deixar brilhando.",
+    image: "https://m.media-amazon.com/images/I/41xoBvLmQjL._AC_SL1200_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Rodo-Multiuso-Bege-Linha-Flow/dp/B0CZTTVLWK/ref=asc_df_B0CZTTVLWK?tag=googleshopp00-20&hvadid=709968341005&hvpos=&hvnetw=g&hvrand=17428490845761627483&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-2309959181970&psc=1&language=pt_BR",
   },
 ];
