@@ -1,9 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { ArrowLeft, Filter, ArrowUpDown } from "lucide-react";
-import GiftCard from "@/components/GiftCard"; // Importa apenas o Componente
+import { Filter, ArrowUpDown, Plus, Trash2 } from "lucide-react";
+import GiftCard from "@/components/GiftCard";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { allGifts } from "@/lib/gifts";
@@ -16,6 +15,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import ChaLocationSection from "@/components/sections/ChaLocationSection";
 import logoSite from "../../assets/logoSite.svg";
 import florUm from "../../assets/florUm.svg";
@@ -27,29 +35,27 @@ import inox from "../../assets/inox.avif";
 import transparente from "../../assets/transparente.avif";
 
 export default function GiftsPage() {
-  // Inicializa com todos os presentes
   const [gifts, setGifts] = useState<Gift[]>(
     allGifts.filter((g) => g.category === "cha"),
   );
   const [isLoading, setIsLoading] = useState(true);
-
   const [filter, setFilter] = useState("all");
   const [sortOrder, setSortOrder] = useState("price-desc");
 
-  // 1. Busca dados ao carregar a página
+  // Estados para o Modal de RSVP Dinâmico
+  const [isRsvpOpen, setIsRsvpOpen] = useState(false);
+  const [guests, setGuests] = useState([{ name: "", rg: "" }]);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   useEffect(() => {
     fetchContributions();
 
-    // 2. Ativa o Realtime para atualizar se alguém doar enquanto você navega
     const channel = supabase
       .channel("realtime_gifts_page")
       .on(
         "postgres_changes",
         { event: "INSERT", schema: "public", table: "contributions" },
-        (payload) => {
-          console.log("Nova doação detectada na página de presentes!", payload);
-          fetchContributions();
-        },
+        () => fetchContributions(),
       )
       .subscribe();
 
@@ -58,7 +64,6 @@ export default function GiftsPage() {
     };
   }, []);
 
-  // Função para buscar o saldo atualizado de cada presente
   const fetchContributions = async () => {
     try {
       const { data, error } = await supabase
@@ -76,7 +81,7 @@ export default function GiftsPage() {
 
         setGifts(
           allGifts
-            .filter((g) => g.category === "cha") // Garante que só mostra Chá
+            .filter((g) => g.category === "cha")
             .map((gift) => ({
               ...gift,
               current: totalPorPresente[gift.id] || 0,
@@ -90,212 +95,284 @@ export default function GiftsPage() {
     }
   };
 
-  // Função para salvar a doação
-  const handleContribute = async (
-    giftId: number,
-    giftName: string,
-    amount: number,
-    name: string,
-    message: string,
-  ) => {
-    // Atualização otimista (UI)
-    setGifts((prevGifts) =>
-      prevGifts.map((gift) =>
-        gift.id === giftId ? { ...gift, current: gift.current + amount } : gift,
-      ),
-    );
+  const addGuestField = () => {
+    setGuests([...guests, { name: "", rg: "" }]);
+  };
 
-    // Salvar no Banco
-    const { error } = await supabase.from("contributions").insert([
-      {
-        gift_id: giftId,
-        gift_name: giftName,
-        amount: amount,
-        guest_name: name,
-        message: message,
-      },
-    ]);
+  const removeGuestField = (index: number) => {
+    const newGuests = guests.filter((_, i) => i !== index);
+    setGuests(newGuests);
+  };
+
+  const updateGuestData = (
+    index: number,
+    field: "name" | "rg",
+    value: string,
+  ) => {
+    const newGuests = [...guests];
+    newGuests[index][field] = value;
+    setGuests(newGuests);
+  };
+
+  const handleRsvpSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    // Filtra apenas campos preenchidos e envia para a tabela rsvp_cha
+    const dataToInsert = guests
+      .filter((g) => g.name.trim() !== "" && g.rg.trim() !== "")
+      .map((g) => ({ name: g.name, rg: g.rg }));
+
+    const { error } = await supabase.from("rsvp_cha").insert(dataToInsert);
 
     if (error) {
-      console.error("Erro ao salvar doação:", error);
-      alert("Erro ao processar a doação. Tente novamente.");
-      fetchContributions();
+      alert("Erro ao confirmar presença. Tente novamente.");
+    } else {
+      alert("Presença(s) confirmada(s) com sucesso!");
+      setIsRsvpOpen(false);
+      setGuests([{ name: "", rg: "" }]);
     }
+    setIsSubmitting(false);
   };
 
   const processedGifts = gifts
-    // Primeiro Filtra
     .filter((gift) => {
-      if (filter === "available") return gift.current < gift.goal; // Não completados
-      if (filter === "gifted") return gift.current >= gift.goal; // Já completados
-      return true; // Todos
+      if (filter === "available") return gift.current < gift.goal;
+      if (filter === "gifted") return gift.current >= gift.goal;
+      return true;
     })
-    // Depois Ordena
     .sort((a, b) => {
-      if (sortOrder === "price-asc") return a.goal - b.goal; // Menor para Maior
-      if (sortOrder === "price-desc") return b.goal - a.goal; // Maior para Menor
-      return a.id - b.id; // Padrão (ordem original)
+      if (sortOrder === "price-asc") return a.goal - b.goal;
+      if (sortOrder === "price-desc") return b.goal - a.goal;
+      return a.id - b.id;
     });
 
   return (
-    <main className="min-h-screen bg-background py-12 ">
-      <div className="container mx-auto">
+    <main className="min-h-screen bg-background py-12 overflow-x-hidden">
+      {/* Container ajustado: w-full para mobile e container para desktop */}
+      <div className="w-full px-4 md:container md:mx-auto relative overflow-hidden">
         <Image
           src={florUm}
-          alt="flor direita"
+          alt="flor"
           className="absolute z-0 opacity-15 -right-48"
         />
         <Image
           src={florDois}
-          alt="flor esquerda"
+          alt="flor"
           className="absolute z-0 opacity-15 -left-48"
         />
 
-        {/* Cabeçalho da Página */}
         <div className="flex z-10 flex-row justify-center items-center space-y-4">
-          <Image src={logoSite} alt="Logo do site" width={32} height={32} />
+          <Image src={logoSite} alt="Logo" width={32} height={32} />
         </div>
 
         <div className="relative z-10">
-          <div className="relative z-10 mt-8 flex h-full flex-col items-center justify-center text-center font-headline text-primary p-4">
-            <h1 className="font-headline text-5xl md:text-7xl font-bold">
-              Júlia & Pedro
-            </h1>
-
-            <p className="mt-16">
-              Estamos muito felizes em compartilhar esse momento especial com
-              você!
-              <br />
-              Com muita alegria, convidamos você para o nosso Chá de Panela!
+          <div className="mt-8 flex flex-col items-center justify-center text-center font-headline text-primary p-4">
+            <h1 className="text-5xl md:text-7xl font-bold">Júlia & Pedro</h1>
+            <p className="mt-16 max-w-lg">
+              Convidamos você para o nosso Chá de Panela! Ficaremos muito
+              felizes com a sua presença.
             </p>
             <Separator className="my-8 bg-border/50" />
-            <h2 className="font-headline md:text-3xl font-bold">
+            <h2 className="md:text-3xl font-bold">
               07 • março • 2026 • às 15h30
             </h2>
-            <button className="mt-8 bg-primary text-white p-4 rounded-md">Confirmar presença</button>
-            <p className="my-2">Confirmar presença até 2 de março</p>
+
+            {/* Modal de RSVP com Múltiplas Pessoas */}
+            <Dialog open={isRsvpOpen} onOpenChange={setIsRsvpOpen}>
+              <DialogTrigger asChild>
+                <Button
+                  size="lg"
+                  className="mt-8 bg-primary text-white h-auto py-4 px-8 text-lg hover:bg-primary/90 rounded-full shadow-lg"
+                >
+                  Confirmar presença
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[450px] max-h-[90vh] overflow-y-auto">
+                <DialogHeader>
+                  <DialogTitle className="text-2xl font-headline text-primary">
+                    Confirmar Presença
+                  </DialogTitle>
+                </DialogHeader>
+                <form
+                  onSubmit={handleRsvpSubmit}
+                  className="grid gap-6 py-4 px-1"
+                >
+                  {guests.map((guest, index) => (
+                    <div
+                      key={index}
+                      className="relative p-4 border rounded-lg bg-muted/20 space-y-3"
+                    >
+                      <div className="flex justify-between items-center">
+                        <Label className="font-bold text-primary">
+                          Convidado {index + 1}
+                        </Label>
+                        {index > 0 && (
+                          <Button
+                            type="button"
+                            variant="ghost"
+                            size="icon"
+                            onClick={() => removeGuestField(index)}
+                            className="h-8 w-8 text-destructive"
+                          >
+                            <Trash2 className="h-4 w-4" />
+                          </Button>
+                        )}
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor={`name-${index}`}>Nome Completo</Label>
+                        <Input
+                          id={`name-${index}`}
+                          required
+                          value={guest.name}
+                          onChange={(e) =>
+                            updateGuestData(index, "name", e.target.value)
+                          }
+                          placeholder="Nome do convidado"
+                        />
+                      </div>
+                      <div className="grid gap-2">
+                        <Label htmlFor={`rg-${index}`}>RG</Label>
+                        <Input
+                          id={`rg-${index}`}
+                          required
+                          value={guest.rg}
+                          onChange={(e) =>
+                            updateGuestData(index, "rg", e.target.value)
+                          }
+                          placeholder="00.000.000-0"
+                        />
+                      </div>
+                    </div>
+                  ))}
+
+                  <Button
+                    type="button"
+                    variant="outline"
+                    onClick={addGuestField}
+                    className="flex gap-2 items-center"
+                  >
+                    <Plus className="h-4 w-4" /> Adicionar pessoa
+                  </Button>
+
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full mt-2 py-6 text-lg"
+                  >
+                    {isSubmitting ? "Enviando..." : "Confirmar presença"}
+                  </Button>
+                </form>
+              </DialogContent>
+            </Dialog>
+
+            <p className="my-2 text-sm opacity-70">
+              Confirmar presença até 2 de março
+            </p>
+            <p className="my-2 text-sm opacity-70">
+              Para confirmar a sua presença, basta clicar no botão acima e
+              inserir os seus dados,
+              <br /> que serão necessários para a liberação de acesso no dia.
+            </p>
             <Separator className="my-8 bg-border/50" />
           </div>
           <ChaLocationSection />
         </div>
 
-        <div className="flex flex-col text-center mt-8 mx-4 justify-center">
-          <h1 className="w-full font-headline text-primary md:text-3xl font-bold">
+        <div className="flex flex-col text-center mt-8 mx-4">
+          <h1 className="font-headline text-primary md:text-3xl font-bold">
             Sugestão de cores
           </h1>
         </div>
 
-        <div className="mt-8 w-full flex flex-wrap justify-center gap-4 md:gap-8 mb-8 relative z-10">
-          <div className="flex flex-col items-center text-center justify-center">
-            <Image
-              src={branco}
-              alt="Cor Branco"
-              className="rounded-full object-cover"
-              width={60}
-              height={60}
-            />
-            <p className="mt-2 text-sm font-medium">Branco</p>
-          </div>
+        <div className="mt-8 flex flex-wrap justify-center gap-6 mb-12 relative z-10">
+          {[
+            { img: branco, label: "Branco" },
+            { img: preto, label: "Preto" },
+            { img: inox, label: "Inox" },
+            { img: transparente, label: "Vidro" },
+          ].map((cor, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <Image
+                src={cor.img}
+                alt={cor.label}
+                className="rounded-full border shadow-sm"
+                width={60}
+                height={60}
+              />
+              <p className="mt-2 text-sm font-medium">{cor.label}</p>
+            </div>
+          ))}
+        </div>
 
-          <div className="flex flex-col items-center text-center justify-center">
-            <Image
-              src={preto}
-              alt="Cor Preto"
-              className="rounded-full object-cover"
-              width={60}
-              height={60}
-            />
-            <p className="mt-2 text-sm font-medium">Preto</p>
-          </div>
+        <Separator />
 
-          <div className="flex flex-col items-center text-center justify-center">
-            <Image
-              src={inox}
-              alt="Cor Inox"
-              className="rounded-full object-cover"
-              width={60}
-              height={60}
-            />
-            <p className="mt-2 text-sm font-medium">Inox</p>
-          </div>
-
-          <div className="flex flex-col items-center text-center justify-center">
-            {/* Removido w-16 h-16 para seguir o padrão de 76px das outras */}
-            <Image
-              src={transparente}
-              alt="Cor Transparente"
-              className="rounded-full object-cover"
-              width={60}
-              height={60}
-            />
-            <p className="mt-2 text-sm font-medium">Vidro</p>
+        <div className="font-headline mt-8">
+          <h2 className="font-headline text-center text-primary md:text-3xl font-bold">
+            Nossa Lista de Chá de Panela 🤍
+          </h2>
+          <div className="flex flex-col text-center md:text-start md:flex-row p-8 gap-4">
+            <p className="md:my-2 text-sm text-primary">
+              Preparamos esta lista com muito carinho com algumas sugestões para
+              o nosso novo lar. São apenas ideias do que estamos precisando, mas
+              sintam-se totalmente livres para nos presentear da forma que
+              acharem melhor! Para facilitar, deixamos três opções em cada item:
+              <strong>Pix</strong>: Para contribuir com o valor do presente de
+              forma rápida e prática, clicando em presentear. <strong>Comprar Online</strong>: Clicando
+              no link da loja para comprar e mandar entregar direto na nossa
+              casa.
+            </p>
+            <p className="md:my-2 text-sm text-primary">
+              <strong>Comprar fisicamente e levar no dia</strong>: Prefere
+              escolher o presente pessoalmente e levar no dia do chá? Nós
+              amamos! Só pedimos que você selecione o presente aqui na lista e
+              coloque seu nome para reservá-lo. Assim, nos ajudam a não termos
+              presentes repetidos. A nossa maior alegria é ter vocês celebrando
+              essa fase tão especial com a gente. Muito obrigada pela presença e
+              por todo o carinho!
+            </p>
           </div>
         </div>
 
-        {/* BARRA DE FERRAMENTAS: Filtro e Ordenação */}
-        <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-8 p-4 bg-muted/30 rounded-lg border shadow-sm">
-          {/* 1. Dropdown de Filtro */}
+        {/* Barra de Filtros */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-8 p-4 bg-muted/30 rounded-xl border mx-4">
           <div className="flex items-center gap-2 flex-1">
             <Filter className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm font-medium whitespace-nowrap">
-              Exibir:
-            </span>
             <Select value={filter} onValueChange={setFilter}>
-              <SelectTrigger className="w-full sm:w-[200px] bg-background">
+              <SelectTrigger className="w-full sm:w-[200px]">
                 <SelectValue placeholder="Status" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">Todos os presentes</SelectItem>
+                <SelectItem value="all">Todos</SelectItem>
                 <SelectItem value="available">Disponíveis</SelectItem>
                 <SelectItem value="gifted">Presenteados</SelectItem>
               </SelectContent>
             </Select>
           </div>
-
-          <Separator orientation="vertical" className="hidden sm:block h-8" />
-
-          {/* Ordenação de Preço */}
           <div className="flex items-center gap-2">
             <ArrowUpDown className="w-4 h-4 text-muted-foreground" />
-            <span className="text-sm font-medium">Ordenar:</span>
             <Select value={sortOrder} onValueChange={setSortOrder}>
-              <SelectTrigger className="w-[180px] bg-background">
+              <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Ordem" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="default">Padrão</SelectItem>
-                <SelectItem value="price-desc">Decrescente</SelectItem>
-                <SelectItem value="price-asc">Crescente</SelectItem>
+                <SelectItem value="price-desc">Preço: Maior</SelectItem>
+                <SelectItem value="price-asc">Preço: Menor</SelectItem>
               </SelectContent>
             </Select>
           </div>
         </div>
 
-        {/* Grade de Presentes */}
+        {/* Grade de Presentes - Agora com 2 colunas no Mobile */}
         {isLoading ? (
-          <div className="flex justify-center items-center py-20">
-            <p className="text-muted-foreground animate-pulse">
-              Carregando lista de presentes...
-            </p>
-          </div>
-        ) : processedGifts.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pb-12">
-            {processedGifts.map((gift) => (
-              <GiftCard
-                key={gift.id}
-                gift={gift}
-                onContribute={handleContribute}
-              />
-            ))}
+          <div className="text-center py-20 animate-pulse">
+            Carregando presentes...
           </div>
         ) : (
-          <div className="text-center py-20 bg-muted/20 rounded-lg border border-dashed">
-            <p className="text-muted-foreground mb-4">
-              Nenhum presente encontrado com os filtros selecionados.
-            </p>
-            <Button variant="outline" onClick={() => setFilter("all")}>
-              Ver todos os presentes
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 pb-20 px-4">
+            {processedGifts.map((gift) => (
+              <GiftCard key={gift.id} gift={gift} onContribute={() => {}} />
+            ))}
           </div>
         )}
       </div>
