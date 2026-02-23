@@ -170,41 +170,65 @@ export default function GiftsPage() {
             </p>
             <Separator className="my-8 bg-border/50" />
             <h2 className="font-headline md:text-3xl font-bold">
-              07 • março • 2026
+              07 • março • 2026 • às 15h30
             </h2>
+            <button className="mt-8 bg-primary text-white p-4 rounded-md">Confirmar presença</button>
+            <p className="my-2">Confirmar presença até 2 de março</p>
             <Separator className="my-8 bg-border/50" />
           </div>
           <ChaLocationSection />
         </div>
 
-
         <div className="flex flex-col text-center mt-8 mx-4 justify-center">
-            <h1 className="w-full font-headline text-primary md:text-3xl font-bold">
-              Sugestão de cores
-            </h1>
+          <h1 className="w-full font-headline text-primary md:text-3xl font-bold">
+            Sugestão de cores
+          </h1>
         </div>
 
-
-        <div className="mt-8 w-full flex justify-center mb-8 relative z-10">
-         
-          <div className="flex flex-col text-center mx-4 justify-center ">
-            <Image src={branco} alt="" className="rounded-full" width={76} height={76} />
-            <p>Branco</p>
+        <div className="mt-8 w-full flex flex-wrap justify-center gap-4 md:gap-8 mb-8 relative z-10">
+          <div className="flex flex-col items-center text-center justify-center">
+            <Image
+              src={branco}
+              alt="Cor Branco"
+              className="rounded-full object-cover"
+              width={60}
+              height={60}
+            />
+            <p className="mt-2 text-sm font-medium">Branco</p>
           </div>
 
-          <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={preto} alt="" className="rounded-full" width={76} height={76} />
-            <p>Preto</p>
+          <div className="flex flex-col items-center text-center justify-center">
+            <Image
+              src={preto}
+              alt="Cor Preto"
+              className="rounded-full object-cover"
+              width={60}
+              height={60}
+            />
+            <p className="mt-2 text-sm font-medium">Preto</p>
           </div>
 
-          <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={inox} alt="" className="rounded-full" width={76} height={76}/>
-            <p>Inox</p>
+          <div className="flex flex-col items-center text-center justify-center">
+            <Image
+              src={inox}
+              alt="Cor Inox"
+              className="rounded-full object-cover"
+              width={60}
+              height={60}
+            />
+            <p className="mt-2 text-sm font-medium">Inox</p>
           </div>
 
-          <div className="flex flex-col text-center mx-4 justify-center">
-            <Image src={transparente} alt="" className="rounded-full" width={76} height={76} />
-            <p>Transparente</p>
+          <div className="flex flex-col items-center text-center justify-center">
+            {/* Removido w-16 h-16 para seguir o padrão de 76px das outras */}
+            <Image
+              src={transparente}
+              alt="Cor Transparente"
+              className="rounded-full object-cover"
+              width={60}
+              height={60}
+            />
+            <p className="mt-2 text-sm font-medium">Vidro</p>
           </div>
         </div>
 
