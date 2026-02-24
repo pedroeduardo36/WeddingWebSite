@@ -1543,4 +1543,149 @@ export const allGifts: Gift[] = [
     storeUrl:
       "https://www.amazon.com.br/Rodo-Multiuso-Bege-Linha-Flow/dp/B0CZTTVLWK/ref=asc_df_B0CZTTVLWK?tag=googleshopp00-20&hvadid=709968341005&hvpos=&hvnetw=g&hvrand=17428490845761627483&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-2309959181970&psc=1&language=pt_BR",
   },
+  {
+    id: 128,
+    category: "cha",
+    name: "Assadeira antiaderente.",
+    goal: 153.74,
+    current: 0,
+    description: "",
+    image: "https://m.media-amazon.com/images/I/51RKjJvDP8L._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Assadeiras-Alum%C3%ADnio-Revestimento-Antiaderente-Tramontina/dp/B008R7SQ40/ref=asc_df_B008R7SQ40?tag=googleshopp00-20&hvadid=709964506292&hvpos=&hvnetw=g&hvrand=11003154257735349522&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-457736022201&psc=1&language=pt_BR",
+  },
+  {
+    id: 129,
+    category: "cha",
+    name: "Avental",
+    goal: 28.9,
+    current: 0,
+    description: "Afinal de contas, não queremos sujar a roupa.",
+    image: "https://m.media-amazon.com/images/I/315mLsQKgyL._AC_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Avental-Oxford-Refor%C3%A7ado-Cozinha-Churrasqueiro/dp/B0D8M5C5TW/ref=asc_df_B0D8M5C5TW?tag=googleshopp00-20&hvadid=709968340999&hvpos=&hvnetw=g&hvrand=15351316072760704347&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2382633469105&psc=1&language=pt_BR",
+  },
+  {
+    id: 130,
+    category: "cha",
+    name: "Bandeja Café da manhã",
+    goal: 27.9,
+    current: 0,
+    description: "Café na cama é vida.",
+    image: "https://m.media-amazon.com/images/I/41Z7r3059eL._AC_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Dobr%C3%A1vel-Multiuso-Port%C3%A1til-Infantil-Notebook/dp/B0FTQDJ18V/ref=asc_df_B0FTQDJ18V?tag=googleshopp00-20&hvadid=709878548112&hvpos=&hvnetw=g&hvrand=4400953222938412268&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2454935586381&psc=1&language=pt_BR",
+  },
+  {
+    id: 131,
+    category: "cha",
+    name: "Cesta para pão",
+    goal: 69,
+    current: 0,
+    description: "kit com 3 cestos",
+    image: "https://m.media-amazon.com/images/I/51pogfXgOYL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Mimo-Style-Organizadores-Lavanderias-Decora%C3%A7%C3%B5es/dp/B087XBSGYH/ref=asc_df_B087XBSGYH?tag=googleshopp00-20&hvadid=709968341206&hvpos=&hvnetw=g&hvrand=944985241240405123&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-936318376217&language=pt_BR&th=1",
+  },
+  {
+    id: 132,
+    category: "cha",
+    name: "Cuscuzeira",
+    goal: 39.9,
+    current: 0,
+    description: "Energia pro dia a dia.",
+    image: "https://m.media-amazon.com/images/I/61jt4ZG5ONL._AC_SL1200_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Cuscuzeira-Alum%C3%ADnio-Polido-Tampas-Resistentes/dp/B0F8R5B9KC/ref=asc_df_B0F8R5B9KC?tag=googleshopp00-20&hvadid=742212429005&hvpos=&hvnetw=g&hvrand=16966571738110314430&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2423597425171&psc=1&language=pt_BR",
+  },
+  {
+    id: 133,
+    category: "cha",
+    name: "Descanso de panela",
+    goal: 19.9,
+    current: 0,
+    description: "Kit 5 descansos de panela",
+    image:
+      "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m8p3um7ad5vm04.webp",
+    storeUrl:
+      "https://shopee.com.br/product/1398327824/22898413786?gads_t_sig=VTJGc2RHVmtYMTlxTFVSVVRrdENkU1hZSjF1Ym94QW1tdXlLQVFLQ3hjN01mNmhVVGFUVHY2TURuZWFZQWt1dVp1QjRwMndoZXFJeHIxZHlUVGtwR1dqZlJKaGdLNGZ6eUdwUXRiSjkxUjRkTzl0bDhWUTVYVm9yU2N5NUpIY2hpa2RkYU96ajU3UFlLYnp0ZmxrZmNRPT0&gad_campaignid=23353217471&gbraid=0AAAAACoEtRk4RFjxBdj5aud4LxWwpI86a",
+  },
+  {
+    id: 134,
+    category: "cha",
+    name: "Descascador de legumes",
+    goal: 38.9,
+    current: 0,
+    description: "Descascador de legumes com acabamento em zinco",
+    image: "https://m.media-amazon.com/images/I/41S3eyWO4IL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Descascador-Legumes-Liga-Zinco-Antiderrapante/dp/B0CH8YMR8M/ref=asc_df_B0CH8YMR8M?tag=googleshopp00-20&hvadid=709964506289&hvpos=&hvnetw=g&hvrand=11614169312440600875&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2373772352583&psc=1&language=pt_BR",
+  },
+  {
+    id: 135,
+    category: "cha",
+    name: "Porta frios",
+    goal: 29.9,
+    current: 0,
+    description: "",
+    image: "https://m.media-amazon.com/images/I/514RyVWXuQL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Pote-Herm%C3%A9tico-Divis%C3%B3rias-Escorredor-Plasutil/dp/B09YVLJ46V/ref=asc_df_B09YVLJ46V?tag=googleshopp00-20&hvadid=709964506241&hvpos=&hvnetw=g&hvrand=179438211716724328&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-1885716833412&psc=1&language=pt_BR",
+  },
+  {
+    id: 136,
+    category: "cha",
+    name: "Potes de vidro",
+    goal: 70,
+    current: 0,
+    description: "Kit com 5 potes de vidro",
+    image: "https://m.media-amazon.com/images/I/81gk+30f37L._AC_SL1500_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Potes-Vidro-Retangular-Tampa-Herm%C3%A9tica/dp/B08CPLKQ32/ref=asc_df_B08CPLKQ32?tag=googleshopp00-20&hvadid=721185796203&hvpos=&hvnetw=g&hvrand=7516904244720523447&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2381201824264&psc=1",
+  },
+  {
+    id: 137,
+    category: "cha",
+    name: "Pincel de silicone",
+    goal: 8.9,
+    current: 0,
+    description: "",
+    image: "https://m.media-amazon.com/images/I/41Z0UT4nPHL._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Pincel-Silicone-Mimo-Style-SN1740P/dp/B07D1LNHMJ/ref=asc_df_B07D1LNHMJ?tag=googleshopp00-20&hvadid=709964506214&hvpos=&hvnetw=g&hvrand=1300099075161196214&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-852472587985&language=pt_BR&th=1",
+  },
+  {
+    id: 138,
+    category: "cha",
+    name: "Conjunto de pegadores",
+    goal: 28.9,
+    current: 0,
+    description: "",
+    image: "https://m.media-amazon.com/images/I/51JIIz0PfML._AC_SL1024_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Conjunto-Pegadores-Inox-20cm-Pe%C3%A7as/dp/B0FTNSBXYR/ref=asc_df_B0FTNSBXYR?tag=googleshopp00-20&hvadid=709964506283&hvpos=&hvnetw=g&hvrand=10105438831586029752&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9196708&hvtargid=pla-2449795199990&psc=1&language=pt_BR",
+  },
+  {
+    id: 139,
+    category: "cha",
+    name: "Cabides",
+    goal: 56.84,
+    current: 0,
+    description: "Jogo com 50 cabides",
+    image: "https://m.magazineluiza.com.br/a-static/420x420/kit-50-cabide-de-veludo-adulto-ultra-fino-antideslizante-kontuz-home/nawebutilidade/cab50-01/479dc17ce0f5250c83436268ed0ff1ae.jpeg",
+    storeUrl:
+      "https://www.magazineluiza.com.br/kit-50-cabide-de-veludo-adulto-ultra-fino-antideslizante-kontuz-home/p/bae6dh6g79/ud/caro/?&seller_id=nawebutilidade&partner_id=83242&gad_campaignid=23346818141&gbraid=0AAAAAD4zZmRZIfuTk12nwgrDmC0lXy0QO",
+  },
+  {
+    id: 140,
+    category: "cha",
+    name: "Tábua de passar roupa",
+    goal: 156.84,
+    current: 0,
+    description: "Deixar tudo lisinho",
+    image: "https://m.media-amazon.com/images/I/312oxn3VZ0L._AC_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/T%C3%A1bua-Passar-Roupa-Extra-Dobr%C3%A1vel/dp/B0CHG1M88Y/ref=asc_df_B0CHG1M88Y?tag=googleshopp00-20&hvadid=709964506235&hvpos=&hvnetw=g&hvrand=2145285726155273880&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-2244489947747&psc=1&language=pt_BR",
+  },
+ 
 ];

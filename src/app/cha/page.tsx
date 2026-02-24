@@ -40,12 +40,13 @@ export default function GiftsPage() {
   );
   const [isLoading, setIsLoading] = useState(true);
   const [filter, setFilter] = useState("all");
-  const [sortOrder, setSortOrder] = useState("price-desc");
+  const [sortOrder, setSortOrder] = useState("price-asc");
 
   // Estados para o Modal de RSVP Dinâmico
   const [isRsvpOpen, setIsRsvpOpen] = useState(false);
   const [guests, setGuests] = useState([{ name: "", rg: "" }]);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [hasConfirmed, setHasConfirmed] = useState(false);
 
   useEffect(() => {
     fetchContributions();
@@ -131,6 +132,7 @@ export default function GiftsPage() {
       alert("Presença(s) confirmada(s) com sucesso!");
       setIsRsvpOpen(false);
       setGuests([{ name: "", rg: "" }]);
+      setHasConfirmed(true);
     }
     setIsSubmitting(false);
   };
@@ -179,93 +181,108 @@ export default function GiftsPage() {
             </h2>
 
             {/* Modal de RSVP com Múltiplas Pessoas */}
-            <Dialog open={isRsvpOpen} onOpenChange={setIsRsvpOpen}>
-              <DialogTrigger asChild>
-                <Button
-                  size="lg"
-                  className="mt-8 bg-primary text-white h-auto py-4 px-8 text-lg hover:bg-primary/90 rounded-full shadow-lg"
-                >
-                  Confirmar presença
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="sm:max-w-[450px] max-h-[90vh] overflow-y-auto">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl font-headline text-primary">
-                    Confirmar Presença
-                  </DialogTitle>
-                </DialogHeader>
-                <form
-                  onSubmit={handleRsvpSubmit}
-                  className="grid gap-6 py-4 px-1"
-                >
-                  {guests.map((guest, index) => (
-                    <div
-                      key={index}
-                      className="relative p-4 border rounded-lg bg-muted/20 space-y-3"
+            <div className="flex flex-row items-center justify-center gap-2 mt-8">
+              <Dialog open={isRsvpOpen} onOpenChange={setIsRsvpOpen}>
+                <DialogTrigger asChild>
+                  {hasConfirmed ? (
+                    <Button
+                      disabled
+                      className="bg-gray-400 text-white h-auto py-4 px-8 text-lg rounded-full cursor-not-allowed"
                     >
-                      <div className="flex justify-between items-center">
-                        <Label className="font-bold text-primary">
-                          Convidado {index + 1}
-                        </Label>
-                        {index > 0 && (
-                          <Button
-                            type="button"
-                            variant="ghost"
-                            size="icon"
-                            onClick={() => removeGuestField(index)}
-                            className="h-8 w-8 text-destructive"
-                          >
-                            <Trash2 className="h-4 w-4" />
-                          </Button>
-                        )}
-                      </div>
-                      <div className="grid gap-2">
-                        <Label htmlFor={`name-${index}`}>Nome Completo</Label>
+                      Presença confirmada!
+                    </Button>
+                  ) : (
+                    <Button
+                      size="lg"
+                      className="bg-primary text-white h-auto py-4 px-8 text-lg hover:bg-primary/90 rounded-full shadow-lg"
+                    >
+                      Confirmar presença
+                    </Button>
+                  )}
+                </DialogTrigger>
+                <DialogContent className="w-[95vw] max-w-[450px] rounded-lg max-h-[90vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-2xl font-headline text-primary text-center">
+                      Confirmar Presença
+                    </DialogTitle>
+                  </DialogHeader>
+                  <form
+                    onSubmit={handleRsvpSubmit}
+                    className="grid gap-4 py-4 px-1"
+                  >
+                    {guests.map((guest, index) => (
+                      <div
+                        key={index}
+                        className="p-4 border rounded-lg bg-muted/20 space-y-3 relative"
+                      >
+                        <div className="flex justify-between items-center">
+                          <Label className="font-bold">
+                            Convidado {index + 1}
+                          </Label>
+                          {index > 0 && (
+                            <Button
+                              type="button"
+                              variant="ghost"
+                              size="icon"
+                              onClick={() => removeGuestField(index)}
+                              className="text-destructive h-8 w-8"
+                            >
+                              <Trash2 className="h-4 w-4" />
+                            </Button>
+                          )}
+                        </div>
                         <Input
-                          id={`name-${index}`}
                           required
                           value={guest.name}
                           onChange={(e) =>
                             updateGuestData(index, "name", e.target.value)
                           }
-                          placeholder="Nome do convidado"
+                          placeholder="Nome"
                         />
-                      </div>
-                      <div className="grid gap-2">
-                        <Label htmlFor={`rg-${index}`}>RG</Label>
                         <Input
-                          id={`rg-${index}`}
                           required
                           value={guest.rg}
                           onChange={(e) =>
                             updateGuestData(index, "rg", e.target.value)
                           }
-                          placeholder="00.000.000-0"
+                          placeholder="RG"
                         />
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                    <Button
+                      type="button"
+                      variant="outline"
+                      onClick={addGuestField}
+                      className="flex gap-2"
+                    >
+                      <Plus className="h-4 w-4" /> Adicionar pessoa
+                    </Button>
+                    <Button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full py-6 text-lg"
+                    >
+                      {isSubmitting ? "Enviando..." : "Confirmar Agora"}
+                    </Button>
+                  </form>
+                </DialogContent>
+              </Dialog>
 
-                  <Button
-                    type="button"
-                    variant="outline"
-                    onClick={addGuestField}
-                    className="flex gap-2 items-center"
-                  >
-                    <Plus className="h-4 w-4" /> Adicionar pessoa
-                  </Button>
-
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full mt-2 py-6 text-lg"
-                  >
-                    {isSubmitting ? "Enviando..." : "Confirmar presença"}
-                  </Button>
-                </form>
-              </DialogContent>
-            </Dialog>
-
+              {hasConfirmed && (
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => {
+                    setHasConfirmed(false); // Permite abrir o modal novamente
+                    setIsRsvpOpen(true);
+                  }}
+                  className="h-14 w-14 rounded-full border-primary text-primary hover:bg-primary/10 shadow-md"
+                  title="Adicionar outra confirmação"
+                >
+                  <Plus className="h-6 w-6" />
+                </Button>
+              )}
+            </div>
             <p className="my-2 text-sm opacity-70">
               Confirmar presença até 2 de março
             </p>
@@ -318,9 +335,9 @@ export default function GiftsPage() {
               sintam-se totalmente livres para nos presentear da forma que
               acharem melhor! Para facilitar, deixamos três opções em cada item:
               <strong>Pix</strong>: Para contribuir com o valor do presente de
-              forma rápida e prática, clicando em presentear. <strong>Comprar Online</strong>: Clicando
-              no link da loja para comprar e mandar entregar direto na nossa
-              casa.
+              forma rápida e prática, clicando em presentear.{" "}
+              <strong>Comprar Online</strong>: Clicando no link da loja para
+              comprar e mandar entregar direto na nossa casa.
             </p>
             <p className="md:my-2 text-sm text-primary">
               <strong>Comprar fisicamente e levar no dia</strong>: Prefere
