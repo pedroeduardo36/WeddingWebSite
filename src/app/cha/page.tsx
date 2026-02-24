@@ -115,6 +115,40 @@ export default function GiftsPage() {
     setGuests(newGuests);
   };
 
+  const handleContribute = async (
+    giftId: number,
+    giftName: string,
+    amount: number,
+    name: string,
+    message: string,
+  ) => {
+    // Atualização otimista na interface
+    setGifts((prevGifts) =>
+      prevGifts.map((gift) =>
+        gift.id === giftId ? { ...gift, current: gift.current + amount } : gift,
+      ),
+    );
+
+    // Inserção no Supabase na tabela 'contributions'
+    const { error } = await supabase.from("contributions").insert([
+      {
+        gift_id: giftId,
+        gift_name: giftName,
+        amount: amount,
+        guest_name: name,
+        message: message,
+      },
+    ]);
+
+    if (error) {
+      console.error("Erro ao salvar doação:", error);
+      alert("Erro ao processar a doação no servidor. Tente novamente.");
+      fetchContributions(); // Reverte a UI buscando os dados reais
+    } else {
+      console.log("Doação registrada com sucesso!");
+    }
+  };
+
   const handleRsvpSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -388,7 +422,11 @@ export default function GiftsPage() {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 pb-20 px-4">
             {processedGifts.map((gift) => (
-              <GiftCard key={gift.id} gift={gift} onContribute={() => {}} />
+              <GiftCard
+                key={gift.id}
+                gift={gift}
+                onContribute={handleContribute}
+              />
             ))}
           </div>
         )}
