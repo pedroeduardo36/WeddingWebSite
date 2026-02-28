@@ -211,7 +211,7 @@ export default function GiftsPage() {
             </p>
             <Separator className="my-8 bg-border/50" />
             <h2 className="md:text-3xl font-bold">
-              07 • março • 2026 • às 15h30
+              07 • março • 2026 • às 17h
             </h2>
 
             {/* Modal de RSVP com Múltiplas Pessoas */}
