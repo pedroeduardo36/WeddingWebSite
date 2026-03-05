@@ -515,7 +515,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 41,
-    category: "casamento",
+    category: "cha",
     name: "Panela de Pressão",
     goal: 174,
     current: 0,
@@ -591,7 +591,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 47,
-    category: "casamento",
+    category: "cha",
     name: "Sanduicheira",
     goal: 99.99,
     current: 0,
@@ -642,7 +642,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 51,
-    category: "casamento",
+    category: "cha",
     name: "Liquidificador",
     goal: 176.37,
     current: 0,
@@ -754,7 +754,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 60,
-    category: "casamento",
+    category: "cha",
     name: "Chaleira Elétrica",
     goal: 133.44,
     current: 0,
@@ -971,7 +971,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 78,
-    category: "casamento",
+    category: "cha",
     name: "Panela Elétrica",
     goal: 361.5,
     current: 0,
@@ -1032,7 +1032,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 83,
-    category: "casamento",
+    category: "cha",
     name: "Processador de Alimentos",
     goal: 117.9,
     current: 0,
@@ -1672,7 +1672,8 @@ export const allGifts: Gift[] = [
     goal: 56.84,
     current: 0,
     description: "Jogo com 50 cabides",
-    image: "https://m.magazineluiza.com.br/a-static/420x420/kit-50-cabide-de-veludo-adulto-ultra-fino-antideslizante-kontuz-home/nawebutilidade/cab50-01/479dc17ce0f5250c83436268ed0ff1ae.jpeg",
+    image:
+      "https://m.magazineluiza.com.br/a-static/420x420/kit-50-cabide-de-veludo-adulto-ultra-fino-antideslizante-kontuz-home/nawebutilidade/cab50-01/479dc17ce0f5250c83436268ed0ff1ae.jpeg",
     storeUrl:
       "https://www.magazineluiza.com.br/kit-50-cabide-de-veludo-adulto-ultra-fino-antideslizante-kontuz-home/p/bae6dh6g79/ud/caro/?&seller_id=nawebutilidade&partner_id=83242&gad_campaignid=23346818141&gbraid=0AAAAAD4zZmRZIfuTk12nwgrDmC0lXy0QO",
   },
@@ -1687,5 +1688,15 @@ export const allGifts: Gift[] = [
     storeUrl:
       "https://www.amazon.com.br/T%C3%A1bua-Passar-Roupa-Extra-Dobr%C3%A1vel/dp/B0CHG1M88Y/ref=asc_df_B0CHG1M88Y?tag=googleshopp00-20&hvadid=709964506235&hvpos=&hvnetw=g&hvrand=2145285726155273880&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-2244489947747&psc=1&language=pt_BR",
   },
- 
+  {
+    id: 141,
+    category: "cha",
+    name: "Prensa francesa",
+    goal: 23.29,
+    current: 0,
+    description: "Aquele cafezinho da tarde",
+    image: "https://m.media-amazon.com/images/I/41VP6123-BS._AC_SL1000_.jpg",
+    storeUrl:
+      "https://www.amazon.com.br/Mimo-Style-AFP350-CAFETEIRA-FRANCESA/dp/B07TBHLGQT/ref=asc_df_B07TBHLGQT?tag=googleshopp00-20&hvadid=709964506256&hvpos=&hvnetw=g&hvrand=12972529490692218585&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-902619401228&language=pt_BR&th=1",
+  },
 ];
