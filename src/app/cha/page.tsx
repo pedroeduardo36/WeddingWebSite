@@ -358,7 +358,7 @@ export default function GiftsPage() {
 
         <Separator />
 
-        <div className="font-headline mt-8">
+        <div id="presentes" className="font-headline mt-8">
           <h2 className="font-headline text-center text-primary md:text-3xl font-bold">
             Nossa Lista de Chá de Panela 🤍
           </h2>
