@@ -14,8 +14,8 @@ export const allGifts: Gift[] = [
   {
     id: 1,
     category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 1000,
+    name: "Cota para Passeio na Lua de Mel",
+    goal: 500,
     current: 0,
     description: "Ajude-nos a ter uma lua de mel inesquecível!",
     image:
@@ -25,8 +25,8 @@ export const allGifts: Gift[] = [
   {
     id: 2,
     category: "casamento",
-    name: "Aluguel de carro na Lua de Mel",
-    goal: 651,
+    name: "Cota para Aluguel de carro na Lua de Mel",
+    goal: 500,
     current: 0,
     description: "Pra exploramos o mundo.",
     image:
@@ -49,7 +49,7 @@ export const allGifts: Gift[] = [
     id: 4,
     category: "casamento",
     name: "Base Báu Queen",
-    goal: 969,
+    goal: 1099,
     current: 0,
     description: "Base para colchão queen",
     image:
@@ -73,8 +73,8 @@ export const allGifts: Gift[] = [
   {
     id: 6,
     category: "casamento",
-    name: "Diária noite de núpcias",
-    goal: 668.76,
+    name: "Cota para Diária noite de núpcias",
+    goal: 334.37,
     current: 0,
     description: " ",
     image:
@@ -95,7 +95,7 @@ export const allGifts: Gift[] = [
   {
     id: 8,
     name: "Porta sabonete Líquido",
-    category: "cha",
+    category: "casamento",
     goal: 89.99,
     current: 0,
     description: "Home Style.",
@@ -107,7 +107,7 @@ export const allGifts: Gift[] = [
   {
     id: 9,
     name: "Porta Escova de dente",
-    category: "cha",
+    category: "casamento",
     goal: 59.99,
     current: 0,
     description: "Home Style.",
@@ -138,8 +138,6 @@ export const allGifts: Gift[] = [
     description: "Lava e Seca para facilitar o dia a dia dos noivos",
     image: "https://imgs.ponto.com.br/55048505/1g.jpg?imwidth=500",
     imageHint: "washing machine",
-    storeUrl:
-      "https://www.casasbahia.com.br/lava-e-seca-samsung-wd11a-3-em-1-inox-look-com-ecobubble-e-lavagem-a-seco-wd11a4453bx-11-kg/p/55048506?IdSku=55048506&idLojista=10037&tipoLojista=1P&&gad_campaignid=22444217737&gbraid=0AAAAADtAamgUU6Ya-1K2DmFN3sJhiw4mP",
   },
   {
     id: 12,
@@ -151,8 +149,6 @@ export const allGifts: Gift[] = [
     image:
       "https://brastemp.vtexassets.com/arquivos/ids/267500-300-300/01_Brastemp_Lava_loucas_BLF08BS_Imagem_Detalhe_BLF08BS_FRONTAL_4.jpg?v=638973414195430000",
     imageHint: "cooking lesson",
-    storeUrl:
-      "https://site.fastshop.com.br/lava-loucas-brastemp-cinza-metalico-com-08-servicos-e-05-programas-de-lavagem---blf08b-brblf08bsana_prd/p?idsku=2498&gad_campaignid=22746909051",
   },
   {
     id: 13,
@@ -515,7 +511,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 41,
-    category: "cha",
+    category: "casamento",
     name: "Panela de Pressão",
     goal: 174,
     current: 0,
@@ -554,7 +550,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 44,
-    category: "cha",
+    category: "casamento",
     name: "Tábuas para Corte",
     goal: 174.99,
     current: 0,
@@ -591,7 +587,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 47,
-    category: "cha",
+    category: "casamento",
     name: "Sanduicheira",
     goal: 99.99,
     current: 0,
@@ -642,7 +638,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 51,
-    category: "cha",
+    category: "casamento",
     name: "Liquidificador",
     goal: 176.37,
     current: 0,
@@ -654,7 +650,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 52,
-    category: "cha",
+    category: "casamento",
     name: "Faca do Chef Inox",
     goal: 191.81,
     current: 0,
@@ -667,15 +663,15 @@ export const allGifts: Gift[] = [
   {
     id: 53,
     category: "casamento",
-    name: "Batedeira Kitchen aid",
-    goal: 2377,
+    name: "Batedeira Planetária",
+    goal: 266,
     current: 0,
-    description: "Não custa sonhar.",
+    description: "Bolin com fefézin.",
     image:
-      "https://m.magazineluiza.com.br/a-static/420x420/batedeira-kitchenaid-artisan-empire-red-220v-kea30cvpna/fastshop2/kikea30cvpna/736bc4698c50266e7bc3b578a44af9a2.jpeg",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_809500-MLA99934080747_112025-F.webp",
     imageHint: "Batedeira",
     storeUrl:
-      "https://www.magazineluiza.com.br/batedeira-kitchenaid-artisan-empire-red-220v-kea30cvpna/p/fheb7jec8h/ep/bapl/?seller_id=fastshop2&region_id=123462&partner_id=83231&gad_campaignid=23346188393&gbraid=0AAAAAD4zZmTciNtHLCI6Ky_FEcvOEVJop",
+      "https://www.mercadolivre.com.br/batedeira-planetaria-britnia-bbpe01-12-velocidades-4l-500w-cor-preto/p/MLB28681453?pdp_filters=item_id:MLB5577846204&from=gshop&matt_tool=80488341&matt_internal_campaign_id=&matt_word=&matt_source=google&matt_campaign_id=22090193747&matt_ad_group_id=194474625594&matt_match_type=&matt_network=g&matt_device=c&matt_creative=792355615584&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735098639&matt_product_id=MLB28681453-product&matt_product_partition_id=2452779771262&matt_target_id=aud-1966858076296:pla-2452779771262&cq_src=google_ads&cq_cmp=22090193747&cq_net=g&cq_plt=gp&cq_med=pla&gad_campaignid=22090193747&gbraid=0AAAAAD93qcButA8cepQ2aKc5nFqbjlN_V",
   },
   {
     id: 54,
@@ -717,8 +713,8 @@ export const allGifts: Gift[] = [
   {
     id: 57,
     category: "casamento",
-    name: "Escrivaninha com gaveteiro",
-    goal: 667.15,
+    name: "Cota para Escrivaninha com gaveteiro",
+    goal: 340,
     current: 0,
     description: "Pra montar nosso Home Studio.",
     image:
@@ -803,7 +799,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 64,
-    category: "cha",
+    category: "casamento",
     name: "Faqueiro",
     goal: 281.2,
     current: 0,
@@ -827,7 +823,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 66,
-    category: "cha",
+    category: "casamento",
     name: "Panela de Teflon",
     goal: 50,
     current: 0,
@@ -852,7 +848,7 @@ export const allGifts: Gift[] = [
   {
     id: 68,
     category: "casamento",
-    name: "Banqueta",
+    name: "Duas Banquetas",
     goal: 1200,
     current: 0,
     description: "Bater um papo no balcão",
@@ -864,7 +860,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 69,
-    category: "cha",
+    category: "casamento",
     name: "Tapete",
     goal: 99,
     current: 0,
@@ -888,7 +884,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 71,
-    category: "cha",
+    category: "casamento",
     name: "Pipoqueira elétrica",
     goal: 299.99,
     current: 0,
@@ -924,7 +920,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 74,
-    category: "cha",
+    category: "casamento",
     name: "Cafeteira Italiana",
     goal: 79.99,
     current: 0,
@@ -938,13 +934,11 @@ export const allGifts: Gift[] = [
     id: 75,
     category: "casamento",
     name: "Sofá",
-    goal: 1418.53,
+    goal: 1500.53,
     current: 0,
     description: "Sofazinho pra assistir Netflix juntinhos",
     image:
       "https://cdn.leroymerlin.com.br/products/sofa_4_lugares_living_linho_bronze_viero_moveis_1572240312_a57d_600x600.jpg",
-    storeUrl:
-      "https://www.leroymerlin.com.br/sofa-4-lugares-living-linho-bronze-viero-moveis_1572240312?region=outros",
   },
   {
     id: 76,
@@ -971,7 +965,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 78,
-    category: "cha",
+    category: "casamento",
     name: "Panela Elétrica",
     goal: 361.5,
     current: 0,
@@ -1032,7 +1026,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 83,
-    category: "cha",
+    category: "casamento",
     name: "Processador de Alimentos",
     goal: 117.9,
     current: 0,
@@ -1291,17 +1285,6 @@ export const allGifts: Gift[] = [
       "https://mundodosfiltros.com.br/products/purificador-de-agua-everest-star?variant=41512844918843&country=BR&currency=BRL&gad_campaignid=23315168575&gbraid=0AAAAApGDSb7XNbPWeodt22-C0u9xGQYYE",
   },
   {
-    id: 106,
-    category: "casamento",
-    name: "Playstation 5",
-    goal: 3300,
-    current: 0,
-    description: "GTA VI tá aí.",
-    image: "https://imgs.casasbahia.com.br/1572582933/3xg.jpg?imwidth=500",
-    storeUrl:
-      "https://www.casasbahia.com.br/pack-console-playstation-5-edicao-digital-825gb-astro-bot-e-gran-turismo-7/p/1572582933?IdSku=1572582933&idLojista=232923&tipoLojista=3P&&gad_campaignid=22846606777&gbraid=0AAAAADtAamiUz49yVlPZTOvB4nB0qX3ST",
-  },
-  {
     id: 107,
     category: "casamento",
     name: "Contribua com um valor livre",
@@ -1369,7 +1352,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 113,
-    category: "cha",
+    category: "casamento",
     name: "Zester.",
     goal: 80.44,
     current: 0,
@@ -1408,8 +1391,6 @@ export const allGifts: Gift[] = [
     current: 0,
     description: "Trazer vários souvenirs",
     image: "https://m.media-amazon.com/images/I/510Yrajv+WL._AC_SL1000_.jpg",
-    storeUrl:
-      "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1",
   },
   {
     id: 117,
@@ -1419,23 +1400,10 @@ export const allGifts: Gift[] = [
     current: 0,
     description: "Trazer vários souvenirs",
     image: "https://m.media-amazon.com/images/I/51EKS337q6L._AC_SL1000_.jpg",
-    storeUrl:
-      "https://www.amazon.com.br/gp/product/B0D2PBZGF3/ref=ewc_pr_img_1?smid=A3LGV2SX75WN63&th=1",
   },
   {
     id: 118,
     category: "casamento",
-    name: "Ar-condicionado portátil.",
-    goal: 2469.5,
-    current: 0,
-    description: "Trazer vários souvenirs",
-    image: "https://imgs.casasbahia.com.br/1571322381/1xg.jpg?imwidth=500",
-    storeUrl:
-      "https://www.casasbahia.com.br/ar-condicionado-portatil-electrolux-12000-btus-frio-com-wi-fi-branco-sp12f/p/1571322381?IdSku=1571322381&idLojista=24506&tipoLojista=3P&&gad_campaignid=22819970585&gbraid=0AAAAADtAamgGLZMaFZUKzt_QmXueOSq-J",
-  },
-  {
-    id: 118,
-    category: "cha",
     name: "Cesto Air Fryer oven.",
     goal: 109.5,
     current: 0,
@@ -1460,7 +1428,7 @@ export const allGifts: Gift[] = [
     id: 120,
     category: "casamento",
     name: "Euros para a viagem de lua de mel.",
-    goal: 619.58,
+    goal: 310,
     current: 0,
     description: "O cambio tá maluco",
     image:
@@ -1523,7 +1491,7 @@ export const allGifts: Gift[] = [
   },
   {
     id: 126,
-    category: "cha",
+    category: "casamento",
     name: "Jogo de prato simples.",
     goal: 150.37,
     current: 0,
@@ -1698,5 +1666,180 @@ export const allGifts: Gift[] = [
     image: "https://m.media-amazon.com/images/I/41VP6123-BS._AC_SL1000_.jpg",
     storeUrl:
       "https://www.amazon.com.br/Mimo-Style-AFP350-CAFETEIRA-FRANCESA/dp/B07TBHLGQT/ref=asc_df_B07TBHLGQT?tag=googleshopp00-20&hvadid=709964506256&hvpos=&hvnetw=g&hvrand=12972529490692218585&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9197471&hvtargid=pla-902619401228&language=pt_BR&th=1",
+  },
+  {
+    id: 142,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 143,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 144,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 145,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 146,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 147,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 148,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 149,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 150,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 151,
+    category: "casamento",
+    name: "Passeio na Lua de Mel",
+    goal: 100,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 152,
+    category: "casamento",
+    name: "Cota para Passeio na Lua de Mel",
+    goal: 500,
+    current: 0,
+    description: "Ajude-nos a ter uma lua de mel inesquecível!",
+    image:
+      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
+    imageHint: "honeymoon travel",
+  },
+  {
+    id: 153,
+    category: "casamento",
+    name: "Cota para Aluguel de carro na Lua de Mel",
+    goal: 500,
+    current: 0,
+    description: "Pra exploramos o mundo.",
+    image:
+      "https://cdn0.matrimonio.com/vendor/2268/3_2/960/jpg/mzr-3687_2_282268-171283978178315.jpeg",
+    imageHint: "carro",
+  },
+  {
+    id: 154,
+    category: "casamento",
+    name: "Cota para Diária noite de núpcias",
+    goal: 334.37,
+    current: 0,
+    description: " ",
+    image:
+      "https://images.trvl-media.com/lodging/3000000/2060000/2050600/2050555/9fc56328.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
+  },
+  {
+    id: 155,
+    category: "casamento",
+    name: "Euros para a viagem de lua de mel.",
+    goal: 300,
+    current: 0,
+    description: "O cambio tá maluco",
+    image:
+      "https://images.unsplash.com/photo-1621280336935-ed7cae618aac?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 156,
+    category: "casamento",
+    name: "Euros para a viagem de lua de mel.",
+    goal: 300,
+    current: 0,
+    description: "O cambio tá maluco",
+    image:
+      "https://images.unsplash.com/photo-1621280336935-ed7cae618aac?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    id: 157,
+    category: "casamento",
+    name: "Cota para Escrivaninha com gaveteiro",
+    goal: 340,
+    current: 0,
+    description: "Pra montar nosso Home Studio.",
+    image:
+      "https://product-hub-prd.madeiramadeira.com.br/665288/images/d851b049-e741-4814-a625-4f93bc2c2850adracompace66528816600x600.jpg?width=700&canvas=1:1&bg-color=FFF",
+    imageHint: "mesa e gaveteiro.",
+    storeUrl:
+      "https://www.madeiramadeira.com.br/kit-2-pecas-com-1-escrivaninha-e-1-gaveteiro-4-gavetas-kuadra-665288.html",
   },
 ];
