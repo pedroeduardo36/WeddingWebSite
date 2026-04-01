@@ -9,7 +9,7 @@ import { Menu } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { usePathname } from 'next/navigation'
 import headerLogo from '../assets/logoSite.svg'
-import fotoCapa from '../assets/fotosJP-15.jpg'
+import fotoCapa from '../assets/preFoto.jpg'
 
 
 export default function Header() {

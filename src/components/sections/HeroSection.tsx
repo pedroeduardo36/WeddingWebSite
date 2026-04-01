@@ -6,6 +6,7 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import fotoHero from '../../assets/fotosJP-2.jpg';
 import { motion, useScroll, useTransform } from "framer-motion";
 import logoViolao from "@/assets/logoSite.svg"; 
+import preHero from '@/assets/preFoto.jpg';
 
 const Countdown = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -67,10 +68,10 @@ export default function HeroSection() {
     <section id="home" className="relative h-[900px] w-full overflow-hidden">
       {heroImage && (
         <Image
-          src={fotoHero}
+          src={preHero}
           alt={heroImage?.description || "Foto Júlia e Pedro"}
           fill
-          className="object-cover object-[center_bottom]"
+          className="object-bottom object-[center_bottom]"
           priority
           data-ai-hint={heroImage?.imageHint}
         />
