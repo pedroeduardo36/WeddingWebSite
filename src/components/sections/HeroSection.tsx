@@ -76,7 +76,7 @@ export default function HeroSection() {
           src={preHero}
           alt={heroImage?.description || "Foto Júlia e Pedro"}
           fill
-          className="object-scale-down md:object-cover"
+          className="object-cover md:object-cover"
           priority
           data-ai-hint={heroImage?.imageHint}
           quality={100}
