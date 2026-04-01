@@ -56,6 +56,9 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
   const [isPhysicalOpen, setIsPhysicalOpen] = useState(false);
   const { toast } = useToast();
 
+  const pricePerQuota = 100; // Valor fixo da cota
+  const totalQuotas = gift.goal / pricePerQuota;
+  const donatedQuotas = Math.floor(gift.current / pricePerQuota);
   const progress = Math.min((gift.current / gift.goal) * 100, 100);
   const isGoalReached = gift.current >= gift.goal;
   const remainingAmount = Math.max(gift.goal - gift.current, 0);
@@ -106,7 +109,7 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
 
     toast({
       title: "Obrigado!",
-      description: isPhysical 
+      description: isPhysical
         ? "Registro de compra física realizado com sucesso!"
         : `Sua contribuição de ${formatCurrency(amount)} foi registrada.`,
     });
@@ -125,24 +128,32 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
         {isGoalReached && (
           <div className="absolute inset-0 bg-primary/60 flex flex-col items-center justify-center text-primary-foreground backdrop-blur-[2px]">
             <CheckCircle className="h-10 w-10 mb-2 drop-shadow-md" />
-            <span className="text-xl font-bold drop-shadow-md">Presenteado!</span>
+            <span className="text-xl font-bold drop-shadow-md">
+              Presenteado!
+            </span>
           </div>
         )}
       </div>
 
       <CardHeader>
         <CardTitle className="font-headline">{gift.name}</CardTitle>
-        <CardDescription className="line-clamp-2 min-h-[40px]">{gift.description}</CardDescription>
+        <CardDescription className="line-clamp-2 min-h-[40px]">
+          {gift.description}
+        </CardDescription>
       </CardHeader>
 
       <CardContent className="flex-grow space-y-4">
         <div className="space-y-2">
           <div className="flex justify-between text-sm font-semibold">
             <span className="text-primary">{formatCurrency(gift.current)}</span>
-            <span className="text-muted-foreground">{formatCurrency(gift.goal)}</span>
+            <span className="text-muted-foreground">
+              {formatCurrency(gift.goal)}
+            </span>
           </div>
           <Progress value={progress} className="h-2" />
-          <div className="text-xs text-right text-muted-foreground">{progress.toFixed(0)}% atingido</div>
+          <div className="text-xs text-right text-muted-foreground">
+            {progress.toFixed(0)}% atingido
+          </div>
         </div>
       </CardContent>
 
@@ -159,29 +170,54 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px] max-h-[90vh] overflow-y-auto">
                   <DialogHeader>
-                    <DialogTitle className="text-primary">Presentear via PIX</DialogTitle>
-                    <DialogDescription>Contribua com um valor para este presente.</DialogDescription>
+                    <DialogTitle className="text-primary">
+                      Presentear via PIX
+                    </DialogTitle>
+                    <DialogDescription>
+                      Contribua com um valor para este presente.
+                    </DialogDescription>
                   </DialogHeader>
                   <div className="space-y-4 pt-4">
                     <div className="bg-muted/50 p-4 rounded-lg flex flex-col items-center gap-3">
                       <Image src={qrCode} alt="PIX" width={160} height={160} />
-                      <p className="text-[10px] text-muted-foreground text-center">Aponte a câmera do celular ou use o link de pagamento.</p>
+                      <p className="text-[10px] text-muted-foreground text-center">
+                        Aponte a câmera do celular ou use o link de pagamento.
+                      </p>
                     </div>
                     <div className="space-y-2">
                       <Label>Seu Nome *</Label>
-                      <Input value={contributorName} onChange={(e) => setContributorName(e.target.value)} placeholder="Como quer ser identificado?" />
+                      <Input
+                        value={contributorName}
+                        onChange={(e) => setContributorName(e.target.value)}
+                        placeholder="Como quer ser identificado?"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label>Valor (R$) *</Label>
-                      <Input type="number" value={contribution} onChange={(e) => setContribution(e.target.value)} placeholder="0,00" />
+                      <Input
+                        type="number"
+                        value={contribution}
+                        onChange={(e) => setContribution(e.target.value)}
+                        placeholder="0,00"
+                      />
                     </div>
                     <div className="space-y-2">
                       <Label>Mensagem (Opcional)</Label>
-                      <Textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Deixe um recado para o casal..." rows={2} />
+                      <Textarea
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        placeholder="Deixe um recado para o casal..."
+                        rows={2}
+                      />
                     </div>
                   </div>
                   <DialogFooter className="mt-4">
-                    <Button onClick={() => handleContributeClick(false)} className="w-full">Confirmar Presente</Button>
+                    <Button
+                      onClick={() => handleContributeClick(false)}
+                      className="w-full"
+                    >
+                      Confirmar Presente
+                    </Button>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
@@ -189,13 +225,19 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
               {/* Modal Físico (Apenas Nome e Mensagem) */}
               <Dialog open={isPhysicalOpen} onOpenChange={setIsPhysicalOpen}>
                 <DialogTrigger asChild>
-                  <Button variant="outline" className="flex-1 gap-1 px-1 text-xs font-semibold sm:text-sm border-primary text-primary">
-                    <PackageCheck className="w-3 h-3 sm:w-4 sm:h-4" /> Comprei Fisicamente
+                  <Button
+                    variant="outline"
+                    className="flex-1 gap-1 px-1 text-xs font-semibold sm:text-sm border-primary text-primary"
+                  >
+                    <PackageCheck className="w-3 h-3 sm:w-4 sm:h-4" /> Comprei
+                    Fisicamente
                   </Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                   <DialogHeader>
-                    <DialogTitle className="text-primary">Já comprei este presente!</DialogTitle>
+                    <DialogTitle className="text-primary">
+                      Já comprei este presente!
+                    </DialogTitle>
                     <DialogDescription>
                       Identifique-se para retirarmos este item da lista.
                     </DialogDescription>
@@ -203,41 +245,60 @@ export default function GiftCard({ gift, onContribute }: GiftCardProps) {
                   <div className="grid gap-4 pt-4">
                     <div className="space-y-2">
                       <Label>Seu Nome *</Label>
-                      <Input 
-                        placeholder="Ex: João e Maria" 
-                        value={contributorName} 
-                        onChange={(e) => setContributorName(e.target.value)} 
+                      <Input
+                        placeholder="Ex: João e Maria"
+                        value={contributorName}
+                        onChange={(e) => setContributorName(e.target.value)}
                       />
                     </div>
                     <div className="space-y-2">
                       <Label>Mensagem (Opcional)</Label>
-                      <Textarea 
-                        placeholder="Escreva algo carinhoso..." 
-                        value={message} 
-                        onChange={(e) => setMessage(e.target.value)} 
-                        rows={3} 
+                      <Textarea
+                        placeholder="Escreva algo carinhoso..."
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        rows={3}
                       />
                     </div>
                     <div className="text-[11px] text-muted-foreground bg-muted/30 p-2 rounded border border-dashed">
-                      <p>Valor que será computado: <strong>{formatCurrency(remainingAmount)}</strong></p>
+                      <p>
+                        Valor que será computado:{" "}
+                        <strong>{formatCurrency(remainingAmount)}</strong>
+                      </p>
                     </div>
                   </div>
                   <DialogFooter className="mt-4">
-                    <Button onClick={() => handleContributeClick(true)} className="w-full">Confirmar e Finalizar</Button>
+                    <Button
+                      onClick={() => handleContributeClick(true)}
+                      className="w-full"
+                    >
+                      Confirmar e Finalizar
+                    </Button>
                   </DialogFooter>
                 </DialogContent>
               </Dialog>
             </>
           ) : (
-            <Button className="flex-1 bg-muted text-muted-foreground cursor-not-allowed" disabled>
+            <Button
+              className="flex-1 bg-muted text-muted-foreground cursor-not-allowed"
+              disabled
+            >
               <CheckCircle className="mr-2 h-4 w-4" /> Completo!
             </Button>
           )}
         </div>
 
         {gift.storeUrl && (
-          <Button variant="ghost" asChild className="w-full gap-2 text-muted-foreground hover:text-primary">
-            <Link href={gift.storeUrl} target="_blank" rel="noopener noreferrer">
+          <Button
+            variant="ghost"
+            asChild
+            className="w-full gap-2 text-muted-foreground hover:text-primary"
+          >
+            <Link
+              href={gift.storeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <ShoppingCart className="h-4 w-4" /> Ver na loja
             </Link>
           </Button>
