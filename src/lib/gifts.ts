@@ -1670,116 +1670,6 @@ export const allGifts: Gift[] = [
   {
     id: 142,
     category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 143,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 144,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 145,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 146,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 147,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 148,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 149,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 150,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 151,
-    category: "casamento",
-    name: "Passeio na Lua de Mel",
-    goal: 100,
-    current: 0,
-    description: "Ajude-nos a ter uma lua de mel inesquecível!",
-    image:
-      "https://fastly.picsum.photos/id/49/1280/792.jpg?hmac=NnUJy0O9-pXHLmY2loqVs2pJmgw9xzuixgYOk4ALCXU",
-    imageHint: "honeymoon travel",
-  },
-  {
-    id: 152,
-    category: "casamento",
     name: "Cota para Passeio na Lua de Mel",
     goal: 500,
     current: 0,
@@ -1789,7 +1679,7 @@ export const allGifts: Gift[] = [
     imageHint: "honeymoon travel",
   },
   {
-    id: 153,
+    id: 143,
     category: "casamento",
     name: "Cota para Aluguel de carro na Lua de Mel",
     goal: 500,
@@ -1800,7 +1690,7 @@ export const allGifts: Gift[] = [
     imageHint: "carro",
   },
   {
-    id: 154,
+    id: 144,
     category: "casamento",
     name: "Cota para Diária noite de núpcias",
     goal: 334.37,
@@ -1810,7 +1700,7 @@ export const allGifts: Gift[] = [
       "https://images.trvl-media.com/lodging/3000000/2060000/2050600/2050555/9fc56328.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill",
   },
   {
-    id: 155,
+    id: 145,
     category: "casamento",
     name: "Euros para a viagem de lua de mel.",
     goal: 300,
@@ -1820,7 +1710,7 @@ export const allGifts: Gift[] = [
       "https://images.unsplash.com/photo-1621280336935-ed7cae618aac?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    id: 156,
+    id: 146,
     category: "casamento",
     name: "Euros para a viagem de lua de mel.",
     goal: 300,
@@ -1830,7 +1720,7 @@ export const allGifts: Gift[] = [
       "https://images.unsplash.com/photo-1621280336935-ed7cae618aac?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    id: 157,
+    id: 147,
     category: "casamento",
     name: "Cota para Escrivaninha com gaveteiro",
     goal: 340,
